@@ -4,9 +4,10 @@ import Img from 'gatsby-image'
 export const StyledContainer = styled.section`
   display: flex;
   flex-direction: row;
+  height: 940px;
 `
 
-export const StyledSection = styled.section`
+export const StyledCtaSection = styled.section`
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -16,7 +17,12 @@ export const StyledSection = styled.section`
   width: 50vw;
 `
 
+export const StyledSliderSection = styled.section`
+  width: 50vw;
+`
+
 export const StyledImg = styled(Img)`
   display: block;
   width: 50vw;
+  height: 1200px;
 `
