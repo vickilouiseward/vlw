@@ -1,8 +1,0 @@
-export { FourLogos } from './fourLogos'
-export { FourTextTabCarousel } from './fourTextTabCarousel'
-export { Header } from './header'
-export { ImageTitle } from './imageTitle'
-export { ThreeImagesTextRight } from './threeImagesTextRight'
-export { ThreeQuotes } from './threeQuotes'
-export { ThreeShopCards } from './threeShopCards'
-export { TwoCtasCarouselRight } from './twoCtasCarouselRight'
