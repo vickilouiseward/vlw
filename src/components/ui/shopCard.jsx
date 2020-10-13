@@ -1,6 +1,10 @@
 import React from 'react'
 import { Title } from '.'
-import { StyledBodyLink, StyledShopCardSection, StyledShopCardImage } from './styled'
+import {
+  StyledBodyLink,
+  StyledShopCardSection,
+  StyledShopCardImage
+} from './styled'
 
 export const ShopCard = ({ image, title, text }) => (
   <StyledShopCardSection>

@@ -89,12 +89,27 @@ const Home = ({ data }) => (
     <ThreeShopCards
       title='Off the rack'
       cards={[
-        { image: data.otr1.childImageSharp.fluid, title: 'Prints', text: 'From £15' },
-        { image: data.otr2.childImageSharp.fluid, title: 'Limited Editions', text: 'From £60' },
-        { image: data.otr3.childImageSharp.fluid, title: 'Original Artworks', text: 'From £150' }
+        {
+          image: data.otr1.childImageSharp.fluid,
+          title: 'Prints',
+          text: 'From £15'
+        },
+        {
+          image: data.otr2.childImageSharp.fluid,
+          title: 'Limited Editions',
+          text: 'From £60'
+        },
+        {
+          image: data.otr3.childImageSharp.fluid,
+          title: 'Original Artworks',
+          text: 'From £150'
+        }
       ]}
     />
-    <ImageTitle image={data.portfolioMain.childImageSharp.fluid} title='Portfolio' />
+    <ImageTitle
+      image={data.portfolioMain.childImageSharp.fluid}
+      title='Portfolio'
+    />
     <FourLogos
       logos={[
         {

@@ -1,6 +1,11 @@
 import React from 'react'
-import { StyledContainer, StyledCtaSection, StyledSliderSection, StyledImg } from './styled'
-import { CallToAction, Parallax, Slider, Title } from '../..'
+import {
+  StyledContainer,
+  StyledCtaSection,
+  StyledSliderSection,
+  StyledImg
+} from './styled'
+import { AutoSlider, CallToAction, Parallax, Title } from '../..'
 import { colours } from '../../../styles'
 
 const { cream } = colours
@@ -16,7 +21,7 @@ export const TwoCtasCarouselRight = ({ title, ctas, image }) => (
       ))}
     </StyledCtaSection>
     <StyledSliderSection>
-      <Slider auto={3000}>
+      <AutoSlider auto={3000}>
         <Parallax height={940}>
           <StyledImg fadeIn={false} fluid={image} alt='' />
         </Parallax>
@@ -29,7 +34,7 @@ export const TwoCtasCarouselRight = ({ title, ctas, image }) => (
         <Parallax height={940}>
           <StyledImg fadeIn={false} fluid={image} alt='' />
         </Parallax>
-      </Slider>
+      </AutoSlider>
     </StyledSliderSection>
   </StyledContainer>
 )

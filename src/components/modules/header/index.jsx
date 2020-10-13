@@ -58,7 +58,10 @@ export const Header = () => {
     <>
       <StyledHeader {...{ showMobileNav }}>
         {mobile && (
-          <StyledMenuButton onClick={() => toggleMobileNav(!showMobileNav)} {...{ showMobileNav }}>
+          <StyledMenuButton
+            onClick={() => toggleMobileNav(!showMobileNav)}
+            {...{ showMobileNav }}
+          >
             {showMobileNav ? <CloseIcon /> : <MenuIcon />}
           </StyledMenuButton>
         )}
@@ -68,7 +71,9 @@ export const Header = () => {
           </Link>
         </StyledTitle>
         {(tabletUp || showMobileNav) && (
-          <StyledTagLine>Fashion, beauty &amp; lifestyle illustrator</StyledTagLine>
+          <StyledTagLine>
+            Fashion, beauty &amp; lifestyle illustrator
+          </StyledTagLine>
         )}
       </StyledHeader>
       {tabletUp && <Nav />}

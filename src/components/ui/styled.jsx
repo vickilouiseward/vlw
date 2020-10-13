@@ -84,7 +84,7 @@ export const StyledBlockquote = styled.blockquote`
 `
 
 export const StyledCite = styled.cite`
-  color: ${({ color }) => (color ? color : black)};
+  color: ${({ color }) => (color || black)};
   font-family: Northwell, serif;
   font-size: 32px;
   line-height: 52px;
@@ -96,7 +96,7 @@ export const StyledCite = styled.cite`
 `
 
 export const StyledH2 = styled.h2`
-  color: ${({ color }) => (color ? color : black)};
+  color: ${({ color }) => (color || black)};
   font-family: Northwell, serif;
   font-size: 48px;
   font-weight: normal;
@@ -109,7 +109,7 @@ export const StyledH2 = styled.h2`
 `
 
 export const StyledH3 = styled.h3`
-  color: ${({ color }) => (color ? color : black)};
+  color: ${({ color }) => (color || black)};
   font-family: Amiri, serif;
   font-size: 24px;
   font-weight: normal;
@@ -118,7 +118,7 @@ export const StyledH3 = styled.h3`
 `
 
 export const StyledParagraph = styled.p`
-  color: ${({ color }) => (color ? color : black)};
+  color: ${({ color }) => (color || black)};
   font-family: Amiri;
   font-size: 16px;
   line-height: 28px;
@@ -127,7 +127,7 @@ export const StyledParagraph = styled.p`
 `
 
 export const StyledBodyLink = styled.span`
-  color: ${({ color }) => (color ? color : black)};
+  color: ${({ color }) => (color || black)};
   font-family: Amiri;
   font-size: 16px;
   font-weight: bold;
@@ -166,7 +166,7 @@ export const StyledLinkButton = styled(Link)`
   text-transform: uppercase;
 `
 
-export const StyledSlider = styled.section`
+export const StyledAutoSlider = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -177,28 +177,14 @@ export const StyledSlider = styled.section`
   width: 100%;
 `
 
-export const StyledSlide = styled.div`
+export const StyledAutoSlide = styled.div`
   height: 100%;
   width: 100%;
   user-select: none;
   will-change: transform;
 `
 
-export const StyledSlideBulletList = styled.ul`
-  bottom: 64px;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-  position: absolute;
-  margin: 0 auto;
-`
-
-export const StyledSlideBullet = styled.li`
-  background-color: ${charcoal};
-  border-radius: 50%;
-  height: 12px;
-  margin: 0 8px;
-  opacity: ${({ active }) => (active ? '90%' : '30%')};
-  width: 12px;
-`
+export const StyledTabSlider = styled.section``
+export const StyledTabSlide = styled.div``
+export const StyledSlideTabList = styled.ul``
+export const StyledSlideTab = styled.li``

@@ -139,8 +139,8 @@ const fadeInMobileNavLi = keyframes`
 `
 
 export const StyledMobileNavLi = styled.li`
-  animation: ${fadeInMobileNavLi} 0.6s ease-in-out ${({ delay }) => `calc(${delay}s + 0.6s)`}
-    forwards;
+  animation: ${fadeInMobileNavLi} 0.6s ease-in-out
+    ${({ delay }) => `calc(${delay}s + 0.6s)`} forwards;
   opacity: 0;
   padding-top: 40px;
   text-align: center;

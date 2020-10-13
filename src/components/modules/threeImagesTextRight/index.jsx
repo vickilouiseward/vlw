@@ -23,7 +23,8 @@ export const ThreeImagesTextRight = ({ images, title, copy }) => {
             onMouseEnter={() => {
               console.log(666)
               setInFocus(index)
-            }}>
+            }}
+          >
             <StyledImg fadeIn={false} fluid={image} {...{ alt }} />
           </StyledImageWrapper>
         ))}

@@ -1,5 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-import { AmiriBold, AmiriBoldItalic, AmiriItalic, AmiriRegular, Northwell } from '../fonts'
+import {
+  AmiriBold,
+  AmiriBoldItalic,
+  AmiriItalic,
+  AmiriRegular,
+  Northwell
+} from '../fonts'
 import { colours } from '../styles'
 
 const { charcoal, white } = colours
