@@ -20,10 +20,7 @@ export const ThreeImagesTextRight = ({ images, title, copy }) => {
           <StyledImageWrapper
             key={index}
             inFocus={inFocus === index}
-            onMouseEnter={() => {
-              console.log(666)
-              setInFocus(index)
-            }}
+            onMouseEnter={() => setInFocus(index)}
           >
             <StyledImg fadeIn={false} fluid={image} {...{ alt }} />
           </StyledImageWrapper>
