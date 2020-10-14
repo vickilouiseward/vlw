@@ -21,7 +21,7 @@ export const TwoCtasCarouselRight = ({ title, ctas, image }) => (
       ))}
     </StyledCtaSection>
     <StyledSliderSection>
-      <AutoSlider auto={3000}>
+      <AutoSlider>
         <Parallax height={940}>
           <StyledImg fadeIn={false} fluid={image} alt='' />
         </Parallax>

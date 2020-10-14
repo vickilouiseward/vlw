@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { animated, useSprings } from 'react-spring'
-import { StyledAutoSlider, StyledAutoSlide } from './styled'
+import { StyledSlider, StyledSlide } from './styled'
 
 export const AutoSlider = ({ children }) => {
   const ref = useRef()
@@ -27,7 +27,7 @@ export const AutoSlider = ({ children }) => {
   }, [children.length, slide])
 
   return (
-    <StyledAutoSlider {...{ ref }}>
+    <StyledSlider {...{ ref }}>
       {springProps.map(({ offset }, index) => (
         <animated.div
           key={index}
@@ -41,9 +41,9 @@ export const AutoSlider = ({ children }) => {
             willChange: 'transform'
           }}
         >
-          <StyledAutoSlide>{children[index]}</StyledAutoSlide>
+          <StyledSlide>{children[index]}</StyledSlide>
         </animated.div>
       ))}
-    </StyledAutoSlider>
+    </StyledSlider>
   )
 }

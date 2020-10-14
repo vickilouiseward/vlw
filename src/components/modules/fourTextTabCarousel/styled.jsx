@@ -28,6 +28,6 @@ export const StyledImgWrapper = styled.section`
 
 export const StyledImg = styled(Img)`
   display: block;
-  height: 460px;
+  height: 760px;
   width: 100vw;
 `

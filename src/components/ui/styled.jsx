@@ -166,25 +166,43 @@ export const StyledLinkButton = styled(Link)`
   text-transform: uppercase;
 `
 
-export const StyledAutoSlider = styled.section`
+export const StyledSliderContainer = styled.section`
+  align-items: center;
+  background-color: ${charcoal};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
+
+export const StyledSlider = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: ${({ height }) => height ? `${height}px` : '100%'};
   position: relative;
   overflow: hidden;
   width: 100%;
 `
 
-export const StyledAutoSlide = styled.div`
+export const StyledSlide = styled.div`
   height: 100%;
   width: 100%;
   user-select: none;
   will-change: transform;
 `
-
-export const StyledTabSlider = styled.section``
 export const StyledTabSlide = styled.div``
-export const StyledSlideTabList = styled.ul``
-export const StyledSlideTab = styled.li``
+export const StyledSlideTabList = styled.ul`
+  align-items: baseline;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 96px;
+  width: 100%;
+`
+export const StyledSlideTab = styled.li`
+  opacity: ${({ active }) => active ? 1 : 0.6};
+`

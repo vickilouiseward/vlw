@@ -9,7 +9,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "npm run build && gh-pages -d public -b master",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "format": "standard",
     "start": "npm run develop",
     "serve": "gatsby serve",
