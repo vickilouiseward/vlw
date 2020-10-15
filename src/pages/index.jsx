@@ -34,7 +34,13 @@ const Home = ({ data }) => (
           link: '/'
         }
       ]}
-      image={data.lwt1.childImageSharp.fluid}
+      images={[
+        data.lwt1.childImageSharp.fluid,
+        data.lwt2.childImageSharp.fluid,
+        data.lwt3.childImageSharp.fluid,
+        data.lwt4.childImageSharp.fluid,
+        data.lwt5.childImageSharp.fluid
+      ]}
     />
     <ThreeQuotes
       title='Testimonials'
@@ -57,7 +63,12 @@ const Home = ({ data }) => (
       ]}
     />
     <FourTextTabCarousel
-      image={data.press1.childImageSharp.fluid}
+      images={[
+        data.press1.childImageSharp.fluid,
+        data.press1.childImageSharp.fluid,
+        data.press3.childImageSharp.fluid,
+        data.press4.childImageSharp.fluid
+      ]}
       title='Press'
       textTabs={[
         {
@@ -164,7 +175,56 @@ export const query = graphql`
         }
       }
     }
+    lwt2: file(relativePath: { eq: "lets_work_together_2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    lwt3: file(relativePath: { eq: "lets_work_together_3.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    lwt4: file(relativePath: { eq: "lets_work_together_4.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    lwt5: file(relativePath: { eq: "lets_work_together_5.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     press1: file(relativePath: { eq: "press_1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    press2: file(relativePath: { eq: "press_1.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    press3: file(relativePath: { eq: "press_3.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    press4: file(relativePath: { eq: "press_4.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

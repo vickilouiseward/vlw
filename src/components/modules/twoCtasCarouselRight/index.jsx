@@ -5,12 +5,12 @@ import {
   StyledSliderSection,
   StyledImg
 } from './styled'
-import { AutoSlider, CallToAction, Parallax, Title } from '../..'
+import { AutoSlider, CallToAction, Title } from '../..'
 import { colours } from '../../../styles'
 
 const { cream } = colours
 
-export const TwoCtasCarouselRight = ({ title, ctas, image }) => (
+export const TwoCtasCarouselRight = ({ title, ctas, images }) => (
   <StyledContainer>
     <StyledCtaSection>
       <Title level={2} color={cream}>
@@ -22,18 +22,7 @@ export const TwoCtasCarouselRight = ({ title, ctas, image }) => (
     </StyledCtaSection>
     <StyledSliderSection>
       <AutoSlider>
-        <Parallax height={940}>
-          <StyledImg fadeIn={false} fluid={image} alt='' />
-        </Parallax>
-        <Parallax height={940}>
-          <StyledImg fadeIn={false} fluid={image} alt='' />
-        </Parallax>
-        <Parallax height={940}>
-          <StyledImg fadeIn={false} fluid={image} alt='' />
-        </Parallax>
-        <Parallax height={940}>
-          <StyledImg fadeIn={false} fluid={image} alt='' />
-        </Parallax>
+        {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='' />)}
       </AutoSlider>
     </StyledSliderSection>
   </StyledContainer>

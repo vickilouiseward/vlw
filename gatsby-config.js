@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/vlw',
   plugins: [
     {
       resolve: 'gatsby-plugin-styled-components',
@@ -14,5 +15,4 @@ module.exports = {
       }
     }
   ]
-  // pathPrefix: '/vlw'
 }

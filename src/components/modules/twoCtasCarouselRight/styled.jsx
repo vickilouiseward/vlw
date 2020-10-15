@@ -24,5 +24,5 @@ export const StyledSliderSection = styled.section`
 export const StyledImg = styled(Img)`
   display: block;
   width: 50vw;
-  height: 1200px;
+  height: 940px;
 `

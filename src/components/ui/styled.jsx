@@ -187,9 +187,17 @@ export const StyledSlider = styled.section`
 
 export const StyledSlide = styled.div`
   height: 100%;
+  position: absolute;
   width: 100%;
+  top: 0;
+  transition: opacity 1s ease-in-out;
   user-select: none;
   will-change: transform;
+  ${({ active }) => active ? `
+    opacity: 1;
+  ` : `
+    opacity: 0;
+  `}
 `
 export const StyledTabSlide = styled.div``
 export const StyledSlideTabList = styled.ul`
