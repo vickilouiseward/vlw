@@ -18,11 +18,11 @@ import { CloseIcon, MenuIcon, Logo } from '../..'
 import { breakpoints } from '../../../utilities'
 
 const routes = [
-  { title: "Let's work together", path: '/' },
-  { title: 'Off the rack', path: '/' },
-  { title: 'Portfilio', path: '/' },
-  { title: 'My story', path: '/' },
-  { title: 'Contact', path: '/' }
+  { title: "Let's work together", path: '/lets-work-together' },
+  { title: 'Off the rack', path: '/off-the-rack' },
+  { title: 'Portfilio', path: '/portfolio' },
+  { title: 'My story', path: '/my-story' },
+  { title: 'Contact', path: '/contact' }
 ]
 
 export const Nav = () => (

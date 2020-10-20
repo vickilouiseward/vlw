@@ -9,14 +9,14 @@ import {
   ThreeImagesTextRight,
   ThreeQuotes,
   ThreeShopCards,
-  TwoCtasCarouselRight
+  TwoCtasCarousel
 } from '../components'
 
 const Home = ({ data }) => (
   <>
     <GlobalStyles />
     <Header />
-    <TwoCtasCarouselRight
+    <TwoCtasCarousel
       title="Let's work together"
       ctas={[
         {

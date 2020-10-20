@@ -10,7 +10,7 @@ import { colours } from '../../../styles'
 
 const { cream } = colours
 
-export const TwoCtasCarouselRight = ({ title, ctas, images }) => (
+export const TwoCtasCarousel = ({ title, ctas, images }) => (
   <StyledContainer>
     <StyledCtaSection>
       <Title level={2} color={cream}>
@@ -21,7 +21,7 @@ export const TwoCtasCarouselRight = ({ title, ctas, images }) => (
       ))}
     </StyledCtaSection>
     <StyledSliderSection>
-      <AutoSlider>
+      <AutoSlider speed={3000}>
         {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='' />)}
       </AutoSlider>
     </StyledSliderSection>

@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
-    "format": "standard",
+    "format": "eslint --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -32,7 +32,13 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
-    "standard": "^14.3.4"
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^3.1.0"
   }
 }

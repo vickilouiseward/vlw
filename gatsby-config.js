@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/vlw',
+  // pathPrefix: '/vlw',
   plugins: [
     {
       resolve: 'gatsby-plugin-styled-components',

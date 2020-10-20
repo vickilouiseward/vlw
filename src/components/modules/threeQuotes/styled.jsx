@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { colours } from '../../../styles'
+import { respondTo } from '../../../utilities'
 
 const { white } = colours
 
@@ -17,4 +18,11 @@ export const StyledSection = styled.section`
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0 24px 96px;
+  ${respondTo.S`
+    height: 372px;
+  `}
+`
+
+export const StyledQuoteSlide = styled.div`
+  height: 100%;
 `
