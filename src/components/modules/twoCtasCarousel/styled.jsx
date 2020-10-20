@@ -45,5 +45,4 @@ export const StyledImg = styled(Img)`
     width: 100vw;
     height: 100vw;
   `}
-  
 `

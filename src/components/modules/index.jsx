@@ -1,5 +1,5 @@
 export { FourLogos } from './fourLogos'
-export { FourTextTabCarousel } from './fourTextTabCarousel'
+export { FourItemCarousel } from './FourItemCarousel'
 export { Header } from './header'
 export { ImageTitle } from './imageTitle'
 export { ThreeImagesTextRight } from './threeImagesTextRight'

@@ -26,7 +26,7 @@ export const StyledHeader = styled.header`
     align-items: center;
     display: flex;
     padding: 0 16px;
-    position: fixed;
+    // position: fixed;
     height: 60px;
     justify-content: center;
     ${({ showMobileNav }) =>

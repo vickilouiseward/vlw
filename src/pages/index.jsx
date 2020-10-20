@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import {
   FourLogos,
-  FourTextTabCarousel,
+  FourItemCarousel,
   GlobalStyles,
   Header,
   ImageTitle,
@@ -62,40 +62,41 @@ const Home = ({ data }) => (
         }
       ]}
     />
-    <FourTextTabCarousel
-      images={[
-        data.press1.childImageSharp.fluid,
-        data.press1.childImageSharp.fluid,
-        data.press3.childImageSharp.fluid,
-        data.press4.childImageSharp.fluid
-      ]}
+    <FourItemCarousel
       title='Press'
-      textTabs={[
-        {
+      items={[{
+        image: data.press1.childImageSharp.fluid,
+        tab: {
           icon: data.pressLogo1.childImageSharp.fluid,
           title: 'Currently exhibiting at',
           text:
             'Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus.'
-        },
-        {
+        }
+      }, {
+        image: data.press1.childImageSharp.fluid,
+        tab: {
           icon: data.pressLogo2.childImageSharp.fluid,
           title: 'Finalist S/S Awards 2020',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
-        },
-        {
+        }
+      }, {
+        image: data.press3.childImageSharp.fluid,
+        tab: {
           icon: data.pressLogo3.childImageSharp.fluid,
           title: 'Previous exhibitions',
           text:
             'Consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
-        },
-        {
+        }
+      }, {
+        image: data.press4.childImageSharp.fluid,
+        tab: {
           icon: data.pressLogo4.childImageSharp.fluid,
           title: '100 anniversary winner',
           text:
             'Ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non.'
         }
-      ]}
+      }]}
     />
     <ThreeCards
       title='Off the rack'
@@ -141,7 +142,7 @@ const Home = ({ data }) => (
         }
       ]}
     />
-    <ThreeImagesTextRight
+    {/* <ThreeImagesTextRight
       images={[
         {
           image: data.ms1.childImageSharp.fluid,
@@ -162,7 +163,7 @@ const Home = ({ data }) => (
         'She uses a mixture of minimalist and detailed lines alongside abstract watercolour to describe the beauty and elegance of the world around her. She is a fashion obsessive and regularly attends shows such as Alice Temperley, Vivienne Westwood, Erdem and Vin+Omi; later realising her experiences in delicate originals.',
         'Last year Vicki exhibited as part of Cluster Illustration in London’s Brick Lane and is now making her international debut as part of Fashion Illustration at Acid Gallery which include some of her runway works.'
       ]}
-    />
+    /> */}
   </>
 )
 

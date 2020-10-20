@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 import { Title } from '.'
-import { StyledSliderContainer, StyledSlider, StyledSlide, StyledSlideTabList, StyledSlideTab } from './styled'
+import {
+  StyledSliderContainer,
+  StyledSlider,
+  StyledFadeSlide,
+  StyledSlideTabList,
+  StyledSlideTab
+} from './styled'
 import { colours } from '../../styles'
 
 const { cream } = colours
@@ -12,7 +18,9 @@ export const TabSlider = ({ children, height, tabs, title }) => {
     <StyledSliderContainer>
       <StyledSlider {...{ height }}>
         {children.map((item, index) => (
-          <StyledSlide key={index} active={index === slide}>{item}</StyledSlide>
+          <StyledFadeSlide key={index} active={index === slide}>
+            {item}
+          </StyledFadeSlide>
         ))}
       </StyledSlider>
       <Title level={2} color={cream}>

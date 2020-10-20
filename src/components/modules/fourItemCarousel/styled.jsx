@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { colours } from '../../../styles'
+import { respondTo } from '../../../utilities'
 
 const { charcoal } = colours
 
@@ -12,22 +13,17 @@ export const StyledContainer = styled.section`
 `
 
 export const StyledSection = styled.section`
-  align-items: baseline;
-  box-sizing: border-box;
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0 24px 96px;
-`
-
-export const StyledImgWrapper = styled.section`
-  display: block;
-  height: 460px;
-  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const StyledImg = styled(Img)`
   display: block;
   height: 760px;
   width: 100vw;
+  ${respondTo.S`
+    height: 160vw;
+  `}
 `

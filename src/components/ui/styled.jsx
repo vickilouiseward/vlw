@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import { colours } from '../../styles'
 import { respondTo } from '../../utilities'
 
-const { black, charcoal, cream } = colours
+const { black, white, charcoal, cream } = colours
 
 export const StyledMenuIcon = styled.svg`
   height: 26px;
@@ -198,7 +198,7 @@ export const StyledSlider = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: ${({ height }) => height ? `${height}px` : '100%'};
+  height: ${({ height }) => height || '100%'};
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -212,13 +212,18 @@ export const StyledSlide = styled.div`
   transition: opacity 1s ease-in-out;
   user-select: none;
   will-change: transform;
-  ${({ active }) => active ? `
-    opacity: 1;
-  ` : `
-    opacity: 0;
-  `}
 `
-export const StyledTabSlide = styled.div``
+export const StyledFadeSlide = styled.div`
+  height: 100%;
+  opacity: ${({ active }) => active ? 1 : 0};
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: opacity 1s ease-in-out;
+  user-select: none;
+  will-change: transform;
+`
+
 export const StyledSlideTabList = styled.ul`
   align-items: baseline;
   box-sizing: border-box;
@@ -232,4 +237,22 @@ export const StyledSlideTabList = styled.ul`
 `
 export const StyledSlideTab = styled.li`
   opacity: ${({ active }) => active ? 1 : 0.6};
+`
+export const StyledSlideBulletList = styled.ul`
+  bottom: 64px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  margin: 0 auto;
+`
+
+export const StyledSlideBullet = styled.li`
+  background-color: ${white};
+  border-radius: 50%;
+  height: 12px;
+  margin: 0 8px;
+  opacity: ${({ active }) => (active ? '90%' : '30%')};
+  width: 12px;
 `
