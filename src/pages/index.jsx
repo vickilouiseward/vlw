@@ -8,7 +8,7 @@ import {
   ImageTitle,
   ThreeImagesTextRight,
   ThreeQuotes,
-  ThreeShopCards,
+  ThreeCards,
   TwoCtasCarousel
 } from '../components'
 
@@ -97,7 +97,7 @@ const Home = ({ data }) => (
         }
       ]}
     />
-    <ThreeShopCards
+    <ThreeCards
       title='Off the rack'
       cards={[
         {

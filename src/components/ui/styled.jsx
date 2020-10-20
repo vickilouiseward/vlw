@@ -64,15 +64,21 @@ export const StyledShopCardSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
+  width: 100%;
   padding-top: 16px;
   text-align: center;
+  ${respondTo.S`
+    padding: 40px 0 24px;
+  `}
 `
 
 export const StyledShopCardImage = styled(Img)`
   display: block;
   margin-bottom: 40px;
   width: 100%;
+  ${respondTo.S`
+    margin-bottom: 0;
+  `}
 `
 
 export const StyledBlockquote = styled.blockquote`
@@ -117,6 +123,7 @@ export const StyledH2 = styled.h2`
   ${respondTo.M`
     font-size: 32px;
     line-height: 52px;
+    margin: 64px auto 0;
   `}
 `
 
