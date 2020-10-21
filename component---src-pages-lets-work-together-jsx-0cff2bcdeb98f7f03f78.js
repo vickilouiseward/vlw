@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{VS8K:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("TiLl");n.default=function(e){e.data;return l.a.createElement(l.a.Fragment,null,l.a.createElement(r.e,null),l.a.createElement(r.f,null))}}}]);
-//# sourceMappingURL=component---src-pages-lets-work-together-jsx-0cff2bcdeb98f7f03f78.js.map
