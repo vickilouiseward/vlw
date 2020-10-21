@@ -23,9 +23,8 @@ export const FourItemCarousel = ({ title, items }) => {
             </StyledSection>
           ))}
         </SwipeSlider>
-
       ) : (
-        <TabSlider tabs={items.map(({ tab }, index) => <TextTab key={index} color={cream} {...tab} />)} height={460} {...{ title }}>
+        <TabSlider tabs={items.map(({ tab }, index) => <TextTab key={index} color={cream} {...tab} />)} height='460px' {...{ title }}>
           {items.map(({ image }, index) => (
             <Parallax key={index} height='460px'>
               <StyledImg fadeIn={false} fluid={image} alt={title} />

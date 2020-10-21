@@ -26,9 +26,10 @@ export const StyledHeader = styled.header`
     align-items: center;
     display: flex;
     padding: 0 16px;
-    // position: fixed;
+    position: fixed;
     height: 60px;
     justify-content: center;
+    z-index: 9;
     ${({ showMobileNav }) =>
       showMobileNav &&
       css`
@@ -120,6 +121,7 @@ export const StyledMobileNav = styled.nav`
   text-transform: uppercase;
   top: 216px;
   width: 100vw;
+  z-index: 9;
 `
 
 export const StyledMobileNavUl = styled.ul`

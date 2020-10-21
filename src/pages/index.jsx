@@ -142,7 +142,7 @@ const Home = ({ data }) => (
         }
       ]}
     />
-    {/* <ThreeImagesTextRight
+    <ThreeImagesTextRight
       images={[
         {
           image: data.ms1.childImageSharp.fluid,
@@ -163,7 +163,7 @@ const Home = ({ data }) => (
         'She uses a mixture of minimalist and detailed lines alongside abstract watercolour to describe the beauty and elegance of the world around her. She is a fashion obsessive and regularly attends shows such as Alice Temperley, Vivienne Westwood, Erdem and Vin+Omi; later realising her experiences in delicate originals.',
         'Last year Vicki exhibited as part of Cluster Illustration in London’s Brick Lane and is now making her international debut as part of Fashion Illustration at Acid Gallery which include some of her runway works.'
       ]}
-    /> */}
+    />
   </>
 )
 
