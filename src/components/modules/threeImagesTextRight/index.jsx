@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   StyledArticle,
   StyledContainer,
   StyledImg,
-  StyledImageWrapper,
+  StyledImgWrapper,
   StyledSection
 } from './styled'
 import { Title, Paragraph } from '../..'
@@ -11,30 +11,44 @@ import { colours } from '../../../styles'
 
 const { cream } = colours
 
-export const ThreeImagesTextRight = ({ images, title, copy }) => {
+export const ThreeImagesTextRight = ({ images, title, text }) => {
   const [inFocus, setInFocus] = useState(0)
+  const [animating, setAnimating] = useState(false)
+
+  useEffect(() => {
+    setAnimating(true)
+
+    const timer = setTimeout(() => {
+      setAnimating(false)
+    }, 800)
+
+    return () => clearTimeout(timer)
+  }, [inFocus])
+
   return (
     <StyledContainer>
       <StyledSection>
         {images.map(({ image, alt }, index) => (
-          <StyledImageWrapper
+          <StyledImgWrapper
             key={index}
             inFocus={inFocus === index}
-            onMouseEnter={() => setInFocus(index)}
+            onMouseEnter={() => {
+              if (!animating) {
+                setInFocus(index)
+              }
+            }}
           >
             <StyledImg fadeIn={false} fluid={image} {...{ alt }} />
-          </StyledImageWrapper>
+          </StyledImgWrapper>
         ))}
       </StyledSection>
       <StyledArticle>
         <Title level={2} color={cream}>
           {title}
         </Title>
-        {copy.map((paragraph, index) => (
-          <Paragraph key={index} color={cream}>
-            {paragraph}
-          </Paragraph>
-        ))}
+        <Paragraph color={cream}>
+          {text}
+        </Paragraph>
       </StyledArticle>
     </StyledContainer>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyledMenuIcon, StyledCloseIcon, StyledLogo } from './styled'
-import { colours } from '../../styles'
+import { colours } from '../../../styles'
 
 const { white } = colours
 
-export const Logo = ({ scaleDown }) => (
-  <StyledLogo viewBox='0 0 390 100' {...{ scaleDown }}>
+export const Logo = ({ scaleUp }) => (
+  <StyledLogo viewBox='0 0 390 100' {...{ scaleUp }}>
     <title>Vicki Louise Ward</title>
     <g stroke='none' strokeWidth={1} fill='none' fillRule='evenodd'>
       <path d='M0 0H391V100H0z' />

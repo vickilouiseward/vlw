@@ -1,8 +1,14 @@
 import React from 'react'
-import { StyledInputContainer, StyledInput, StyledLabel, StyledInputError } from './styled'
+import {
+  StyledForm,
+  StyledInputContainer,
+  StyledInput,
+  StyledLabel,
+  StyledInputError
+} from './styled'
 
 export const Form = ({ children, onSubmit }) => (
-  <form {...{ onSubmit }} noValidate>{children}</form>
+  <StyledForm {...{ onSubmit }} noValidate>{children}</StyledForm>
 )
 
 export const Input = ({ label, field, type, register, error }) => (

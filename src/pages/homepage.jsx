@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import {
-  FourLogos,
+  // FiveLogos,
   FourItemCarousel,
   GlobalStyles,
   Header,
-  ImageTitle,
+  ImageCta,
+  Newsletter,
   ThreeImagesTextRight,
   ThreeQuotes,
   ThreeCards,
@@ -67,7 +68,7 @@ const Home = ({ data }) => (
       items={[{
         image: data.press1.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo1.childImageSharp.fluid,
+          icon: data.pressLogo1.childImageSharp.fixed,
           title: 'Currently exhibiting at',
           text:
             'Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus.'
@@ -75,7 +76,7 @@ const Home = ({ data }) => (
       }, {
         image: data.press1.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo2.childImageSharp.fluid,
+          icon: data.pressLogo2.childImageSharp.fixed,
           title: 'Finalist S/S Awards 2020',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
@@ -83,7 +84,7 @@ const Home = ({ data }) => (
       }, {
         image: data.press3.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo3.childImageSharp.fluid,
+          icon: data.pressLogo3.childImageSharp.fixed,
           title: 'Previous exhibitions',
           text:
             'Consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
@@ -91,7 +92,7 @@ const Home = ({ data }) => (
       }, {
         image: data.press4.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo4.childImageSharp.fluid,
+          icon: data.pressLogo4.childImageSharp.fixed,
           title: '100 anniversary winner',
           text:
             'Ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non.'
@@ -118,30 +119,47 @@ const Home = ({ data }) => (
         }
       ]}
     />
-    <ImageTitle
-      image={data.portfolioMain.childImageSharp.fluid}
+    <ImageCta
+      image={[
+        data.portfolioMainLg.childImageSharp.fluid,
+        {
+          ...data.portfolioMainSm.childImageSharp.fluid,
+          media: '(max-width: 600px)'
+        }
+      ]}
       title='Portfolio'
+      cta={{
+        title: 'Portfolio',
+        blurb:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
+        cta: 'Explore',
+        link: '/'
+      }}
     />
-    <FourLogos
+    {/* <FiveLogos
       logos={[
         {
           image: data.portfolio1.childImageSharp.fixed,
-          title: ''
+          alt: 'SkinCeuticals'
         },
         {
           image: data.portfolio2.childImageSharp.fixed,
-          title: ''
+          alt: 'NET-A-PORTER'
         },
         {
           image: data.portfolio3.childImageSharp.fixed,
-          title: ''
+          alt: 'By Sarah London'
         },
         {
           image: data.portfolio4.childImageSharp.fixed,
-          title: ''
+          alt: 'PerriconeMD'
+        },
+        {
+          image: data.portfolio5.childImageSharp.fixed,
+          alt: "L'Oréal"
         }
       ]}
-    />
+    /> */}
     <ThreeImagesTextRight
       images={[
         {
@@ -158,11 +176,11 @@ const Home = ({ data }) => (
         }
       ]}
       title='My Story'
-      copy={[
-        'Vicki Louise Ward is a London based fashion and lifestyle illustrator. She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.',
-        'She uses a mixture of minimalist and detailed lines alongside abstract watercolour to describe the beauty and elegance of the world around her. She is a fashion obsessive and regularly attends shows such as Alice Temperley, Vivienne Westwood, Erdem and Vin+Omi; later realising her experiences in delicate originals.',
-        'Last year Vicki exhibited as part of Cluster Illustration in London’s Brick Lane and is now making her international debut as part of Fashion Illustration at Acid Gallery which include some of her runway works.'
-      ]}
+      text='Vicki Louise Ward is a London based fashion and lifestyle illustrator. She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.'
+    />
+    <Newsletter
+      title='Newsletter'
+      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
     />
   </>
 )
@@ -171,168 +189,182 @@ export const query = graphql`
   query {
     lwt1: file(relativePath: { eq: "lets_work_together_1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     lwt2: file(relativePath: { eq: "lets_work_together_2.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     lwt3: file(relativePath: { eq: "lets_work_together_3.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     lwt4: file(relativePath: { eq: "lets_work_together_4.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     lwt5: file(relativePath: { eq: "lets_work_together_5.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     press1: file(relativePath: { eq: "press_1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     press2: file(relativePath: { eq: "press_1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     press3: file(relativePath: { eq: "press_3.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     press4: file(relativePath: { eq: "press_4.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     pressLogo1: file(relativePath: { eq: "acid_gallery_logo.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+        fixed(height: 72) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
     pressLogo2: file(relativePath: { eq: "fida_logo.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+        fixed(height: 72) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
     pressLogo3: file(relativePath: { eq: "cluster_logo.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+        fixed(height: 72) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
     pressLogo4: file(relativePath: { eq: "stylist_logo.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+        fixed(height: 72) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
     otr1: file(relativePath: { eq: "prints.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     otr2: file(relativePath: { eq: "limited_edition.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     otr3: file(relativePath: { eq: "original_artwork.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioMain: file(relativePath: { eq: "portfolio.jpg" }) {
+    portfolioMainLg: file(relativePath: { eq: "portfolio.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolio1: file(relativePath: { eq: "skin_ceuticals.png" }) {
+    portfolioMainSm: file(relativePath: { eq: "lets_work_together_4.jpg" }) {
       childImageSharp {
-        fixed(height: 32) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolio2: file(relativePath: { eq: "nap.png" }) {
-      childImageSharp {
-        fixed(height: 32) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    portfolio3: file(relativePath: { eq: "perricone_md.png" }) {
-      childImageSharp {
-        fixed(height: 32) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    portfolio4: file(relativePath: { eq: "loreal.png" }) {
-      childImageSharp {
-        fixed(height: 32) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
+    # portfolio1: file(relativePath: { eq: "skin_ceuticals.png" }) {
+    #   childImageSharp {
+    #     fixed(height: 72) {
+    #       ...GatsbyImageSharpFixed_withWebp_noBase64
+    #     }
+    #   }
+    # }
+    # portfolio2: file(relativePath: { eq: "nap.png" }) {
+    #   childImageSharp {
+    #     fixed(height: 72) {
+    #       ...GatsbyImageSharpFixed_withWebp_noBase64
+    #     }
+    #   }
+    # }
+    # portfolio3: file(relativePath: { eq: "by_sarah.png" }) {
+    #   childImageSharp {
+    #     fixed(height: 72) {
+    #       ...GatsbyImageSharpFixed_withWebp_noBase64
+    #     }
+    #   }
+    # }
+    # portfolio4: file(relativePath: { eq: "perricone_md.png" }) {
+    #   childImageSharp {
+    #     fixed(height: 72) {
+    #       ...GatsbyImageSharpFixed_withWebp_noBase64
+    #     }
+    #   }
+    # }
+    # portfolio5: file(relativePath: { eq: "loreal.png" }) {
+    #   childImageSharp {
+    #     fixed(height: 72) {
+    #       ...GatsbyImageSharpFixed_withWebp_noBase64
+    #     }
+    #   }
+    # }
     ms1: file(relativePath: { eq: "my_story_1.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     ms2: file(relativePath: { eq: "my_story_2.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
     ms3: file(relativePath: { eq: "my_story_3.jpg" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

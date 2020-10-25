@@ -18,14 +18,21 @@ export const StyledSection = styled.section`
   display: flex;
   flex-direction: row;
   width: 75vw;
+  ${respondTo.M`
+    width: 50vw;
+  `}
   ${respondTo.S`
     width: 100vw;
   `}
 `
 
-export const StyledImageWrapper = styled.div`
-  transition: width 0.6s ease-in-out;
-  width: ${({ inFocus }) => (inFocus ? '800px' : 'calc((100% - 800px) / 2)')};
+export const StyledImgWrapper = styled.div`
+  overflow: hidden;
+  transition: width 0.8s ease-in-out;
+  width: ${({ inFocus }) => (inFocus ? '45vw' : '15vw')};
+  ${respondTo.M`
+    width: ${({ inFocus }) => (inFocus ? '30vw' : '10vw')};
+  `}
   ${respondTo.S`
     width: ${({ inFocus }) => (inFocus ? '60vw' : '20vw')};
   `}
@@ -35,17 +42,28 @@ export const StyledImg = styled(Img)`
   display: block;
   height: 800px;
   width: 100%;
+  ${respondTo.M`
+    height: 50vw;
+    width: 50vw;
+  `}
   ${respondTo.S`
     height: 100vw;
+    width: 100vw;
   `}
 `
 
 export const StyledArticle = styled.article`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 0 40px;
+  justify-content: center;
+  padding: 64px 40px 40px;
   width: 25vw;
+  text-align: center;
+  ${respondTo.M`
+    width: 50vw;
+  `}
   ${respondTo.S`
-    width: auto;
+    width: 100vw;
   `}
 `

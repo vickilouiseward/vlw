@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
-import { StyledContainer, StyledSection } from './styled'
-import { Button, Paragraph, Form, Input } from '../..'
+import { StyledContainer, StyledSection, StyledFormSection } from './styled'
+import { Button, Title, Paragraph, Form, Input } from '../..'
 
-export const Newsletter = () => {
+export const Newsletter = ({ title, text, light }) => {
   const [success, setSuccess] = useState(false)
   const { register, handleSubmit, errors } = useForm() // initialize the hook
   const onSubmit = async (formData) => {
@@ -17,13 +17,16 @@ export const Newsletter = () => {
   }
 
   return (
-    <StyledContainer>
-      <Paragraph>Be the first to know when we launch and sign up to the brand new monthly newsletter</Paragraph>
+    <StyledContainer {...{ light }}>
+      <StyledSection>
+        <Title level={2}>{title}</Title>
+        <Paragraph>{text}</Paragraph>
+      </StyledSection>
       {success ? (
         <Paragraph>Thank you for signing up!</Paragraph>
       ) : (
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <StyledSection>
+          <StyledFormSection>
             <Input
               label='Name'
               field='name'
@@ -40,7 +43,7 @@ export const Newsletter = () => {
               error={errors.email && 'Please enter a valid email address'}
             />
             <Button type='submit'>Sign up</Button>
-          </StyledSection>
+          </StyledFormSection>
         </Form>
       )}
 

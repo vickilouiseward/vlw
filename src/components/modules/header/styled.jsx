@@ -15,20 +15,19 @@ const fadeInHeader = keyframes`
 `
 
 export const StyledHeader = styled.header`
+  align-items: center;
   background-color: ${black};
   box-sizing: border-box;
-  height: 138px;
-  padding-top: 32px;
-  top: 0;
+  display: flex;
+  flex-direction: row;
+  height: 80px;
   width: 100vw;
-  text-align: center;
   ${respondTo.S`
-    align-items: center;
-    display: flex;
-    padding: 0 16px;
-    position: fixed;
     height: 60px;
     justify-content: center;
+    padding: 0 16px;
+    position: fixed;
+    text-align: center;
     z-index: 9;
     ${({ showMobileNav }) =>
       showMobileNav &&
@@ -61,7 +60,12 @@ export const StyledMenuButton = styled.button`
 export const StyledTitle = styled.h1`
   line-height: 0;
   margin: 0;
+  padding-left: 144px;
+  ${respondTo.M`
+    padding-left: 64px;
+  `}
   ${respondTo.S`
+    padding: 0;
     ${({ showMobileNav }) =>
       !showMobileNav &&
       `
@@ -70,14 +74,17 @@ export const StyledTitle = styled.h1`
   `}
 `
 
+export const StyledHomeLink = styled(Link)`
+  display: block;
+`
+
 export const StyledTagLine = styled.p`
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
 `
 
 export const StyledNav = styled.nav`
   background-color: ${black};
-  padding: 24px 0;
   text-transform: uppercase;
 `
 
@@ -92,16 +99,20 @@ export const StyledNavUl = styled.ul`
 
 export const StyledNavLi = styled.li`
   line-height: 1;
-  padding: 0 83px;
-  ${respondTo.L`
-    padding: 0 32px;
-    text-align: center;
+  padding-left: 40px;
+  ${respondTo.M`
+    padding-left: 24px;
   `}
 `
 
 export const StyledNavLink = styled(Link)`
   color: ${cream};
+  font-size: 13px;
+  letter-spacing: 2.4px;
   text-decoration: none;
+  ${respondTo.M`
+    letter-spacing: 0.4px;
+  `}
 `
 
 const fadeInMobileNav = keyframes`

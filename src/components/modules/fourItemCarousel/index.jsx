@@ -5,7 +5,7 @@ import { Parallax, TabSlider, TextTab, SwipeSlider } from '../..'
 import { colours } from '../../../styles'
 import { breakpoints } from '../../../utilities'
 
-const { cream } = colours
+const { cream, midnight } = colours
 
 export const FourItemCarousel = ({ title, items }) => {
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
@@ -13,7 +13,7 @@ export const FourItemCarousel = ({ title, items }) => {
   return (
     <StyledContainer>
       {mobile ? (
-        <SwipeSlider height='calc(60vw + 520px)'>
+        <SwipeSlider height='calc(60vw + 520px)' bgcolor={midnight}>
           {items.map(({ image, tab }, index) => (
             <StyledSection key={index}>
               <Parallax height='60vw'>

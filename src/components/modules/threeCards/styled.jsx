@@ -9,6 +9,7 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 64px;
 `
 
 export const StyledSection = styled.section`

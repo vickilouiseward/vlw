@@ -57,4 +57,8 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  h1, h2, h3, p {
+    color: ${({ lightmode }) => lightmode ? midnight : white};
+  }
 `

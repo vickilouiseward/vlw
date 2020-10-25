@@ -56,7 +56,7 @@ const StyledKeyLine = styled.div`
   margin: 80px auto 0;
   width: 300px;
   ${respondTo.S`
-    margin: 24px auto -44px;
+    margin: 24px auto -40px;
   `}
 `
 
@@ -67,6 +67,10 @@ const StyledContainer = styled.section`
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  overflow: hidden;
+  > section {
+    padding-bottom: 0
+  }
 `
 const Home = ({ data }) => (
   <StyledContainer>
@@ -75,8 +79,10 @@ const Home = ({ data }) => (
     <Logo />
     <StyledTagLine>Fashion, beauty &amp; lifestyle illustrator</StyledTagLine>
     <StyledKeyLine />
-    <Title level={2}>Coming soon!</Title>
-    <Newsletter />
+    <Newsletter
+      title='Coming soon!'
+      text='Be the first to know when we launch and sign up to the brand new monthly newsletter'
+    />
   </StyledContainer>
 )
 
@@ -84,7 +90,7 @@ export const query = graphql`
   query {
     jimmychoo: file(relativePath: { eq: "jimmychoo_shoe.png" }) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }

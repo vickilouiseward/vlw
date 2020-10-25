@@ -6,22 +6,19 @@ import {
   StyledImg
 } from './styled'
 import { AutoSlider, CallToAction, Title } from '../..'
-import { colours } from '../../../styles'
-
-const { cream } = colours
 
 export const TwoCtasCarousel = ({ title, ctas, images }) => (
   <StyledContainer>
     <StyledCtaSection>
-      <Title level={2} color={cream}>
+      <Title level={2}>
         {title}
       </Title>
       {ctas.map((cta, index) => (
-        <CallToAction key={index} color={cream} {...cta} />
+        <CallToAction key={index} level={3} {...cta} />
       ))}
     </StyledCtaSection>
     <StyledSliderSection>
-      <AutoSlider speed={3000}>
+      <AutoSlider speed={6000}>
         {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='' />)}
       </AutoSlider>
     </StyledSliderSection>

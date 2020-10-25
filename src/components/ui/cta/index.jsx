@@ -1,9 +1,9 @@
 import React from 'react'
-import { Title, Paragraph } from '.'
+import { Title, Paragraph } from '..'
 import {
-  StyledBodyLink,
   StyledButton,
   StyledCtaSection,
+  StyledLink,
   StyledLinkButton
 } from './styled'
 
@@ -16,12 +16,12 @@ export const LinkButton = ({ cta, link }) => (
 )
 
 export const BodyLink = ({ color, children }) => (
-  <StyledBodyLink {...{ color }}>{children}</StyledBodyLink>
+  <StyledLink {...{ color }}>{children}</StyledLink>
 )
 
-export const CallToAction = ({ title, blurb, cta, link, color }) => (
+export const CallToAction = ({ level, title, blurb, cta, link, color }) => (
   <StyledCtaSection>
-    <Title level={3} {...{ color }}>
+    <Title {...{ level, color }}>
       {title}
     </Title>
     <Paragraph {...{ color }}>{blurb}</Paragraph>

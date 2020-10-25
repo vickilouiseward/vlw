@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { Link } from 'gatsby'
 import {
   StyledHeader,
   StyledMenuButton,
   StyledTitle,
+  StyledHomeLink,
   StyledTagLine,
   StyledNav,
   StyledNavUl,
@@ -66,17 +66,15 @@ export const Header = () => {
           </StyledMenuButton>
         )}
         <StyledTitle {...{ showMobileNav }}>
-          <Link to='/'>
-            <Logo scaleDown={mobile && !showMobileNav} />
-          </Link>
+          <StyledHomeLink to='/homepage'>
+            <Logo scaleUp={showMobileNav} />
+          </StyledHomeLink>
         </StyledTitle>
-        {(tabletUp || showMobileNav) && (
-          <StyledTagLine>
-            Fashion, beauty &amp; lifestyle illustrator
-          </StyledTagLine>
+        {mobile && showMobileNav && (
+          <StyledTagLine>Fashion, beauty &amp; lifestyle illustrator</StyledTagLine>
         )}
+        {tabletUp && <Nav />}
       </StyledHeader>
-      {tabletUp && <Nav />}
       {mobile && showMobileNav && <MobileNav />}
     </>
   )

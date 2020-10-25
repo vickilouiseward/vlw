@@ -1,12 +1,11 @@
 import React from 'react'
-import { Title, Paragraph } from '.'
+import { Title, Paragraph } from '..'
 import { StyledTextTabSection, StyledTextTabIcon } from './styled'
 
 export const TextTab = ({ icon, title, text, color }) => (
   <StyledTextTabSection>
     <StyledTextTabIcon
-      fluid={icon}
-      imgStyle={{ objectFit: 'contain' }}
+      fixed={icon}
       alt={title}
     />
     <Title level={3} {...{ color }}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StyledSlider, StyledFadeSlide } from './styled'
 
-export const AutoSlider = ({ children, speed }) => {
+export const AutoSlider = ({ children, speed, bgcolor }) => {
   const [slide, setSlide] = useState(0)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export const AutoSlider = ({ children, speed }) => {
   }, [children.length, slide])
 
   return (
-    <StyledSlider>
+    <StyledSlider {...{ bgcolor }}>
       {children.map((item, index) => (
         <StyledFadeSlide key={index} active={index === slide}>
           {item}

@@ -3,15 +3,18 @@ import { useMediaQuery } from 'react-responsive'
 import { StyledContainer, StyledSection, StyledQuoteSlide } from './styled'
 import { AutoSlider, Title, Quote } from '../..'
 import { breakpoints } from '../../../utilities'
+import { colours } from '../../../styles'
+
+const { midnight } = colours
 
 export const ThreeQuotes = ({ title, quotes }) => {
-  const mobile = useMediaQuery({ maxWidth: breakpoints.S })
+  const tablet = useMediaQuery({ maxWidth: breakpoints.M })
 
   return (
     <StyledContainer>
-      <Title level={2}>{title}</Title>
+      <Title level={2} color={midnight}>{title}</Title>
       <StyledSection>
-        {mobile ? (
+        {tablet ? (
           <AutoSlider speed={6000}>
             {quotes.map((quote, index) => (
               <StyledQuoteSlide key={index}>
