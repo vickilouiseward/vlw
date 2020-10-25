@@ -1,5 +1,6 @@
 export * from './autoSlider'
 export * from './cta'
+export * from './forms'
 export * from './icons'
 export * from './parallax'
 export * from './quote'

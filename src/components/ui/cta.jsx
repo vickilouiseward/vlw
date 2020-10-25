@@ -7,8 +7,8 @@ import {
   StyledLinkButton
 } from './styled'
 
-export const Button = ({ onClick, children }) => (
-  <StyledButton {...{ onClick }}>{children}</StyledButton>
+export const Button = ({ onClick, type, children }) => (
+  <StyledButton {...{ onClick, type }}>{children}</StyledButton>
 )
 
 export const LinkButton = ({ cta, link }) => (

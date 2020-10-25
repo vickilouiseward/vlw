@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import { colours } from '../../styles'
 import { respondTo } from '../../utilities'
 
-const { black, white, charcoal, cream } = colours
+const { black, white, midnight, cream, silver } = colours
 
 export const StyledMenuIcon = styled.svg`
   height: 26px;
@@ -34,6 +34,7 @@ export const StyledCtaSection = styled.section`
   flex-direction: column;
   justify-content: center;
   padding-top: 120px;
+  max-width: 520px;
   text-align: center;
   ${respondTo.S`
     padding-top: 64px;
@@ -142,7 +143,6 @@ export const StyledParagraph = styled.p`
   font-size: 16px;
   line-height: 28px;
   margin: 16px auto 24px;
-  max-width: 520px;
 `
 
 export const StyledBodyLink = styled.span`
@@ -159,10 +159,11 @@ export const StyledBodyLink = styled.span`
 
 export const StyledButton = styled.button`
   background-color: ${cream};
-  border: 1px solid ${charcoal};
-  color: ${charcoal};
+  border: 1px solid ${midnight};
+  color: ${midnight};
   font-family: Amiri;
   font-size: 14px;
+  height: 38px;
   letter-spacing: 2.33px;
   line-height: 38px;
   padding: 0 23px;
@@ -172,8 +173,8 @@ export const StyledButton = styled.button`
 
 export const StyledLinkButton = styled(Link)`
   background-color: ${cream};
-  border: 1px solid ${charcoal};
-  color: ${charcoal};
+  border: 1px solid ${midnight};
+  color: ${midnight};
   display: inline-block;
   font-family: Amiri;
   font-size: 14px;
@@ -187,7 +188,7 @@ export const StyledLinkButton = styled(Link)`
 
 export const StyledSliderContainer = styled.section`
   align-items: center;
-  background-color: ${charcoal};
+  background-color: ${midnight};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,4 +256,48 @@ export const StyledSlideBullet = styled.li`
   margin: 0 8px;
   opacity: ${({ active }) => (active ? '90%' : '30%')};
   width: 12px;
+`
+
+export const StyledInputContainer = styled.section`
+  position: relative;
+  width: 320px;
+`
+
+export const StyledInput = styled.input`
+  background-color: ${white};
+  border: 1px solid ${silver};
+  box-sizing: border-box;
+  color: ${black}
+  font-family: Amiri, serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 38px;
+  height: 38px;
+  padding: 0 8px;
+  opacity: 0.9;
+  outline: 0;
+  width: 100%;
+  ${respondTo.M`
+    margin-bottom: 24px;
+  `}
+`
+
+export const StyledLabel = styled.label`
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2.33px;
+  line-height: 24px;
+  padding-bottom: 8px;
+`
+
+export const StyledInputError = styled.div`
+  color: #e02929;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  padding-top: 8px;
+  position: absolute;
+  ${respondTo.M`
+    bottom: 0;
+  `}
 `

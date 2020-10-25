@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 
-const { charcoal } = colours
+const { midnight } = colours
 
 export const StyledContainer = styled.section`
-  background-color: ${charcoal};
+  background-color: ${midnight};
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

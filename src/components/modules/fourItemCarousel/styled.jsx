@@ -3,10 +3,10 @@ import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { charcoal } = colours
+const { midnight } = colours
 
 export const StyledContainer = styled.section`
-  background-color: ${charcoal};
+  background-color: ${midnight};
   display: flex;
   flex-direction: column;
   justify-content: center;
