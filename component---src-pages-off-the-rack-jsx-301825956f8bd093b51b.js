@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{kJjj:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("TiLl");n.default=function(e){e.data;return l.a.createElement(l.a.Fragment,null,l.a.createElement(r.g,null),l.a.createElement(r.h,null))}}}]);
-//# sourceMappingURL=component---src-pages-off-the-rack-jsx-301825956f8bd093b51b.js.map
