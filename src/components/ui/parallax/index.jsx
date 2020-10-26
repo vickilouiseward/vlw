@@ -4,7 +4,7 @@ import { animated, useSpring } from 'react-spring'
 export const Parallax = ({ children, height }) => {
   const ref = useRef()
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
-  const calc = offset => `translateY(-${offset * 0.1}px)`
+  const calc = offset => `translateY(-${offset * 0.06}px)`
   const handleScroll = () => {
     const posY = ref.current.getBoundingClientRect().top
     const offset = window.pageYOffset - posY

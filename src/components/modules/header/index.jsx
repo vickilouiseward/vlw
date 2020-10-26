@@ -19,7 +19,7 @@ import { breakpoints } from '../../../utilities'
 
 const routes = [
   { title: "Let's work together", path: '/lets-work-together' },
-  { title: 'Off the rack', path: '/off-the-rack' },
+  { title: 'Shop off the rack', path: '/shop-off-the-rack' },
   { title: 'Portfilio', path: '/portfolio' },
   { title: 'My story', path: '/my-story' },
   { title: 'Contact', path: '/contact' }

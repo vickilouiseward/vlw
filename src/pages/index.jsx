@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { GlobalStyles, ComingSoon } from '../components'
 
-const Home = () => (
+const Page = () => (
   <>
     <Helmet>
       <html lang='en' />
@@ -15,4 +15,4 @@ const Home = () => (
   </>
 )
 
-export default Home
+export default Page

@@ -48,7 +48,4 @@ export const StyledTagLine = styled.p`
   color: ${midnight};
   font-size: 18px;
   margin: 0;
-  ${respondTo.S`
-    font-size: 10px;
-  `}
 `

@@ -11,7 +11,7 @@ import {
 
 const clamp = (input, lower, upper) => Math.min(Math.max(input, lower), upper)
 
-export const SwipeSlider = ({ children, height, bgcolor }) => {
+export const SwipeSlider = ({ children, height, light }) => {
   const ref = useRef()
   const [slide, setSlide] = useState(0)
   const [springProps, setSpringProps] = useSprings(children.length, (index) => ({
@@ -51,7 +51,7 @@ export const SwipeSlider = ({ children, height, bgcolor }) => {
 
   return (
     <StyledSliderContainer>
-      <StyledSlider {...{ ref, height, bgcolor }}>
+      <StyledSlider {...{ ref, height, light }}>
         {springProps.map(({ offset }, index) => (
           <animated.div
             key={index}
@@ -69,7 +69,7 @@ export const SwipeSlider = ({ children, height, bgcolor }) => {
         ))}
         <StyledSlideBulletList>
           {Children.map(children, (_, index) => (
-            <StyledSlideBullet active={slide === index} key={index} onClick={() => setSlide(index)} />
+            <StyledSlideBullet active={slide === index} key={index} onClick={() => setSlide(index)} {...{ light }}/>
           ))}
         </StyledSlideBulletList>
       </StyledSlider>

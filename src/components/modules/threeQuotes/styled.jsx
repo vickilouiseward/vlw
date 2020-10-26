@@ -13,17 +13,23 @@ export const StyledContainer = styled.section`
 `
 
 export const StyledSection = styled.section`
-  align-items: baseline;
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0 24px 96px;
   ${respondTo.M`
-    height: 372px;
+    padding: 0 32px;
   `}
 `
 
 export const StyledQuoteSlide = styled.div`
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
+  padding-bottom: 96px;
 `

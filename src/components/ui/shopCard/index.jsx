@@ -1,18 +1,13 @@
 import React from 'react'
-import { Title } from '..'
 import {
   StyledShopCardSection,
-  StyledShopCardImage,
-  StyledPrice
+  StyledShopCardImage
 } from './styled'
-import { colours } from '../../../styles'
+import { LinkButton } from '..'
 
-const { midnight } = colours
-
-export const ShopCard = ({ image, title, text, href }) => (
+export const ShopCard = ({ image, cta, link }) => (
   <StyledShopCardSection>
-    <StyledShopCardImage fluid={image} alt={title} />
-    <Title level={3} color={midnight}>{title}</Title>
-    <StyledPrice>{text}</StyledPrice>
+    <StyledShopCardImage fluid={image} alt={cta} />
+    <LinkButton {...{ cta, link }} />
   </StyledShopCardSection>
 )

@@ -21,9 +21,9 @@ export const StyledSection = styled.section`
 
 export const StyledImg = styled(Img)`
   display: block;
-  height: 760px;
+  height: 600px;
   width: 100vw;
   ${respondTo.S`
-    height: 160vw;
+    height: 100vw;
   `}
 `

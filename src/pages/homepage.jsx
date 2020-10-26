@@ -13,7 +13,7 @@ import {
   TwoCtasCarousel
 } from '../components'
 
-const Home = ({ data }) => (
+const Page = ({ data }) => (
   <>
     <GlobalStyles />
     <Header />
@@ -47,19 +47,29 @@ const Home = ({ data }) => (
       title='Testimonials'
       quotes={[
         {
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet.',
-          cite: 'Emily'
+          standfirst: 'Vicki is my go-to when my clients request illustrative art commissions. She is amazing to work with, her passion and enthusiasm for what she does is second to none, and her processes and structure mean my clients are always happy with the finished piece.',
+          text: 'No task is too big or small for Vicki, she has been commissioned for a wide range of digital & physical works for my clients. She has a great personality and this shows in the quality of her work. Would recommend for all your creative art needs.',
+          cite: {
+            name: 'Emil Ingleton',
+            extra: 'Founder & CEO - Evolve Chelsea'
+          }
         },
         {
-          text:
-            'Cras vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varimassa neque, posuere sed mollis ut, placerat eu or unt purus ac lobortis...',
-          cite: 'Racheal'
+          callout: true,
+          standfirst: 'Such a pleasure to work with Vicki. We wanted something completely bespoke for a family business.',
+          text: 'She understood our brief and delivered an incredible piece of artwork better than we could ever imagined. She is incredibly talented and always goes above and beyond. Highly recommend.',
+          cite: {
+            name: 'Andy Wilson',
+            extra: 'Private client'
+          }
         },
         {
-          text:
-            'Varius as vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varius. Integer massa neque, pas vel dolor non liosuere sed mollis ut, placerat eu orci.',
-          cite: 'Claudia'
+          standfirst: 'It was an absolute pleasure working with Vicki from start to finish. With an innate energy and creativity she took our brief and brought it to life with graceful watercolours, in super-fast time to meet out deadline.',
+          text: 'Having worked in both retail and publishing Vicki understands how to create illustrations that translate seamlessly across all media platforms, from print to online and social.  This was the visual engagement we wanted to make our products get attention in a current and relevant way. Plus Vicki is a truly lovely and warm person who is a delight in every way.',
+          cite: {
+            name: 'Cara Ward',
+            extra: 'Co-founder & director - Pure PR '
+          }
         }
       ]}
     />
@@ -100,41 +110,24 @@ const Home = ({ data }) => (
       }]}
     />
     <ThreeCards
-      title='Off the rack'
+      title='Shop off the rack'
       cards={[
         {
           image: data.otr1.childImageSharp.fluid,
-          title: 'Prints',
-          text: 'From £15'
+          cta: 'Shop Prints',
+          link: '/shop-off-the-rack/prints'
         },
         {
           image: data.otr2.childImageSharp.fluid,
-          title: 'Limited Editions',
-          text: 'From £60'
+          cta: 'Shop Editions',
+          link: '/shop-off-the-rack/editions'
         },
         {
           image: data.otr3.childImageSharp.fluid,
-          title: 'Original Artworks',
-          text: 'From £150'
+          cta: 'Shop Originals',
+          link: '/shop-off-the-rack/originals'
         }
       ]}
-    />
-    <ImageCta
-      image={[
-        data.portfolioMainLg.childImageSharp.fluid,
-        {
-          ...data.portfolioMainSm.childImageSharp.fluid,
-          media: '(max-width: 600px)'
-        }
-      ]}
-      title='Portfolio'
-      cta={{
-        title: 'Portfolio',
-        blurb:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-        cta: 'Explore',
-        link: '/'
-      }}
     />
     {/* <FiveLogos
       logos={[
@@ -181,6 +174,23 @@ const Home = ({ data }) => (
     <Newsletter
       title='Newsletter'
       text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+    />
+    <ImageCta
+      image={[
+        data.portfolioMainLg.childImageSharp.fluid,
+        {
+          ...data.portfolioMainSm.childImageSharp.fluid,
+          media: '(max-width: 600px)'
+        }
+      ]}
+      title='Portfolio'
+      cta={{
+        title: 'Portfolio',
+        blurb:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
+        cta: 'Explore',
+        link: '/'
+      }}
     />
   </>
 )
@@ -372,4 +382,4 @@ export const query = graphql`
   }
 `
 
-export default Home
+export default Page

@@ -9,11 +9,12 @@ export const StyledSliderContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 `
 
 export const StyledSlider = styled.section`
   align-items: center;
-  background-color: ${({ bgcolor }) => (bgcolor || white)};
+  background-color: ${({ light }) => light ? white : midnight};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,10 +87,10 @@ export const StyledSlideBulletList = styled.ul`
 `
 
 export const StyledSlideBullet = styled.li`
-  background-color: ${white};
+  background-color: ${({ light }) => light ? midnight : white};
   border-radius: 50%;
-  height: 12px;
-  margin: 0 8px;
+  height: 8px;
+  margin: 0 4px;
   opacity: ${({ active }) => (active ? '90%' : '30%')};
-  width: 12px;
+  width: 8px;
 `

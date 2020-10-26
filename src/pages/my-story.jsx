@@ -1,15 +1,19 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
-import {
-  GlobalStyles,
-  Header
-} from '../components'
+import { Helmet } from 'react-helmet'
+import { GlobalStyles, Header, ComingSoon } from '../components'
 
-const Home = ({ data }) => (
+const Page = () => (
   <>
+    <Helmet>
+      <html lang='en' />
+      <meta charSet='utf-8' />
+      <title>Coming Soon | Vicki Louise Ward Fashion Illustrator</title>
+      <meta name='description' content='Coming soon, Vicki Louise Ward - fashion, beauty &amp; lifestyle illustrator' />
+    </Helmet>
     <GlobalStyles />
     <Header />
+    <ComingSoon />
   </>
 )
 
-export default Home
+export default Page

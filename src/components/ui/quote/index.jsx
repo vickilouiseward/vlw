@@ -1,10 +1,13 @@
 import React from 'react'
-import { Paragraph } from '..'
-import { StyledBlockquote, StyledCite } from './styled'
+import { StyledBlockquote, StyledStandfirst, StyledQuoteText, StyledCite, StyledCiteExtra } from './styled'
 
-export const Quote = ({ text, cite }) => (
+export const Quote = ({ callout, standfirst, text, cite }) => (
   <StyledBlockquote>
-    <Paragraph>{text}</Paragraph>
-    <StyledCite>{cite}</StyledCite>
+    <StyledStandfirst {...{ callout }}>{standfirst}</StyledStandfirst>
+    <StyledQuoteText>{text}</StyledQuoteText>
+    <StyledCite>
+      {cite.name}
+      <StyledCiteExtra>{cite.extra}</StyledCiteExtra>
+    </StyledCite>
   </StyledBlockquote>
 )

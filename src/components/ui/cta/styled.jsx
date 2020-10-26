@@ -52,6 +52,9 @@ export const StyledButton = styled.button`
   padding: 0 23px;
   outline: none;
   text-transform: uppercase;
+  ${respondTo.M`
+    margin-top: 16px;
+  `}
 `
 
 export const StyledLinkButton = styled(Link)`
@@ -68,7 +71,4 @@ export const StyledLinkButton = styled(Link)`
   outline: none;
   text-decoration: none;
   text-transform: uppercase;
-  ${respondTo.M`
-    margin-top: 16px;
-  `}
 `

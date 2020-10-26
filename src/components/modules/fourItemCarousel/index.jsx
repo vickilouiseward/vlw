@@ -13,7 +13,7 @@ export const FourItemCarousel = ({ title, items }) => {
   return (
     <StyledContainer>
       {mobile ? (
-        <SwipeSlider height='calc(60vw + 520px)' bgcolor={midnight}>
+        <SwipeSlider height='calc(60vw + 520px)'>
           {items.map(({ image, tab }, index) => (
             <StyledSection key={index}>
               <Parallax height='60vw'>

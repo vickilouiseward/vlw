@@ -13,14 +13,14 @@ export const StyledContainer = styled.section`
 `
 
 export const StyledSection = styled.section`
-  align-items: baseline;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0 24px 96px;
   ${respondTo.S`
+    align-items: center;
     flex-direction: column;
-    padding-bottom: 64px;
+    padding: 0 0 64px;
   `}
 `
