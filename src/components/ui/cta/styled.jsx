@@ -48,6 +48,7 @@ export const StyledButton = styled.button`
   height: 38px;
   letter-spacing: 2.33px;
   line-height: 38px;
+  min-width: 160px;
   padding: 0 23px;
   outline: none;
   text-transform: uppercase;
@@ -62,8 +63,12 @@ export const StyledLinkButton = styled(Link)`
   font-size: 14px;
   letter-spacing: 2.33px;
   line-height: 38px;
+  min-width: 160px;
   padding: 0 23px;
   outline: none;
   text-decoration: none;
   text-transform: uppercase;
+  ${respondTo.M`
+    margin-top: 16px;
+  `}
 `

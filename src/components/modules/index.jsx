@@ -1,3 +1,4 @@
+export { ComingSoon } from './comingSoon'
 export { FiveLogos } from './fiveLogos'
 export { FourItemCarousel } from './FourItemCarousel'
 export { Header } from './header'
