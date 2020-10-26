@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{sNup:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),u=t("TiLl");n.default=function(e){e.data;return l.a.createElement(l.a.Fragment,null,l.a.createElement(u.h,null),l.a.createElement(u.i,null))}}}]);
-//# sourceMappingURL=component---src-pages-my-story-jsx-5b802686ddeed9dab585.js.map
