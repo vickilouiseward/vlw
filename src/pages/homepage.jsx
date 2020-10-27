@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import {
   // FiveLogos,
   FourItemCarousel,
@@ -15,6 +16,12 @@ import {
 
 const Page = ({ data }) => (
   <>
+    <Helmet>
+      <html lang='en' />
+      <meta charSet='utf-8' />
+      <title>Vicki Louise Ward Fashion Illustrator</title>
+      <meta name='description' content='Vicki Louise Ward - fashion, beauty &amp; lifestyle illustrator' />
+    </Helmet>
     <GlobalStyles />
     <Header />
     <TwoCtasCarousel

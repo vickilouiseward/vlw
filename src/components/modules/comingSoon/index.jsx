@@ -5,7 +5,8 @@ import {
   StyledSection,
   StyledImg
 } from './styled'
-import { Logo, Tagline, Newsletter } from '..'
+import { Newsletter } from '..'
+import { Logo, Tagline } from '../..'
 
 export const ComingSoon = () => {
   const data = useStaticQuery(graphql`
