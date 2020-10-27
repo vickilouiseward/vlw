@@ -16,6 +16,7 @@ export const StyledInputContainer = styled.section`
 export const StyledInput = styled.input`
   background-color: ${white};
   border: 1px solid ${silver};
+  border-radius: 0;
   box-sizing: border-box;
   color: ${black}
   font-family: Amiri, serif;

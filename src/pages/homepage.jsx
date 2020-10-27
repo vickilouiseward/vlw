@@ -9,7 +9,7 @@ import {
   Newsletter,
   ThreeImagesTextRight,
   ThreeQuotes,
-  ThreeCards,
+  // ThreeCards,
   TwoCtasCarousel
 } from '../components'
 
@@ -109,7 +109,7 @@ const Page = ({ data }) => (
         }
       }]}
     />
-    <ThreeCards
+    {/* <ThreeCards
       title='Shop off the rack'
       cards={[
         {
@@ -128,7 +128,7 @@ const Page = ({ data }) => (
           link: '/shop-off-the-rack/originals'
         }
       ]}
-    />
+    /> */}
     {/* <FiveLogos
       logos={[
         {
@@ -183,14 +183,8 @@ const Page = ({ data }) => (
           media: '(max-width: 600px)'
         }
       ]}
-      title='Portfolio'
-      cta={{
-        title: 'Portfolio',
-        blurb:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-        cta: 'Explore',
-        link: '/'
-      }}
+      cta='Explore protfolio'
+      link='/portfolio'
     />
   </>
 )
@@ -309,14 +303,14 @@ export const query = graphql`
         }
       }
     }
-    portfolioMainLg: file(relativePath: { eq: "portfolio.jpg" }) {
+    portfolioMainLg: file(relativePath: { eq: "portfolio_lg.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioMainSm: file(relativePath: { eq: "lets_work_together_4.jpg" }) {
+    portfolioMainSm: file(relativePath: { eq: "portfolio_sm.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -5,16 +5,17 @@ import {
   StyledMenuButton,
   StyledTitle,
   StyledHomeLink,
-  StyledTagLine,
+  StyledTagline,
   StyledNav,
   StyledNavUl,
   StyledNavLi,
   StyledNavLink,
   StyledMobileNav,
   StyledMobileNavUl,
-  StyledMobileNavLi
+  StyledMobileNavLi,
+  StyledSpacer
 } from './styled'
-import { CloseIcon, MenuIcon, Logo } from '../..'
+import { CloseIcon, MenuIcon, HeaderLogo } from '../..'
 import { breakpoints } from '../../../utilities'
 
 const routes = [
@@ -67,15 +68,19 @@ export const Header = () => {
         )}
         <StyledTitle {...{ showMobileNav }}>
           <StyledHomeLink to='/homepage'>
-            <Logo scaleUp={showMobileNav} />
+            <HeaderLogo scaleUp={showMobileNav} />
           </StyledHomeLink>
         </StyledTitle>
         {mobile && showMobileNav && (
-          <StyledTagLine>Fashion, beauty &amp; lifestyle illustrator</StyledTagLine>
+          <StyledTagline>Fashion, beauty &amp; lifestyle illustrator</StyledTagline>
         )}
         {tabletUp && <Nav />}
       </StyledHeader>
-      {mobile && showMobileNav && <MobileNav />}
+      {mobile && <>
+        <StyledSpacer />
+        {showMobileNav && <MobileNav />}
+      </>
+      }
     </>
   )
 }

@@ -78,7 +78,7 @@ export const StyledHomeLink = styled(Link)`
   display: block;
 `
 
-export const StyledTagLine = styled.p`
+export const StyledTagline = styled.p`
   font-size: 12px;
   margin: 0;
 `
@@ -157,4 +157,7 @@ export const StyledMobileNavLi = styled.li`
   opacity: 0;
   padding-top: 40px;
   text-align: center;
+`
+export const StyledSpacer = styled.div`
+  height: 60px; 
 `

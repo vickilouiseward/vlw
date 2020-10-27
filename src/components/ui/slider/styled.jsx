@@ -28,15 +28,18 @@ export const StyledSliderTitle = styled.section`
   padding-top: 64px;
 `
 
-export const StyledSlide = styled.div`
+export const StyledSwipeSlide = styled.div`
   height: 100%;
+  opacity: ${({ active }) => active ? 1 : 0};
   position: absolute;
   width: 100%;
   top: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: ${({ active }) => active ? '1s' : 0};
   user-select: none;
   will-change: transform;
 `
-export const StyledFadeSlide = styled.div`
+export const StyledAutoSlide = styled.div`
   height: 100%;
   opacity: ${({ active }) => active ? 1 : 0};
   position: absolute;

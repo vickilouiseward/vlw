@@ -11,9 +11,6 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // > section {
-  //   padding-bottom: 0
-  // }
 `
 
 export const StyledSection = styled.section`
@@ -27,14 +24,6 @@ export const StyledSection = styled.section`
   width: 100vw;
 `
 
-export const StyledLogo = styled.svg`
-  height: auto;
-  width: 500px;
-  ${respondTo.S`
-    width: 260px;
-  `}
-`
-
 export const StyledImg = styled(Img)`
   display: block;
   height: auto;
@@ -42,10 +31,4 @@ export const StyledImg = styled(Img)`
   ${respondTo.S`
     width: 90px;
   `}
-`
-
-export const StyledTagLine = styled.p`
-  color: ${midnight};
-  font-size: 18px;
-  margin: 0;
 `
