@@ -76,11 +76,12 @@ export const Header = () => {
         )}
         {tabletUp && <Nav />}
       </StyledHeader>
-      {mobile && <>
-        <StyledSpacer />
-        {showMobileNav && <MobileNav />}
-      </>
-      }
+      {mobile && (
+        <>
+          <StyledSpacer />
+          {showMobileNav && <MobileNav />}
+        </>
+      )}
     </>
   )
 }
