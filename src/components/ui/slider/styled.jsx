@@ -5,7 +5,6 @@ const { white, midnight } = colours
 
 export const StyledSliderContainer = styled.section`
   align-items: center;
-  background-color: ${midnight};
   display: flex;
   flex-direction: column;
   justify-content: center;

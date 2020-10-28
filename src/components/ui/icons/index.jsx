@@ -49,7 +49,7 @@ export const Tagline = ({ children }) => (
 export const MenuIcon = () => (
   <StyledMenuIcon>
     <title>Menu</title>
-    <g fill='#FFF' fillRule='nonzero' stroke='none' strokeWidth={1}>
+    <g fill='#fff' fillRule='nonzero' stroke='none' strokeWidth={1}>
       <path
         d='M7.08 16.489l16.262-.505 2.113.152c.597 0 .827-.958.046-1.11l-16.583.353-2.067-.302c-.965.353-.506 1.361.23 1.412zM27.61 25.55c.272.6 1.088.6 1.542 0 0-4.456-26.303-2.056-26.393-2.056-.635.342-.454 1.114.181 1.456.09 0 24.67-2.313 24.67.6z'
         transform='translate(-16 -16) translate(16 16)'

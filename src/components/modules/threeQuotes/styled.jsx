@@ -24,12 +24,7 @@ export const StyledSection = styled.section`
   `}
 `
 
-export const StyledQuoteSlide = styled.div`
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding-bottom: 96px;
+export const StyledSliderSection = styled.div`
+  height: 604px;
+  width: 100vw;
 `

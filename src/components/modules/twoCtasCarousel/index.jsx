@@ -6,6 +6,9 @@ import {
   StyledImg
 } from './styled'
 import { AutoSlider, CallToAction, Title } from '../..'
+import { colours } from '../../../styles'
+
+const { white } = colours
 
 export const TwoCtasCarousel = ({ title, ctas, images }) => (
   <StyledContainer>
@@ -18,7 +21,7 @@ export const TwoCtasCarousel = ({ title, ctas, images }) => (
       ))}
     </StyledCtaSection>
     <StyledSliderSection>
-      <AutoSlider speed={6000}>
+      <AutoSlider speed={6000} light>
         {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='' />)}
       </AutoSlider>
     </StyledSliderSection>

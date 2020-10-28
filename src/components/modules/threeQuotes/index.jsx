@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { StyledContainer, StyledSection, StyledQuoteSlide } from './styled'
-import { SwipeSlider, Title, Quote } from '../..'
+import { StyledContainer, StyledSection, StyledSliderSection } from './styled'
+import { AutoSlider, Title, Quote } from '../..'
 import { breakpoints } from '../../../utilities'
 import { colours } from '../../../styles'
 
@@ -15,13 +15,13 @@ export const ThreeQuotes = ({ title, quotes }) => {
       <Title level={2} color={midnight}>{title}</Title>
       <StyledSection>
         {tablet ? (
-          <SwipeSlider height='604px' light>
-            {quotes.map((quote, index) => (
-              <StyledQuoteSlide key={index}>
+          <StyledSliderSection>
+            <AutoSlider speed={6000} dots light>
+              {quotes.map((quote, index) => (
                 <Quote key={index} {...quote} />
-              </StyledQuoteSlide>
-            ))}
-          </SwipeSlider>
+              ))}
+            </AutoSlider>
+          </StyledSliderSection>
         ) : (
           quotes.map((quote, index) => (
             <Quote key={index} {...quote} />
