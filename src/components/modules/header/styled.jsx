@@ -15,18 +15,22 @@ const fadeInHeader = keyframes`
 `
 
 export const StyledHeader = styled.header`
+  animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
   align-items: center;
   background-color: ${black};
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   height: 80px;
+  margin-top: calc(100vh - 80px);
+  opacity: 0;
   width: 100vw;
   ${respondTo.S`
     height: 60px;
     justify-content: center;
+    margin-top: calc(100vh - 60px);
     padding: 0 16px;
-    position: fixed;
+    // position: fixed;
     text-align: center;
     z-index: 9;
     ${({ showMobileNav }) =>

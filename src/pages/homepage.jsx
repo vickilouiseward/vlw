@@ -2,16 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import {
-  // FiveLogos,
-  FourItemCarousel,
+  BodyWrapper,
   GlobalStyles,
   Header,
-  ImageCta,
+  SplashHero,
   Newsletter,
   ThreeImagesTextRight,
   ThreeQuotes,
-  // ThreeCards,
   TwoCtasCarousel
+  // FiveLogos,
+  // FourItemCarousel,
+  // ThreeCards,
 } from '../components'
 
 const Page = ({ data }) => (
@@ -23,64 +24,108 @@ const Page = ({ data }) => (
       <meta name='description' content='Vicki Louise Ward - fashion, beauty &amp; lifestyle illustrator' />
     </Helmet>
     <GlobalStyles />
-    <Header />
-    <TwoCtasCarousel
-      title="Let's work together"
-      ctas={[
-        {
-          title: 'Bespoke originals',
-          blurb:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
-          cta: 'Find out more',
-          link: '/'
-        },
-        {
-          title: 'Commercial commissions',
-          blurb:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
-          cta: 'Find out more',
-          link: '/'
-        }
-      ]}
+    <SplashHero
       images={[
-        data.lwt1.childImageSharp.fluid,
-        data.lwt2.childImageSharp.fluid,
-        data.lwt3.childImageSharp.fluid,
-        data.lwt4.childImageSharp.fluid,
-        data.lwt5.childImageSharp.fluid
+        [
+          data.portfolioLg1.childImageSharp.fluid,
+          {
+            ...data.portfolioSm1.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ], [
+          data.portfolioLg2.childImageSharp.fluid,
+          {
+            ...data.portfolioSm2.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ], [
+          data.portfolioLg3.childImageSharp.fluid,
+          {
+            ...data.portfolioSm3.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ], [
+          data.portfolioLg4.childImageSharp.fluid,
+          {
+            ...data.portfolioSm4.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ], [
+          data.portfolioLg5.childImageSharp.fluid,
+          {
+            ...data.portfolioSm5.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ], [
+          data.portfolioLg6.childImageSharp.fluid,
+          {
+            ...data.portfolioSm6.childImageSharp.fluid,
+            media: '(max-width: 600px)'
+          }
+        ]
       ]}
+      cta='Explore protfolio'
+      link='/portfolio'
     />
-    <ThreeQuotes
-      title='Testimonials'
-      quotes={[
-        {
-          standfirst: 'Vicki is my go-to when my clients request illustrative art commissions. She is amazing to work with, her passion and enthusiasm for what she does is second to none, and her processes and structure mean my clients are always happy with the finished piece.',
-          text: 'No task is too big or small for Vicki, she has been commissioned for a wide range of digital & physical works for my clients. She has a great personality and this shows in the quality of her work. Would recommend for all your creative art needs.',
-          cite: {
-            name: 'Emil Ingleton',
-            extra: 'Founder & CEO - Evolve Chelsea'
+    <BodyWrapper>
+      <Header />
+      <TwoCtasCarousel
+        title="Let's work together"
+        ctas={[
+          {
+            title: 'Bespoke originals',
+            blurb:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
+            cta: 'Find out more',
+            link: '/'
+          },
+          {
+            title: 'Commercial commissions',
+            blurb:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
+            cta: 'Find out more',
+            link: '/'
           }
-        },
-        {
-          callout: true,
-          standfirst: 'Such a pleasure to work with Vicki. We wanted something completely bespoke for a family business.',
-          text: 'She understood our brief and delivered an incredible piece of artwork better than we could ever imagined. She is incredibly talented and always goes above and beyond. Highly recommend.',
-          cite: {
-            name: 'Andy Wilson',
-            extra: 'Private client'
+        ]}
+        images={[
+          data.lwt1.childImageSharp.fluid,
+          data.lwt2.childImageSharp.fluid,
+          data.lwt3.childImageSharp.fluid,
+          data.lwt4.childImageSharp.fluid,
+          data.lwt5.childImageSharp.fluid
+        ]}
+      />
+      <ThreeQuotes
+        title='Testimonials'
+        quotes={[
+          {
+            standfirst: 'Vicki is my go-to when my clients request illustrative art commissions. She is amazing to work with, her passion and enthusiasm for what she does is second to none, and her processes and structure mean my clients are always happy with the finished piece.',
+            text: 'No task is too big or small for Vicki, she has been commissioned for a wide range of digital & physical works for my clients. She has a great personality and this shows in the quality of her work. Would recommend for all your creative art needs.',
+            cite: {
+              name: 'Emil Ingleton',
+              extra: 'Founder & CEO - Evolve Chelsea'
+            }
+          },
+          {
+            callout: true,
+            standfirst: 'Such a pleasure to work with Vicki. We wanted something completely bespoke for a family business.',
+            text: 'She understood our brief and delivered an incredible piece of artwork better than we could ever imagined. She is incredibly talented and always goes above and beyond. Highly recommend.',
+            cite: {
+              name: 'Andy Wilson',
+              extra: 'Private client'
+            }
+          },
+          {
+            standfirst: 'It was an absolute pleasure working with Vicki from start to finish. With an innate energy and creativity she took our brief and brought it to life with graceful watercolours, in super-fast time to meet out deadline.',
+            text: 'Having worked in both retail and publishing Vicki understands how to create illustrations that translate seamlessly across all media platforms, from print to online and social.  This was the visual engagement we wanted to make our products get attention in a current and relevant way. Plus Vicki is a truly lovely and warm person who is a delight in every way.',
+            cite: {
+              name: 'Cara Ward',
+              extra: 'Co-founder & director - Pure PR '
+            }
           }
-        },
-        {
-          standfirst: 'It was an absolute pleasure working with Vicki from start to finish. With an innate energy and creativity she took our brief and brought it to life with graceful watercolours, in super-fast time to meet out deadline.',
-          text: 'Having worked in both retail and publishing Vicki understands how to create illustrations that translate seamlessly across all media platforms, from print to online and social.  This was the visual engagement we wanted to make our products get attention in a current and relevant way. Plus Vicki is a truly lovely and warm person who is a delight in every way.',
-          cite: {
-            name: 'Cara Ward',
-            extra: 'Co-founder & director - Pure PR '
-          }
-        }
-      ]}
-    />
-    <FourItemCarousel
+        ]}
+      />
+      {/* <FourItemCarousel
       title='Press'
       items={[{
         image: data.press1.childImageSharp.fluid,
@@ -115,8 +160,8 @@ const Page = ({ data }) => (
             'Ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non.'
         }
       }]}
-    />
-    {/* <ThreeCards
+    /> */}
+      {/* <ThreeCards
       title='Shop off the rack'
       cards={[
         {
@@ -136,7 +181,7 @@ const Page = ({ data }) => (
         }
       ]}
     /> */}
-    {/* <FiveLogos
+      {/* <FiveLogos
       logos={[
         {
           image: data.portfolio1.childImageSharp.fixed,
@@ -160,44 +205,118 @@ const Page = ({ data }) => (
         }
       ]}
     /> */}
-    <ThreeImagesTextRight
-      images={[
-        {
-          image: data.ms1.childImageSharp.fluid,
-          alt: ''
-        },
-        {
-          image: data.ms2.childImageSharp.fluid,
-          alt: ''
-        },
-        {
-          image: data.ms3.childImageSharp.fluid,
-          alt: ''
-        }
-      ]}
-      title='My Story'
-      text='Vicki Louise Ward is a London based fashion and lifestyle illustrator. She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.'
-    />
-    <Newsletter
-      title='Newsletter'
-      text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
-    />
-    <ImageCta
-      image={[
-        data.portfolioMainLg.childImageSharp.fluid,
-        {
-          ...data.portfolioMainSm.childImageSharp.fluid,
-          media: '(max-width: 600px)'
-        }
-      ]}
-      cta='Explore protfolio'
-      link='/portfolio'
-    />
+      <ThreeImagesTextRight
+        images={[
+          {
+            image: data.ms1.childImageSharp.fluid,
+            alt: ''
+          },
+          {
+            image: data.ms2.childImageSharp.fluid,
+            alt: ''
+          },
+          {
+            image: data.ms3.childImageSharp.fluid,
+            alt: ''
+          }
+        ]}
+        title='My Story'
+        text='Vicki Louise Ward is a London based fashion and lifestyle illustrator. She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.'
+      />
+      <Newsletter
+        title='Newsletter'
+        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+      />
+    </BodyWrapper>
   </>
 )
 
 export const query = graphql`
   query {
+    portfolioLg1: file(relativePath: { eq: "01_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm1: file(relativePath: { eq: "01_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioLg2: file(relativePath: { eq: "02_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm2: file(relativePath: { eq: "02_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioLg3: file(relativePath: { eq: "03_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm3: file(relativePath: { eq: "03_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioLg4: file(relativePath: { eq: "04_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm4: file(relativePath: { eq: "04_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioLg5: file(relativePath: { eq: "05_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm5: file(relativePath: { eq: "05_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioLg6: file(relativePath: { eq: "06_bp4_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    portfolioSm6: file(relativePath: { eq: "06_bp1_portfolio.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     lwt1: file(relativePath: { eq: "lets_work_together_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
@@ -304,20 +423,6 @@ export const query = graphql`
       }
     }
     otr3: file(relativePath: { eq: "original_artwork.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioMainLg: file(relativePath: { eq: "portfolio_lg.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioMainSm: file(relativePath: { eq: "portfolio_sm.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

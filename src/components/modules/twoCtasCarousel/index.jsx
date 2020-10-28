@@ -6,9 +6,6 @@ import {
   StyledImg
 } from './styled'
 import { AutoSlider, CallToAction, Title } from '../..'
-import { colours } from '../../../styles'
-
-const { white } = colours
 
 export const TwoCtasCarousel = ({ title, ctas, images }) => (
   <StyledContainer>

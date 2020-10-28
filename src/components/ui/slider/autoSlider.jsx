@@ -4,12 +4,11 @@ import { StyledSlider, StyledAutoSlide, StyledSlideBulletList, StyledSlideBullet
 export const AutoSlider = ({ children, speed, dots, light }) => {
   const [slide, setSlide] = useState(0)
   const [slideInterval, setSlideInterval] = useState()
-  const nextSlide = () => setSlide((slide + 1) % children.length)
+  const start = () => setSlideInterval(setInterval(() => setSlide((slide + 1) % children.length), speed))
   const cancel = () => slideInterval && clearInterval(slideInterval)
 
   useEffect(() => {
-    setSlideInterval(setInterval(nextSlide, speed))
-
+    start()
     return cancel
   }, [children.length, slide])
 
@@ -20,7 +19,7 @@ export const AutoSlider = ({ children, speed, dots, light }) => {
           key={index}
           active={index === slide}
           onPointerOver={cancel}
-          onPointerOut={nextSlide}
+          onPointerOut={start}
         >
           {item}
         </StyledAutoSlide>

@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
+const { midnight } = colours
+
 export const StyledContainer = styled.section`
+  background-color: ${midnight};
   display: flex;
   flex-direction: row;
   height: 850px;

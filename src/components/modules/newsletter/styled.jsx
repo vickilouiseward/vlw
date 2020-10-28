@@ -1,14 +1,16 @@
 import styled from 'styled-components'
+import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
+
+const { midnight } = colours
 
 export const StyledContainer = styled.section`
   align-items: center;
+  background-color: ${midnight};
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 900px;
   padding: 64px 0;
   text-align: center;
   width: 100%;
@@ -29,6 +31,8 @@ export const StyledFormSection = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 900px;
   padding-bottom: 32px;
   text-align: left;
   width: 100%;

@@ -78,7 +78,7 @@ export const Header = () => {
       </StyledHeader>
       {mobile && (
         <>
-          <StyledSpacer />
+          {/* <StyledSpacer /> */}
           {showMobileNav && <MobileNav />}
         </>
       )}
