@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import {
@@ -19,7 +19,7 @@ const Page = ({ data }) => {
   const introAnimation = typeof window !== 'undefined' && !window.sessionStorage.getItem('introComplete')
 
   useEffect(() => {
-    // window.sessionStorage.setItem('introComplete', 1)
+    window.sessionStorage.setItem('introComplete', 1)
   }, [])
 
   return (
