@@ -50,14 +50,14 @@ export const MobileNav = () => (
   </StyledMobileNav>
 )
 
-export const Header = () => {
+export const Header = ({ introAnimation }) => {
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const tabletUp = useMediaQuery({ minWidth: breakpoints.S + 1 })
   const [showMobileNav, toggleMobileNav] = useState(false)
 
   return (
     <>
-      <StyledHeader {...{ showMobileNav }}>
+      <StyledHeader {...{ introAnimation, showMobileNav }}>
         {mobile && (
           <StyledMenuButton
             onClick={() => toggleMobileNav(!showMobileNav)}

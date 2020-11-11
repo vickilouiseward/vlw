@@ -2,13 +2,14 @@ import React from 'react'
 import {
   StyledMenuIcon,
   StyledCloseIcon,
+  StyledInstaIcon,
   StyledLogo,
   StyledHeaderLogo,
   StyledTagline
 } from './styled'
 import { colours } from '../../../styles'
 
-const { black, white } = colours
+const { black, white, midnight } = colours
 
 export const HeaderLogo = ({ scaleUp }) => (
   <StyledHeaderLogo viewBox='0 0 390 100' {...{ scaleUp }}>
@@ -49,7 +50,7 @@ export const Tagline = ({ children }) => (
 export const MenuIcon = () => (
   <StyledMenuIcon>
     <title>Menu</title>
-    <g fill='#fff' fillRule='nonzero' stroke='none' strokeWidth={1}>
+    <g fill={white} fillRule='nonzero' stroke='none' strokeWidth={1}>
       <path
         d='M7.08 16.489l16.262-.505 2.113.152c.597 0 .827-.958.046-1.11l-16.583.353-2.067-.302c-.965.353-.506 1.361.23 1.412zM27.61 25.55c.272.6 1.088.6 1.542 0 0-4.456-26.303-2.056-26.393-2.056-.635.342-.454 1.114.181 1.456.09 0 24.67-2.313 24.67.6z'
         transform='translate(-16 -16) translate(16 16)'
@@ -68,11 +69,22 @@ export const CloseIcon = () => (
     <path
       d='M1.856 32.416c.192 0 .288-.16.288-.352a.611.611 0 00-.224-.448c-.128-.064-.64 0-.736-.096-.448-.448-.672-1.056-.672-1.792 0-4.736 8.128-14.72 10.048-17.056 1.632 6.016 3.744 12.576 5.856 15.552.064.064.192.224.352.224.032 0 .096 0 .128-.032a.279.279 0 00.192-.256c0-.064-.032-.128-.096-.224-.256-.352-.704-.736-.992-1.184-1.888-3.328-3.776-9.024-5.184-14.336 3.52-4.32 7.392-8.64 10.24-11.68.128-.16.224-.224.224-.224s.032 0 .032.032c0 .09-.531.861-1.1 1.663l-.264.37c-.569.795-1.1 1.519-1.1 1.519a.243.243 0 00-.064.128c0 .064.032.128.096.16a.243.243 0 00.128.064.176.176 0 00.16-.096c.288-.704 2.592-2.784 2.592-3.968l-.032-.192h0c-.032-.096-.128-.16-.256-.16-.192 0-.48.128-.704.384-2.816 3.008-6.688 6.976-10.176 11.2C9.184 6.976 8.48 3.392 8.48 1.824c0-.288 0-.512.064-.672.032-.096.192-.416.192-.672V.416c0-.224-.16-.416-.608-.416h-.192c-.256.064-.32.192-.32.288 0 .064.032.128.032.16s1.056 5.248 2.72 11.456C8.224 14.496 0 24.256 0 29.504c0 .96.288 1.76.896 2.336.448.416.768.576.96.576z'
       transform='translate(-176 -61) translate(177 62)'
-      fill='#FFF'
+      fill={white}
       fillRule='nonzero'
-      stroke='#FFF'
+      stroke={white}
       strokeWidth={0.5}
       opacity={0.800455729}
     />
   </StyledCloseIcon>
+)
+
+export const InstaIcon = () => (
+  <StyledInstaIcon viewBox='0 0 20 20'>
+    <title>Instagram @vickilouiseward</title>
+    <g fill={midnight} fillRule='nonzero'>
+      <path d='M17.033 0H2.967A2.975 2.975 0 000 2.967v14.066A2.975 2.975 0 002.967 20h14.066A2.975 2.975 0 0020 17.033V2.967A2.975 2.975 0 0017.033 0zM19 17.596c0 .775-.629 1.404-1.404 1.404H2.404A1.404 1.404 0 011 17.596V2.404C1 1.629 1.629 1 2.404 1h15.192C18.371 1 19 1.629 19 2.404v15.192z' />
+      <path d='M10 5a5 5 0 100 10 5 5 0 000-10zm0 9a4 4 0 110-8 4 4 0 010 8z' />
+      <circle cx={15.7931034} cy={4.44827586} r={1} />
+    </g>
+  </StyledInstaIcon>
 )

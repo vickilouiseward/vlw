@@ -16,7 +16,7 @@ export const ThreeQuotes = ({ title, quotes }) => {
       <StyledSection>
         {tablet ? (
           <StyledSliderSection>
-            <AutoSlider speed={6000} dots light>
+            <AutoSlider speed={6000} dots light pauseable>
               {quotes.map((quote, index) => (
                 <Quote key={index} {...quote} />
               ))}

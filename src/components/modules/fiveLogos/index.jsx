@@ -14,7 +14,7 @@ export const FiveLogos = ({ logos }) => {
     <StyledContainer>
       <StyledSection>
         {tablet ? (
-          <AutoSlider speed={4000} bgcolor={midnight}>
+          <AutoSlider speed={4000} bgcolor={midnight} pauseable>
             {logos.map(({ image, alt }, index) => (
               <StyledImg key={index} fadeIn={false} fixed={image} {...{ alt }} />
             ))}

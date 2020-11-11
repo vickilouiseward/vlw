@@ -3,10 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 import {
   StyledContainer,
   StyledSection,
-  StyledImg
+  StyledImg,
+  StyledSocialSection,
+  StyledLink
 } from './styled'
 import { Newsletter } from '..'
-import { Logo, Tagline } from '../..'
+import { Logo, Tagline, InstaIcon } from '../..'
 
 export const ComingSoon = () => {
   const data = useStaticQuery(graphql`
@@ -26,6 +28,16 @@ export const ComingSoon = () => {
         <StyledImg fadeIn={false} fluid={data.jimmychoo.childImageSharp.fluid} alt='Jimmy Choo shoe illustration' />
         <Logo />
         <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
+        <StyledSocialSection>
+          <InstaIcon />
+          Follow me on Instagram
+          <StyledLink
+            href='https://www.instagram.com/vickilouiseward'
+            title='Instagram @vickilouiseward '
+          >
+            @vickilouiseward
+          </StyledLink>
+        </StyledSocialSection>
       </StyledSection>
       <Newsletter
         title='Coming soon!'

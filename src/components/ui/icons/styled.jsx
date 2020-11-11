@@ -30,6 +30,12 @@ export const StyledHeaderLogo = styled.svg`
   `}
 `
 
+export const StyledInstaIcon = styled.svg`
+  height: 20px;
+  padding: 0 8px 2px;
+  width: 20px;
+`
+
 export const StyledLogo = styled.svg`
   height: auto;
   width: 500px;

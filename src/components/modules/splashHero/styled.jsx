@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
@@ -18,7 +18,7 @@ export const StyledContainer = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
+  height: 100vh;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -26,19 +26,23 @@ export const StyledContainer = styled.section`
   z-index: -1;
   ${respondTo.S`
     justify-content: flex-end;
-    padding: 0 24px 40px;
-    height: calc(100vh - 60px);
+    padding: 0 24px 100px;
+    height: 100vh;
   `}
 `
 
 export const StyledSliderSection = styled.section`
-  animation: ${fadeIn} 2s ease-in-out 2s forwards;
   height: 100%;
-  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 0;
+  ${({ introAnimation }) =>
+    introAnimation &&
+    css`
+      animation: ${fadeIn} 2s ease-in-out 2s forwards;
+      opacity: 0;
+    `}
 `
 
 export const StyledImg = styled(Img)`
@@ -52,18 +56,33 @@ export const StyledImg = styled(Img)`
 `
 
 export const StyledSection = styled.section`
-  animation: ${fadeIn} 2s ease-in-out forwards;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0;
   text-align: center;
   z-index: 1;
+  ${({ introAnimation }) =>
+    introAnimation &&
+    css`
+      animation: ${fadeIn} 2s ease-in-out forwards;
+      opacity: 0;
+    `}
 `
 
 export const StyledLinkSpacer = styled.div`
-  animation: ${fadeIn} 2s ease-in-out 4s forwards;
-  opacity: 0;
   padding-top: 24px;
+  ${({ introAnimation }) =>
+    introAnimation &&
+    css`
+      animation: ${fadeIn} 2s ease-in-out 4s forwards;
+      opacity: 0;
+    `}
+`
+
+export const StyledSpacer = styled.div`
+  margin-bottom: calc(100vh - 80px);
+  ${respondTo.S`
+    margin-bottom: calc(100vh - 60px);
+  `}
 `

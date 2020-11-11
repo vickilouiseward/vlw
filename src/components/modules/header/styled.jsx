@@ -15,24 +15,29 @@ const fadeInHeader = keyframes`
 `
 
 export const StyledHeader = styled.header`
-  animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
   align-items: center;
   background-color: ${black};
   box-sizing: border-box;
+  // box-shadow: 0px 8px 8px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: row;
   height: 80px;
-  margin-top: calc(100vh - 80px);
-  opacity: 0;
+  position: sticky;
+  top: 0;
   width: 100vw;
+  z-index: 9;
+  ${({ introAnimation }) =>
+    introAnimation &&
+    css`
+      animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
+      opacity: 0;
+    `}
   ${respondTo.S`
     height: 60px;
     justify-content: center;
-    margin-top: calc(100vh - 60px);
     padding: 0 16px;
     // position: fixed;
     text-align: center;
-    z-index: 9;
     ${({ showMobileNav }) =>
       showMobileNav &&
       css`

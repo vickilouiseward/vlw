@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { StyledContainer, StyledSliderSection, StyledImg, StyledSection, StyledLinkSpacer } from './styled'
-import { AutoSlider, Logo, Tagline, LinkButton } from '../..'
+import { StyledContainer, StyledSliderSection, StyledImg, StyledSection, StyledLinkSpacer, StyledSpacer } from './styled'
+import { AutoSlider, Logo, Tagline, LinkButton, ParallaxFade } from '../..'
 
-export const SplashHero = ({ images, cta, link }) => {
+export const SplashHero = ({ images, cta, link, introAnimation }) => {
   const [bgImage, setBgImage] = useState(0)
 
   useEffect(() => {
@@ -12,19 +12,25 @@ export const SplashHero = ({ images, cta, link }) => {
   }, [images.length, bgImage])
 
   return (
-    <StyledContainer>
-      <StyledSliderSection>
-        <AutoSlider speed={6000} light>
-          {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='Portfolio example' />)}
-        </AutoSlider>
-      </StyledSliderSection>
-      <StyledSection>
-        <Logo />
-        <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
-        <StyledLinkSpacer>
+    <>
+      <StyledContainer>
+        {/* <ParallaxFade> */}
+        <StyledSliderSection {...{ introAnimation }}>
+          <AutoSlider speed={6000} light>
+            {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='Portfolio example' />)}
+          </AutoSlider>
+        </StyledSliderSection>
+        <StyledSection {...{ introAnimation }}>
+          <Logo />
+          <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
+          {/* <StyledLinkSpacer {...{ fadeIn }}>
           <LinkButton {...{ cta, link }} />
-        </StyledLinkSpacer>
-      </StyledSection>
-    </StyledContainer>
+        </StyledLinkSpacer> */}
+        </StyledSection>
+        {/* </ParallaxFade> */}
+
+      </StyledContainer>
+      <StyledSpacer />
+    </>
   )
 }
