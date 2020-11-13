@@ -4,7 +4,7 @@ import axios from 'axios'
 import { StyledContainer, StyledSection, StyledFormSection } from './styled'
 import { Button, Title, Paragraph, Form, Input } from '../..'
 
-export const Newsletter = ({ title, text, light }) => {
+export const Newsletter = ({ title, text }) => {
   const [success, setSuccess] = useState(false)
   const { register, handleSubmit, errors } = useForm() // initialize the hook
   const onSubmit = async (formData) => {
@@ -17,7 +17,7 @@ export const Newsletter = ({ title, text, light }) => {
   }
 
   return (
-    <StyledContainer {...{ light }}>
+    <StyledContainer>
       <StyledSection>
         <Title level={2}>{title}</Title>
         <Paragraph>{text}</Paragraph>

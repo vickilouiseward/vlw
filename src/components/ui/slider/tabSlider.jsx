@@ -12,12 +12,12 @@ import { colours } from '../../../styles'
 
 const { cream } = colours
 
-export const TabSlider = ({ children, height, light, tabs, title }) => {
+export const TabSlider = ({ children, height, $light, tabs, title }) => {
   const [slide, setSlide] = useState(0)
 
   return (
     <StyledSliderContainer>
-      <StyledSlider {...{ height, light }}>
+      <StyledSlider {...{ height, $light }}>
         {children.map((item, index) => (
           <StyledTabSlide key={index} active={index === slide}>
             {item}

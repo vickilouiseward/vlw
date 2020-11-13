@@ -16,7 +16,7 @@ export const SplashHero = ({ images, cta, link, introAnimation }) => {
       <StyledContainer>
         {/* <ParallaxFade> */}
         <StyledSliderSection {...{ introAnimation }}>
-          <AutoSlider speed={6000} light>
+          <AutoSlider speed={6000} $light>
             {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='Portfolio example' />)}
           </AutoSlider>
         </StyledSliderSection>

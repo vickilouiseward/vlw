@@ -10,7 +10,7 @@ import {
 
 const clamp = (input, lower, upper) => Math.min(Math.max(input, lower), upper)
 
-export const SwipeSlider = ({ children, height, light }) => {
+export const SwipeSlider = ({ children, height, $light }) => {
   const ref = useRef()
   const [slide, setSlide] = useState(0)
   const gestureBinds = useGesture(
@@ -38,7 +38,7 @@ export const SwipeSlider = ({ children, height, light }) => {
 
   return (
     <StyledSliderContainer>
-      <StyledSlider {...{ ref, height, light }}>
+      <StyledSlider {...{ ref, height, $light }}>
         {children.map((item, index) => (
           <StyledSwipeSlide key={index} active={index === slide} {...gestureBinds()}>
             {item}
@@ -46,7 +46,7 @@ export const SwipeSlider = ({ children, height, light }) => {
         ))}
         <StyledSlideBulletList>
           {Children.map(children, (_, index) => (
-            <StyledSlideBullet active={slide === index} key={index} onClick={() => setSlide(index)} {...{ light }} />
+            <StyledSlideBullet active={slide === index} key={index} onClick={() => setSlide(index)} {...{ $light }} />
           ))}
         </StyledSlideBulletList>
       </StyledSlider>

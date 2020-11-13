@@ -13,7 +13,7 @@ export const StyledSliderContainer = styled.section`
 
 export const StyledSlider = styled.section`
   align-items: center;
-  background-color: ${({ light }) => light ? white : midnight};
+  background-color: ${({ $light }) => $light ? white : midnight};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,7 +89,7 @@ export const StyledSlideBulletList = styled.ul`
 `
 
 export const StyledSlideBullet = styled.li`
-  background-color: ${({ light }) => light ? midnight : white};
+  background-color: ${({ $light }) => $light ? midnight : white};
   border-radius: 50%;
   height: 8px;
   margin: 0 4px;

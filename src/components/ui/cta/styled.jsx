@@ -12,7 +12,7 @@ export const StyledCtaSection = styled.section`
   flex-direction: column;
   justify-content: center;
   padding-top: 72px;
-  max-width: 520px;
+  max-width: 460px;
   text-align: center;
   ${respondTo.S`
     padding-top: 64px;
@@ -40,9 +40,9 @@ export const StyledLink = styled.a`
 `
 
 export const StyledButton = styled.button`
-  background-color: ${cream};
-  border: 1px solid ${midnight};
-  color: ${midnight};
+  background-color: ${({ $outline }) => $outline ? 'transparent' : cream};
+  border: 1px solid ${cream};
+  color: ${({ $outline }) => $outline ? cream : midnight};
   font-family: Amiri;
   font-size: 14px;
   height: 38px;
@@ -58,9 +58,9 @@ export const StyledButton = styled.button`
 `
 
 export const StyledLinkButton = styled(Link)`
-  background-color: ${cream};
-  border: 1px solid ${midnight};
-  color: ${midnight};
+  background-color: ${({ $outline }) => $outline ? 'transparent' : cream};
+  border: 1px solid ${cream};
+  color: ${({ $outline }) => $outline ? cream : midnight};
   display: inline-block;
   font-family: Amiri;
   font-size: 14px;

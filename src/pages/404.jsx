@@ -13,7 +13,7 @@ const StyledSection = styled.section`
 
 const PageNotFound = ({ data }) => (
   <>
-    <GlobalStyles lightmode />
+    <GlobalStyles $lightmode />
     <Header />
     <StyledSection>
       <Title level={2}>Page not found.</Title>

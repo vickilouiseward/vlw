@@ -75,7 +75,7 @@ const Page = ({ data }) => {
         link='/portfolio'
         {...{ introAnimation }}
       />
-      <BodyWrapper>
+      <BodyWrapper {...{ introAnimation }}>
         <Header {...{ introAnimation }} />
         <TwoCtasCarousel
           title="Let's work together"
