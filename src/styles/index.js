@@ -9,3 +9,5 @@ export const colours = {
   pastelBlue: '#e3e8ee',
   royalBlue: '#05192e'
 }
+
+export const dropShadow = '0px 12px 24px 0px rgba(0,0,0,0.24)'

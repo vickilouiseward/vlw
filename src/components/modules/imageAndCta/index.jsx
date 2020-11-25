@@ -1,7 +1,8 @@
 import React from 'react'
 import {
   StyledContainer,
-  StyledCtaSection,
+  StyledCtaSectionRight,
+  StyledCtaSectionLeft,
   StyledImageSectionRight,
   StyledImageSectionLeft,
   StyledImgLg,
@@ -9,26 +10,26 @@ import {
 } from './styled'
 import { CallToAction } from '../..'
 
-export const ImageCtaLeft = ({ cta, images }) => (
-  <StyledContainer>
-    <StyledCtaSection>
-      <CallToAction level={3} {...cta} $outline />
-    </StyledCtaSection>
+export const ImageCtaLeft = ({ cta, images, $light }) => (
+  <StyledContainer {...{ $light }}>
+    <StyledCtaSectionLeft>
+      <CallToAction level={3} {...{ ...cta, $light }} />
+    </StyledCtaSectionLeft>
     <StyledImageSectionRight>
-      <StyledImgLg fadeIn={false} fluid={images[0]} alt='' />
-      <StyledImgSm fadeIn={false} fluid={images[1]} alt='' />
+      <StyledImgLg fadeIn={false} fluid={images[0]} alt={cta.title} />
+      <StyledImgSm fadeIn={false} fluid={images[1]} alt={cta.title} />
     </StyledImageSectionRight>
   </StyledContainer>
 )
 
-export const ImageCtaRight = ({ cta, images }) => (
-  <StyledContainer>
+export const ImageCtaRight = ({ cta, images, $light }) => (
+  <StyledContainer {...{ $light }}>
     <StyledImageSectionLeft>
-      <StyledImgSm fadeIn={false} fluid={images[1]} alt='' />
-      <StyledImgLg fadeIn={false} fluid={images[0]} alt='' />
+      <StyledImgSm fadeIn={false} fluid={images[1]} alt={cta.title} />
+      <StyledImgLg fadeIn={false} fluid={images[0]} alt={cta.title} />
     </StyledImageSectionLeft>
-    <StyledCtaSection>
-      <CallToAction level={3} {...cta} />
-    </StyledCtaSection>
+    <StyledCtaSectionRight>
+      <CallToAction level={3} {...{ ...cta, $light }} />
+    </StyledCtaSectionRight>
   </StyledContainer>
 )

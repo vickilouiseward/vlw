@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { GlobalStyles, Header } from '../components'
+import { GlobalStyles, SiteHeader } from '../components'
 import { Title, LinkButton } from '../components/ui'
 
 const StyledSection = styled.section`
@@ -14,7 +14,7 @@ const StyledSection = styled.section`
 const PageNotFound = ({ data }) => (
   <>
     <GlobalStyles $lightmode />
-    <Header />
+    <SiteHeader />
     <StyledSection>
       <Title level={2}>Page not found.</Title>
       <LinkButton cta='Return to home' link='/' />

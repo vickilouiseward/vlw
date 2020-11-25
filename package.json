@@ -23,6 +23,8 @@
     "tls": false
   },
   "dependencies": {
+    "@formium/client": "^0.1.2",
+    "@formium/react": "^0.1.1",
     "axios": "^0.21.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.66",
@@ -31,6 +33,7 @@
     "gatsby-plugin-sharp": "^2.6.39",
     "gatsby-plugin-styled-components": "^3.3.12",
     "gatsby-source-filesystem": "^2.3.33",
+    "gatsby-source-formium": "^0.1.1",
     "gatsby-transformer-sharp": "^2.5.17",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

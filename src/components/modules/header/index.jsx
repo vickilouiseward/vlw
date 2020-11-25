@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import {
-  StyledHeader,
+  StyledSiteHeader,
   StyledMenuButton,
   StyledTitle,
   StyledHomeLink,
@@ -13,9 +13,18 @@ import {
   StyledMobileNav,
   StyledMobileNavUl,
   StyledMobileNavLi,
-  StyledSpacer
+  StyledContainer,
+  StyledSection,
+  StyledImg
 } from './styled'
-import { CloseIcon, MenuIcon, HeaderLogo } from '../..'
+import {
+  CloseIcon,
+  MenuIcon,
+  HeaderLogo,
+  Title,
+  Paragraph,
+  Parallax
+} from '../..'
 import { breakpoints } from '../../../utilities'
 
 const routes = [
@@ -50,14 +59,14 @@ export const MobileNav = () => (
   </StyledMobileNav>
 )
 
-export const Header = ({ introAnimation }) => {
+export const SiteHeader = ({ introAnimation }) => {
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const tabletUp = useMediaQuery({ minWidth: breakpoints.S + 1 })
   const [showMobileNav, toggleMobileNav] = useState(false)
 
   return (
     <>
-      <StyledHeader {...{ introAnimation, showMobileNav }}>
+      <StyledSiteHeader {...{ introAnimation, showMobileNav }}>
         {mobile && (
           <StyledMenuButton
             onClick={() => toggleMobileNav(!showMobileNav)}
@@ -75,7 +84,7 @@ export const Header = ({ introAnimation }) => {
           <StyledTagline>Fashion, beauty &amp; lifestyle illustrator</StyledTagline>
         )}
         {tabletUp && <Nav />}
-      </StyledHeader>
+      </StyledSiteHeader>
       {mobile && (
         <>
           {/* <StyledSpacer /> */}
@@ -85,3 +94,19 @@ export const Header = ({ introAnimation }) => {
     </>
   )
 }
+
+export const PageHeader = ({ title, text, image, color, bgcolor }) => (
+  <>
+    {image && (
+      <Parallax height='380px'>
+        <StyledImg fadeIn={false} fluid={image} alt={title} />
+      </Parallax>
+    )}
+    <StyledContainer {...{ bgcolor }}>
+      <StyledSection>
+        <Title level={2} {...{ color }}>{title}</Title>
+        {text && <Paragraph>{text}</Paragraph>}
+      </StyledSection>
+    </StyledContainer>
+  </>
+)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { GlobalStyles, Header, ComingSoon } from '../components'
+import { GlobalStyles, SiteHeader, ComingSoon } from '../components'
 
 const Page = () => (
   <>
@@ -11,7 +11,7 @@ const Page = () => (
       <meta name='description' content='Coming soon, Vicki Louise Ward - fashion, beauty &amp; lifestyle illustrator' />
     </Helmet>
     <GlobalStyles />
-    <Header />
+    <SiteHeader />
     <ComingSoon />
   </>
 )

@@ -26,6 +26,12 @@ export const StyledSection = styled.section`
 `
 
 export const StyledFormSection = styled.section`
+  width: 100%;
+  > form {
+    width: 100%;
+  }
+`
+export const PageWrapper = styled.section`
   align-items: flex-end;
   box-sizing: border-box;
   display: flex;
@@ -33,7 +39,6 @@ export const StyledFormSection = styled.section`
   justify-content: space-evenly;
   margin: 0 auto;
   max-width: 900px;
-  padding-bottom: 32px;
   text-align: left;
   width: 100%;
   ${respondTo.M`

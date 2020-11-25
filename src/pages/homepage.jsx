@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import {
   BodyWrapper,
   GlobalStyles,
-  Header,
+  SiteHeader,
   SplashHero,
   Newsletter,
   ThreeImagesTextRight,
@@ -75,8 +75,9 @@ const Page = ({ data }) => {
         link='/portfolio'
         {...{ introAnimation }}
       />
+      {console.log(data.lwt1.childImageSharp.fluid)}
       <BodyWrapper {...{ introAnimation }}>
-        <Header {...{ introAnimation }} />
+        <SiteHeader {...{ introAnimation }} />
         <TwoCtasCarousel
           title="Let's work together"
           ctas={[
@@ -85,14 +86,15 @@ const Page = ({ data }) => {
               blurb:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
               cta: 'Find out more',
-              link: '/'
+              link: '/lets-work-together/bespoke-originals'
             },
             {
               title: 'Commercial commissions',
               blurb:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
-              cta: 'Find out more',
-              link: '/'
+              cta: 'Coming soon'
+              // cta: 'Find out more',
+              // link: '/'
             }
           ]}
           images={[
@@ -138,7 +140,7 @@ const Page = ({ data }) => {
       items={[{
         image: data.press1.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo1.childImageSharp.fixed,
+          image: data.pressLogo1.childImageSharp.fixed,
           title: 'Currently exhibiting at',
           text:
             'Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus.'
@@ -146,7 +148,7 @@ const Page = ({ data }) => {
       }, {
         image: data.press1.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo2.childImageSharp.fixed,
+          image: data.pressLogo2.childImageSharp.fixed,
           title: 'Finalist S/S Awards 2020',
           text:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
@@ -154,7 +156,7 @@ const Page = ({ data }) => {
       }, {
         image: data.press3.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo3.childImageSharp.fixed,
+          image: data.pressLogo3.childImageSharp.fixed,
           title: 'Previous exhibitions',
           text:
             'Consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
@@ -162,7 +164,7 @@ const Page = ({ data }) => {
       }, {
         image: data.press4.childImageSharp.fluid,
         tab: {
-          icon: data.pressLogo4.childImageSharp.fixed,
+          image: data.pressLogo4.childImageSharp.fixed,
           title: '100 anniversary winner',
           text:
             'Ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non.'
@@ -242,252 +244,252 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
-    portfolioLg1: file(relativePath: { eq: "01_bp4_portfolio.png" }) {
+    portfolioLg1: file(relativePath: { eq: "homepage/01_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm1: file(relativePath: { eq: "01_bp1_portfolio.png" }) {
+    portfolioSm1: file(relativePath: { eq: "homepage/01_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioLg2: file(relativePath: { eq: "02_bp4_portfolio.png" }) {
+    portfolioLg2: file(relativePath: { eq: "homepage/02_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm2: file(relativePath: { eq: "02_bp1_portfolio.png" }) {
+    portfolioSm2: file(relativePath: { eq: "homepage/02_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioLg3: file(relativePath: { eq: "03_bp4_portfolio.png" }) {
+    portfolioLg3: file(relativePath: { eq: "homepage/03_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm3: file(relativePath: { eq: "03_bp1_portfolio.png" }) {
+    portfolioSm3: file(relativePath: { eq: "homepage/03_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioLg4: file(relativePath: { eq: "04_bp4_portfolio.png" }) {
+    portfolioLg4: file(relativePath: { eq: "homepage/04_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm4: file(relativePath: { eq: "04_bp1_portfolio.png" }) {
+    portfolioSm4: file(relativePath: { eq: "homepage/04_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioLg5: file(relativePath: { eq: "05_bp4_portfolio.png" }) {
+    portfolioLg5: file(relativePath: { eq: "homepage/05_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm5: file(relativePath: { eq: "05_bp1_portfolio.png" }) {
+    portfolioSm5: file(relativePath: { eq: "homepage/05_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioLg6: file(relativePath: { eq: "06_bp4_portfolio.png" }) {
+    portfolioLg6: file(relativePath: { eq: "homepage/06_bp4_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    portfolioSm6: file(relativePath: { eq: "06_bp1_portfolio.png" }) {
+    portfolioSm6: file(relativePath: { eq: "homepage/06_bp1_portfolio.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt1: file(relativePath: { eq: "lets_work_together_1.jpg" }) {
+    lwt1: file(relativePath: { eq: "homepage/lets_work_together_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt2: file(relativePath: { eq: "lets_work_together_2.jpg" }) {
+    lwt2: file(relativePath: { eq: "homepage/lets_work_together_2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt3: file(relativePath: { eq: "lets_work_together_3.jpg" }) {
+    lwt3: file(relativePath: { eq: "homepage/lets_work_together_3.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt4: file(relativePath: { eq: "lets_work_together_4.jpg" }) {
+    lwt4: file(relativePath: { eq: "homepage/lets_work_together_4.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt5: file(relativePath: { eq: "lets_work_together_5.jpg" }) {
+    lwt5: file(relativePath: { eq: "homepage/lets_work_together_5.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    press1: file(relativePath: { eq: "press_1.jpg" }) {
+    press1: file(relativePath: { eq: "homepage/press_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    press2: file(relativePath: { eq: "press_1.jpg" }) {
+    press2: file(relativePath: { eq: "homepage/press_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    press3: file(relativePath: { eq: "press_3.jpg" }) {
+    press3: file(relativePath: { eq: "homepage/press_3.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    press4: file(relativePath: { eq: "press_4.jpg" }) {
+    press4: file(relativePath: { eq: "homepage/press_4.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    pressLogo1: file(relativePath: { eq: "acid_gallery_logo.png" }) {
+    pressLogo1: file(relativePath: { eq: "homepage/acid_gallery_logo.png" }) {
       childImageSharp {
         fixed(height: 72) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
-    pressLogo2: file(relativePath: { eq: "fida_logo.png" }) {
+    pressLogo2: file(relativePath: { eq: "homepage/fida_logo.png" }) {
       childImageSharp {
         fixed(height: 72) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
-    pressLogo3: file(relativePath: { eq: "cluster_logo.png" }) {
+    pressLogo3: file(relativePath: { eq: "homepage/cluster_logo.png" }) {
       childImageSharp {
         fixed(height: 72) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
-    pressLogo4: file(relativePath: { eq: "stylist_logo.png" }) {
+    pressLogo4: file(relativePath: { eq: "homepage/stylist_logo.png" }) {
       childImageSharp {
         fixed(height: 72) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }
-    otr1: file(relativePath: { eq: "prints.png" }) {
+    otr1: file(relativePath: { eq: "homepage/prints.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    otr2: file(relativePath: { eq: "limited_edition.png" }) {
+    otr2: file(relativePath: { eq: "homepage/limited_edition.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    otr3: file(relativePath: { eq: "original_artwork.png" }) {
+    otr3: file(relativePath: { eq: "homepage/original_artwork.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    # portfolio1: file(relativePath: { eq: "skin_ceuticals.png" }) {
+    # portfolio1: file(relativePath: { eq: "homepage/skin_ceuticals.png" }) {
     #   childImageSharp {
     #     fixed(height: 72) {
     #       ...GatsbyImageSharpFixed_withWebp_noBase64
     #     }
     #   }
     # }
-    # portfolio2: file(relativePath: { eq: "nap.png" }) {
+    # portfolio2: file(relativePath: { eq: "homepage/nap.png" }) {
     #   childImageSharp {
     #     fixed(height: 72) {
     #       ...GatsbyImageSharpFixed_withWebp_noBase64
     #     }
     #   }
     # }
-    # portfolio3: file(relativePath: { eq: "by_sarah.png" }) {
+    # portfolio3: file(relativePath: { eq: "homepage/by_sarah.png" }) {
     #   childImageSharp {
     #     fixed(height: 72) {
     #       ...GatsbyImageSharpFixed_withWebp_noBase64
     #     }
     #   }
     # }
-    # portfolio4: file(relativePath: { eq: "perricone_md.png" }) {
+    # portfolio4: file(relativePath: { eq: "homepage/perricone_md.png" }) {
     #   childImageSharp {
     #     fixed(height: 72) {
     #       ...GatsbyImageSharpFixed_withWebp_noBase64
     #     }
     #   }
     # }
-    # portfolio5: file(relativePath: { eq: "loreal.png" }) {
+    # portfolio5: file(relativePath: { eq: "homepage/loreal.png" }) {
     #   childImageSharp {
     #     fixed(height: 72) {
     #       ...GatsbyImageSharpFixed_withWebp_noBase64
     #     }
     #   }
     # }
-    ms1: file(relativePath: { eq: "my_story_1.jpg" }) {
+    ms1: file(relativePath: { eq: "homepage/my_story_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    ms2: file(relativePath: { eq: "my_story_2.jpg" }) {
+    ms2: file(relativePath: { eq: "homepage/my_story_2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    ms3: file(relativePath: { eq: "my_story_3.jpg" }) {
+    ms3: file(relativePath: { eq: "homepage/my_story_3.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

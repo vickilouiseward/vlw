@@ -1,9 +1,10 @@
 import styled, { css, keyframes } from 'styled-components'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { black, cream } = colours
+const { black, cream, midnight } = colours
 
 const fadeInHeader = keyframes`
   from {
@@ -14,7 +15,7 @@ const fadeInHeader = keyframes`
   }
 `
 
-export const StyledHeader = styled.header`
+export const StyledSiteHeader = styled.header`
   align-items: center;
   background-color: ${black};
   box-sizing: border-box;
@@ -169,4 +170,34 @@ export const StyledMobileNavLi = styled.li`
 `
 export const StyledSpacer = styled.div`
   height: 60px; 
+`
+
+export const StyledContainer = styled.section`
+  align-items: center;
+  background-color: ${({ bgcolor }) => bgcolor || midnight};
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 0;
+  text-align: center;
+  width: 100%;
+  ${respondTo.M`
+    padding: 64px 32px;
+  `}
+`
+
+export const StyledSection = styled.section`
+  max-width: 800px;
+  width: 100%;
+`
+
+export const StyledImg = styled(Img)`
+  display: block;
+  width: 100vw;
+  height: 500px;
+  // ${respondTo.S`
+  //   width: 100vw;
+  //   height: auto;
+  // `}
 `

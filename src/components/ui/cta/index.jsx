@@ -7,24 +7,28 @@ import {
   StyledLinkButton
 } from './styled'
 
-export const Button = ({ onClick, type, $outline, children }) => (
-  <StyledButton {...{ onClick, type, $outline }}>{children}</StyledButton>
+export const Button = ({ onClick, type, $outline, $light, $disabled, children }) => (
+  <StyledButton {...{ onClick, type, $outline, $light, $disabled }}>{children}</StyledButton>
 )
 
-export const LinkButton = ({ cta, link, $outline }) => (
-  <StyledLinkButton to={link} {...{ $outline }}>{cta}</StyledLinkButton>
+export const LinkButton = ({ cta, link, $outline, $light }) => (
+  <StyledLinkButton to={link} {...{ $outline, $light }}>{cta}</StyledLinkButton>
 )
 
 export const BodyLink = ({ color, children }) => (
   <StyledLink {...{ color }}>{children}</StyledLink>
 )
 
-export const CallToAction = ({ level, title, blurb, cta, link, color, $outline }) => (
+export const CallToAction = ({ level, title, blurb, cta, link, $light, $outline }) => (
   <StyledCtaSection>
-    <Title {...{ level, color }}>
+    <Title {...{ level }}>
       {title}
     </Title>
-    <Paragraph {...{ color }}>{blurb}</Paragraph>
-    <LinkButton {...{ cta, link, $outline }} />
+    <Paragraph>{blurb}</Paragraph>
+    {link ? (
+      <LinkButton {...{ cta, link, $outline, $light }} />
+    ) : (
+      <Button $disabled {...{ $outline, $light }}>{cta}</Button>
+    )}
   </StyledCtaSection>
 )

@@ -1,46 +1,51 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { colours } from '../../../styles'
+import { colours, dropShadow } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { midnight, silver } = colours
+const { white, midnight } = colours
 
 export const StyledContainer = styled.section`
-  background-color: ${midnight};
+  background-color: ${({ $light }) => $light ? white : midnight};
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 96px 0 24px;
-  &:before {
-    background-color: ${silver};
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 0 auto 120px;
-    max-width: 1200px;
-    opacity: 0.5;
-    width: calc(100% - 80px);
-  }
   ${respondTo.S`
     flex-direction: column;
-    padding-top: 0;
-    &:before {
-      margin-bottom: 64px;
-      width: calc(100% - 64px)
-    }
   `}
 `
 
-export const StyledCtaSection = styled.section`
-  align-items: center;
+export const StyledCtaSectionRight = styled.section`
+  align-items: flex-end;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: -72px;
-  padding: 0 24px;
+  padding-right: 120px;
   width: 40vw;
+  ${respondTo.M`
+    padding-right: 64px;
+  `}
+  ${respondTo.S`
+    padding: 64px 24px;
+    width: 100vw;
+    order: 1;
+  `}
+`
+
+export const StyledCtaSectionLeft = styled.section`
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -72px;
+  padding-left: 120px;
+  width: 40vw;
+  ${respondTo.M`
+    padding-left: 64px;
+  `}
   ${respondTo.S`
     padding: 64px 24px;
     width: 100vw;
@@ -49,6 +54,7 @@ export const StyledCtaSection = styled.section`
 `
 
 export const StyledImgLg = styled(Img)`
+  box-shadow: ${dropShadow};
   display: block;
   height: 100%;
   width: 60%;
@@ -56,6 +62,7 @@ export const StyledImgLg = styled(Img)`
 `
 
 export const StyledImgSm = styled(Img)`
+  box-shadow: ${dropShadow};
   display: block;
   height: 70%;
   width: 40%;
@@ -67,10 +74,13 @@ export const StyledImageSectionRight = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   height: 40vw;
-  padding-right: 48px;
+  padding-right: 120px;
   width: 60vw;
+  ${respondTo.M`
+    padding-right: 64px;
+  `}
   ${respondTo.S`
     height: 70vw;
     padding: 0 24px;
@@ -87,10 +97,13 @@ export const StyledImageSectionLeft = styled.section`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   height: 40vw;
-  padding-left: 48px;
+  padding-left: 120px;
   width: 60vw;
+  ${respondTo.M`
+    padding-left: 64px;
+  `}
   ${respondTo.S`
     height: 70vw;
     padding: 0 24px;

@@ -19,7 +19,7 @@ export const TwoCtasCarousel = ({ title, ctas, images }) => (
     </StyledCtaSection>
     <StyledSliderSection>
       <AutoSlider speed={6000} light pauseable>
-        {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='' />)}
+        {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt={title} />)}
       </AutoSlider>
     </StyledSliderSection>
   </StyledContainer>

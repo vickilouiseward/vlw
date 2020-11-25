@@ -1,20 +1,33 @@
 import React from 'react'
+import { Button } from '..'
 import {
-  StyledForm,
-  StyledInputContainer,
-  StyledInput,
+  StyledPageWrapper,
+  StyledFieldWrapper,
+  StyledTextInput,
   StyledLabel,
   StyledInputError
 } from './styled'
 
-export const Form = ({ children, onSubmit }) => (
-  <StyledForm {...{ onSubmit }} noValidate>{children}</StyledForm>
+export const PageWrapper = ({ children, onSubmit }) => (
+  <StyledPageWrapper>{children}</StyledPageWrapper>
 )
 
-export const Input = ({ label, field, type, register, error }) => (
-  <StyledInputContainer>
-    <StyledLabel htmlFor={field}>{label}</StyledLabel>
-    <StyledInput id={field} name={field} type={type || 'text'} ref={register} />
-    {error && <StyledInputError>{error}</StyledInputError>}
-  </StyledInputContainer>
+export const FieldWrapper = ({ children }) => (
+  <StyledFieldWrapper>
+    {children}
+  </StyledFieldWrapper>
 )
+
+export const FormControl = ({ label, labelFor, children, error }) => (
+  <>
+    <StyledLabel htmlFor={labelFor}>{label}</StyledLabel>
+    {children}
+    {error && <StyledInputError>{error}</StyledInputError>}
+  </>
+)
+
+export const TextInput = (props) => (
+  <StyledTextInput {...props} />
+)
+
+export const SubmitButton = Button

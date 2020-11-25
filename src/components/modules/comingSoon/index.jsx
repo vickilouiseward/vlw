@@ -13,7 +13,7 @@ import { Logo, Tagline, InstaIcon } from '../..'
 export const ComingSoon = () => {
   const data = useStaticQuery(graphql`
     query {
-      jimmychoo: file(relativePath: { eq: "jimmychoo_shoe.png" }) {
+      jimmychoo: file(relativePath: { eq: "homepage/jimmychoo_shoe.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64

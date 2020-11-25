@@ -1,19 +1,29 @@
 import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import axios from 'axios'
-import { StyledContainer, StyledSection, StyledFormSection } from './styled'
-import { Button, Title, Paragraph, Form, Input } from '../..'
+import { graphql, useStaticQuery } from 'gatsby'
+import { FormiumForm, defaultComponents } from '@formium/react'
+import { StyledContainer, StyledSection, StyledFormSection, PageWrapper } from './styled'
+import { Title, Paragraph, FieldWrapper, FormControl, TextInput, SubmitButton } from '../..'
+import { formium } from '../../../utilities'
 
 export const Newsletter = ({ title, text }) => {
   const [success, setSuccess] = useState(false)
-  const { register, handleSubmit, errors } = useForm() // initialize the hook
-  const onSubmit = async (formData) => {
-    try {
-      await axios.post('https://fqthev84y8.execute-api.eu-west-1.amazonaws.com/dev/', formData)
-      setSuccess(true)
-    } catch (error) {
-      console.log(error)
+  const [error, setError] = useState(false)
+  const data = useStaticQuery(graphql`
+    query {
+      formiumForm(slug: { eq: "newsletter" }) {
+        id
+        name
+        slug
+        projectId
+        schema
+        createAt
+        updateAt
+      }
     }
+  `)
+
+  if (typeof window !== 'undefined') {
+    window.sessionStorage.clear(`formium-${data.id}-form-state`)
   }
 
   return (
@@ -25,26 +35,34 @@ export const Newsletter = ({ title, text }) => {
       {success ? (
         <Paragraph>Thank you for signing up!</Paragraph>
       ) : (
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          <StyledFormSection>
-            <Input
-              label='Name'
-              field='name'
-              register={register({ required: true })}
-              error={errors.name && 'Please enter your name'}
-            />
-            <Input
-              label='Email address'
-              field='email' type='email'
-              register={register({
-                required: true,
-                pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-              })}
-              error={errors.email && 'Please enter a valid email address'}
-            />
-            <Button type='submit'>Sign up</Button>
-          </StyledFormSection>
-        </Form>
+        <StyledFormSection>
+          <FormiumForm
+            data={data.formiumForm}
+            components={{
+              ...defaultComponents,
+              PageWrapper,
+              Header: () => null,
+              FieldWrapper,
+              FormControl,
+              TextInput,
+              SubmitButton
+            }}
+            onSubmit={async (values) => {
+              setError(false)
+              setSuccess(false)
+
+              try {
+                await formium.submitForm('newsletter', values)
+                setSuccess(true)
+              } catch {
+                setError(true)
+              }
+            }}
+            novalidate
+            a='b'
+          />
+          {error && <Paragraph>Something went wrong, please try again.</Paragraph>}
+        </StyledFormSection>
       )}
 
     </StyledContainer>

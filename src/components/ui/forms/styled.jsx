@@ -4,16 +4,16 @@ import { respondTo } from '../../../utilities'
 
 const { black, white, silver } = colours
 
-export const StyledForm = styled.form`
+export const StyledPageWrapper = styled.section`
   width: 100%;
 `
 
-export const StyledInputContainer = styled.section`
+export const StyledFieldWrapper = styled.section`
   position: relative;
   width: 320px;
 `
 
-export const StyledInput = styled.input`
+export const StyledTextInput = styled.input`
   background-color: ${white};
   border: 1px solid ${silver};
   border-radius: 0;

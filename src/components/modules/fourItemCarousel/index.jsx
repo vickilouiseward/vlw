@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { StyledContainer, StyledSection, StyledImg } from './styled'
-import { Parallax, TabSlider, TextTab, SwipeSlider } from '../..'
+import { Parallax, TabSlider, ImgTextBlock, SwipeSlider } from '../..'
 import { colours } from '../../../styles'
 import { breakpoints } from '../../../utilities'
 
@@ -19,12 +19,12 @@ export const FourItemCarousel = ({ title, items }) => {
               <Parallax height='60vw'>
                 <StyledImg fadeIn={false} fluid={image} alt={title} />
               </Parallax>
-              <TextTab color={cream} {...tab} />
+              <ImgTextBlock color={cream} {...tab} />
             </StyledSection>
           ))}
         </SwipeSlider>
       ) : (
-        <TabSlider tabs={items.map(({ tab }, index) => <TextTab key={index} color={cream} {...tab} />)} height='460px' {...{ title }}>
+        <TabSlider tabs={items.map(({ tab }, index) => <ImgTextBlock key={index} color={cream} {...tab} />)} height='460px' {...{ title }}>
           {items.map(({ image }, index) => (
             <Parallax key={index} height='460px'>
               <StyledImg fadeIn={false} fluid={image} alt={title} />

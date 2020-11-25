@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { black, midnight, cream } = colours
+const { black, midnight, cream, silver } = colours
 
 export const StyledCtaSection = styled.section`
   align-items: center;
@@ -41,7 +41,8 @@ export const StyledLink = styled.a`
 
 export const StyledButton = styled.button`
   background-color: ${({ $outline }) => $outline ? 'transparent' : cream};
-  border: 1px solid ${cream};
+  border: 1px solid  ${({ $light }) => $light ? midnight : cream};
+  box-sizing: border-box;
   color: ${({ $outline }) => $outline ? cream : midnight};
   font-family: Amiri;
   font-size: 14px;
@@ -50,6 +51,7 @@ export const StyledButton = styled.button`
   line-height: 38px;
   min-width: 160px;
   padding: 0 23px;
+  opacity: ${({ disabled }) => disabled ? 0.5 : 1};
   outline: none;
   text-transform: uppercase;
   ${respondTo.M`
@@ -59,7 +61,8 @@ export const StyledButton = styled.button`
 
 export const StyledLinkButton = styled(Link)`
   background-color: ${({ $outline }) => $outline ? 'transparent' : cream};
-  border: 1px solid ${cream};
+  border: 1px solid  ${({ $light }) => $light ? midnight : cream};
+  box-sizing: border-box;
   color: ${({ $outline }) => $outline ? cream : midnight};
   display: inline-block;
   font-family: Amiri;

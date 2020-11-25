@@ -9,7 +9,7 @@ export const StyledContainer = styled.section`
   background-color: ${midnight};
   display: flex;
   flex-direction: row;
-  height: 850px;
+  height: calc(100vh - 80px);
   ${respondTo.S`
     height: auto;
     flex-direction: column;
@@ -43,7 +43,7 @@ export const StyledSliderSection = styled.section`
 export const StyledImg = styled(Img)`
   display: block;
   width: 50vw;
-  height: 850px;
+  height: calc(100vh - 80px);
   ${respondTo.S`
     width: 100vw;
     height: 100vw;
