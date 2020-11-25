@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FormiumForm, defaultComponents } from '@formium/react'
-import { StyledContainer, StyledSection, StyledFormSection, PageWrapper } from './styled'
-import { Title, Paragraph, FieldWrapper, FormControl, TextInput, SubmitButton } from '../..'
-import { formium } from '../../../utilities'
+import { StyledContainer, StyledSection, StyledPageWrapper, StyledFormSection } from './styled'
+import { Title, Paragraph, PageWrapper, FieldWrapper, FormControl, TextInput, SubmitButton } from '../..'
+import { breakpoints, formium } from '../../../utilities'
 
 export const Newsletter = ({ title, text }) => {
+  const tablet = useMediaQuery({ maxWidth: breakpoints.M })
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
   const data = useStaticQuery(graphql`
@@ -40,7 +42,7 @@ export const Newsletter = ({ title, text }) => {
             data={data.formiumForm}
             components={{
               ...defaultComponents,
-              PageWrapper,
+              PageWrapper: tablet ? PageWrapper : StyledPageWrapper,
               Header: () => null,
               FieldWrapper,
               FormControl,
@@ -58,8 +60,6 @@ export const Newsletter = ({ title, text }) => {
                 setError(true)
               }
             }}
-            novalidate
-            a='b'
           />
           {error && <Paragraph>Something went wrong, please try again.</Paragraph>}
         </StyledFormSection>

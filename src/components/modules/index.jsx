@@ -1,5 +1,6 @@
 export { BodyWrapper } from './bodyWrapper'
 export { ComingSoon } from './comingSoon'
+export { ContactForm } from './contactForm'
 export { FiveLogos } from './fiveLogos'
 export { FourItemCarousel } from './FourItemCarousel'
 export { SiteHeader, PageHeader } from './header'

@@ -9,7 +9,8 @@ import {
   Spacer,
   ImageCtaLeft,
   ImageScrollingTextBlocks,
-  ImageTextBlockGroup
+  ImageTextBlockGroup,
+  ContactForm
 } from '../../components'
 import { colours } from '../../styles'
 
@@ -118,6 +119,11 @@ const Page = ({ data }) => (
           }
         ]}
       />
+      <ContactForm
+        title='Get in touch'
+        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+        image={data.dress.childImageSharp.fluid}
+      />
     </BodyWrapper>
   </>
 )
@@ -196,8 +202,8 @@ export const query = graphql`
     }
     dress: file(relativePath: { eq: "lets-work-together/purple_dress_wip.png" }) {
       childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

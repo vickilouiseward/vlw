@@ -25,13 +25,7 @@ export const StyledSection = styled.section`
   width: 100%;
 `
 
-export const StyledFormSection = styled.section`
-  width: 100%;
-  > form {
-    width: 100%;
-  }
-`
-export const PageWrapper = styled.section`
+export const StyledPageWrapper = styled.div`
   align-items: flex-end;
   box-sizing: border-box;
   display: flex;
@@ -41,11 +35,25 @@ export const PageWrapper = styled.section`
   max-width: 900px;
   text-align: left;
   width: 100%;
-  ${respondTo.M`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 0;
-  `}
+  > section {
+    width: 320px;
+  }
+  input, 
+  textarea {
+    margin-bottom: 0;
+  }
+  input ~ div,
+  textarea ~ div {
+    bottom: -28px;
+  }
+  button {
+    margin-top: 0;
+  }
+`
+
+export const StyledFormSection = styled.section`
+  width: 100%;
+  > form {
+    width: 100%;
+  }
 `

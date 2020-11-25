@@ -4,11 +4,12 @@ import {
   StyledPageWrapper,
   StyledFieldWrapper,
   StyledTextInput,
+  StyledTextarea,
   StyledLabel,
   StyledInputError
 } from './styled'
 
-export const PageWrapper = ({ children, onSubmit }) => (
+export const PageWrapper = ({ children }) => (
   <StyledPageWrapper>{children}</StyledPageWrapper>
 )
 
@@ -28,6 +29,10 @@ export const FormControl = ({ label, labelFor, children, error }) => (
 
 export const TextInput = (props) => (
   <StyledTextInput {...props} />
+)
+
+export const Textarea = (props) => (
+  <StyledTextarea {...props} />
 )
 
 export const SubmitButton = Button

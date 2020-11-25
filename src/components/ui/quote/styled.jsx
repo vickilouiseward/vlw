@@ -77,7 +77,4 @@ export const StyledCiteExtra = styled.span`
   font-size: 14px;
   line-height: 26px;
   letter-spacing: 2.3px;
-  ${respondTo.M`
-
-  `}
 `
