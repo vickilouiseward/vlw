@@ -10,8 +10,10 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 120px;
   ${respondTo.S`
     flex-direction: column;
+    padding-bottom: 64px;
   `}
 `
 
@@ -28,7 +30,8 @@ export const StyledCtaSectionRight = styled.section`
     padding-right: 64px;
   `}
   ${respondTo.S`
-    padding: 64px 24px;
+    align-items: center;
+    padding: 64px 24px 0;
     width: 100vw;
     order: 1;
   `}
@@ -47,6 +50,7 @@ export const StyledCtaSectionLeft = styled.section`
     padding-left: 64px;
   `}
   ${respondTo.S`
+    align-items: center;
     padding: 64px 24px;
     width: 100vw;
     order: 1;
@@ -83,6 +87,7 @@ export const StyledImageSectionRight = styled.section`
   `}
   ${respondTo.S`
     height: 70vw;
+    justify-content: center;
     padding: 0 24px;
     width: 100vw;
     order: 0;
@@ -106,6 +111,7 @@ export const StyledImageSectionLeft = styled.section`
   `}
   ${respondTo.S`
     height: 70vw;
+    justify-content: center;
     padding: 0 24px;
     width: 100vw;
     order: 0;

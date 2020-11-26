@@ -22,7 +22,7 @@ export const StyledKeyline = styled.div`
   background-color: ${silver};
   display: block;
   height: 1px;
-  margin: 120px auto;
+  margin: 0 auto 120px;
   max-width: 1200px;
   opacity: 0.5;
   width: calc(100% - 80px);

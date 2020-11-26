@@ -10,7 +10,7 @@ export const Newsletter = ({ title, text }) => {
   const tablet = useMediaQuery({ maxWidth: breakpoints.M })
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
-  const data = useStaticQuery(graphql`
+  const { formiumForm } = useStaticQuery(graphql`
     query {
       formiumForm(slug: { eq: "newsletter" }) {
         id
@@ -24,8 +24,10 @@ export const Newsletter = ({ title, text }) => {
     }
   `)
 
+  console.log()
+
   if (typeof window !== 'undefined') {
-    window.sessionStorage.clear(`formium-${data.id}-form-state`)
+    window.sessionStorage.clear(`formium-${formiumForm.id}-form-state`)
   }
 
   return (
@@ -39,7 +41,7 @@ export const Newsletter = ({ title, text }) => {
       ) : (
         <StyledFormSection>
           <FormiumForm
-            data={data.formiumForm}
+            data={formiumForm}
             components={{
               ...defaultComponents,
               PageWrapper: tablet ? PageWrapper : StyledPageWrapper,
@@ -54,7 +56,7 @@ export const Newsletter = ({ title, text }) => {
               setSuccess(false)
 
               try {
-                await formium.submitForm('newsletter', values)
+                await formium.submitForm(formiumForm.slug, values)
                 setSuccess(true)
               } catch {
                 setError(true)

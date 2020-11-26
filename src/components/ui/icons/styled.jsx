@@ -40,12 +40,21 @@ export const StyledLogo = styled.svg`
   height: auto;
   width: 500px;
   ${respondTo.S`
-    width: 260px;
+    height: auto;
+    width: 300px;
   `}
 `
 
 export const StyledTagline = styled.p`
   color: ${midnight};
-  font-size: 18px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  padding-top: 4px;
   margin: 0;
+  text-transform: uppercase;
+  ${respondTo.S`
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  `}
 `

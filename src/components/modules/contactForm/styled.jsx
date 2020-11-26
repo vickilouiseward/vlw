@@ -21,7 +21,7 @@ export const StyledFormSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 120px 24px 40px;
+  padding: 120px 24px 64px;
   text-align: center;
   width: 50vw;
   ${respondTo.S`
@@ -74,8 +74,8 @@ export const StyledImgSection = styled.section`
 
 export const StyledImg = styled(Img)`
   display: block;
+  height: 990px;
   width: 50vw;
-  height: 948px;
   ${respondTo.S`
     width: 100vw;
     height: 100vw;

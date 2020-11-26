@@ -22,7 +22,7 @@ import { formium } from '../../../utilities'
 export const ContactForm = ({ title, text, image }) => {
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
-  const data = useStaticQuery(graphql`
+  const { formiumForm } = useStaticQuery(graphql`
     query {
       formiumForm(slug: { eq: "contact" }) {
         id
@@ -37,10 +37,11 @@ export const ContactForm = ({ title, text, image }) => {
   `)
 
   if (typeof window !== 'undefined') {
-    window.sessionStorage.clear(`formium-${data.id}-form-state`)
+    window.sessionStorage.clear(`formium-${formiumForm.id}-form-state`)
   }
+
   return (
-    <StyledContainer>
+    <StyledContainer id='contact'>
       <StyledFormSection>
         <Title level={2}>
           {title}
@@ -51,7 +52,7 @@ export const ContactForm = ({ title, text, image }) => {
         ) : (
           <>
             <FormiumForm
-              data={data.formiumForm}
+              data={formiumForm}
               components={{
                 ...defaultComponents,
                 PageWrapper,
@@ -67,7 +68,7 @@ export const ContactForm = ({ title, text, image }) => {
                 setSuccess(false)
 
                 try {
-                  await formium.submitForm('newsletter', values)
+                  await formium.submitForm(formiumForm.slug, values)
                   setSuccess(true)
                 } catch {
                   setError(true)

@@ -16,7 +16,6 @@ export const StyledContainer = styled.section`
   width: 100%;
   ${respondTo.M`
     padding: 64px 24px;
-    max-width: 368px;
   `}
 `
 

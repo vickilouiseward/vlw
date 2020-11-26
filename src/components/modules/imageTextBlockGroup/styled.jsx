@@ -8,6 +8,9 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 120px 80px;
+  ${respondTo.S`
+  padding: 64px 24px;
+  `}
 `
 
 export const StyledSection = styled.section`

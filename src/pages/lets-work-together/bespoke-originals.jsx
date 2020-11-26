@@ -6,6 +6,7 @@ import {
   GlobalStyles,
   SiteHeader,
   PageHeader,
+  Keyline,
   Spacer,
   ImageCtaLeft,
   ImageScrollingTextBlocks,
@@ -31,23 +32,8 @@ const Page = ({ data }) => (
         color={midnight}
         bgcolor={white}
         title='Bespoke originals'
-        image={data.header.childImageSharp.fluid}
+        text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
       />
-      <Spacer />
-      <ImageCtaLeft
-        cta={{
-          title: 'Bespoke originals',
-          blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-          cta: "Let's work together",
-          link: '/lets-work-together/bespoke-originals#contact'
-        }}
-        images={[
-          data.yoga.childImageSharp.fluid,
-          data.jom.childImageSharp.fluid
-        ]}
-        $light
-      />
-      <Spacer />
       <ImageScrollingTextBlocks
         title='Vicki’s process'
         image={data.runway.childImageSharp.fluid}

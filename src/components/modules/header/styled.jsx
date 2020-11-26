@@ -10,7 +10,7 @@ const fadeInHeader = keyframes`
   from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 `
@@ -19,7 +19,6 @@ export const StyledSiteHeader = styled.header`
   align-items: center;
   background-color: ${black};
   box-sizing: border-box;
-  // box-shadow: 0px 8px 8px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -37,7 +36,6 @@ export const StyledSiteHeader = styled.header`
     height: 60px;
     justify-content: center;
     padding: 0 16px;
-    // position: fixed;
     text-align: center;
     ${({ showMobileNav }) =>
       showMobileNav &&
@@ -45,6 +43,7 @@ export const StyledSiteHeader = styled.header`
         animation: ${fadeInHeader} 0.6s ease-in-out;
         flex-direction: column;
         height: 216px;
+        position: fixed;
       `}
   `}
 `
@@ -89,8 +88,11 @@ export const StyledHomeLink = styled(Link)`
 `
 
 export const StyledTagline = styled.p`
-  font-size: 12px;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  padding-top: 4px;
   margin: 0;
+  text-transform: uppercase;
 `
 
 export const StyledNav = styled.nav`
@@ -179,7 +181,7 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 0 0;
+  padding: 80px 0;
   text-align: center;
   width: 100%;
   ${respondTo.M`
