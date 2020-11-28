@@ -14,7 +14,7 @@ export const PageWrapper = ({ children }) => (
 )
 
 export const FieldWrapper = ({ children }) => (
-  <StyledFieldWrapper>
+  <StyledFieldWrapper data-aos='fade-in'>
     {children}
   </StyledFieldWrapper>
 )

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FormiumForm, defaultComponents } from '@formium/react'
 import {
@@ -11,15 +12,17 @@ import {
   Title,
   Paragraph,
   PageWrapper,
+  Parallax,
   FieldWrapper,
   FormControl,
   TextInput,
   Textarea,
   SubmitButton
 } from '../..'
-import { formium } from '../../../utilities'
+import { breakpoints, formium } from '../../../utilities'
 
 export const ContactForm = ({ title, text, image }) => {
+  const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
   const { formiumForm } = useStaticQuery(graphql`
@@ -80,7 +83,9 @@ export const ContactForm = ({ title, text, image }) => {
         )}
       </StyledFormSection>
       <StyledImgSection>
-        <StyledImg fadeIn={false} fluid={image} alt={title} />
+        <Parallax height={mobile ? '100vw' : '990px'}>
+          <StyledImg fadeIn={false} fluid={image} alt={title} />
+        </Parallax>
       </StyledImgSection>
     </StyledContainer>
   )

@@ -27,10 +27,10 @@ export const StyledImgSection = styled.section`
 export const StyledImg = styled(Img)`
   display: block;
   width: 50vw;
-  height: calc(100vh - 80px);
+  height: 120vh;
   ${respondTo.S`
     width: 100vw;
-    height: 100vw;
+    height: 120vw;
   `}
 `
 

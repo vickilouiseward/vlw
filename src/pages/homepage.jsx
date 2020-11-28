@@ -14,11 +14,19 @@ import {
   // FourItemCarousel,
   // ThreeCards,
 } from '../components'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Page = ({ data }) => {
   const introAnimation = typeof window !== 'undefined' && !window.sessionStorage.getItem('introComplete')
 
   useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-in-out',
+      offset: 100,
+      once: true
+    })
     window.sessionStorage.setItem('introComplete', 1)
   }, [])
 

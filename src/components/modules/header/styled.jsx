@@ -29,8 +29,8 @@ export const StyledSiteHeader = styled.header`
   ${({ introAnimation }) =>
     introAnimation &&
     css`
-      animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
-      opacity: 0;
+      // animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
+      // opacity: 0;
     `}
   ${respondTo.S`
     height: 60px;

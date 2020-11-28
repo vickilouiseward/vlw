@@ -36,7 +36,7 @@ const routes = [
 ]
 
 export const Nav = () => (
-  <StyledNav>
+  <StyledNav data-aos='fade-in'>
     <StyledNavUl>
       {routes.map(({ title, path }, index) => (
         <StyledNavLi key={index}>
@@ -75,13 +75,13 @@ export const SiteHeader = ({ introAnimation }) => {
             {showMobileNav ? <CloseIcon /> : <MenuIcon />}
           </StyledMenuButton>
         )}
-        <StyledTitle {...{ showMobileNav }}>
+        <StyledTitle data-aos='fade-in' {...{ showMobileNav }}>
           <StyledHomeLink to='/homepage'>
             <HeaderLogo scaleUp={showMobileNav} />
           </StyledHomeLink>
         </StyledTitle>
         {mobile && showMobileNav && (
-          <StyledTagline>Fashion, beauty &amp; lifestyle illustrator</StyledTagline>
+          <StyledTagline data-aos='fade-in'>Fashion, beauty &amp; lifestyle illustrator</StyledTagline>
         )}
         {tabletUp && <Nav />}
       </StyledSiteHeader>

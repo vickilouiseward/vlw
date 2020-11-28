@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
-
-const { white, midnight } = colours
 
 export const StyledContainer = styled.section`
   display: flex;

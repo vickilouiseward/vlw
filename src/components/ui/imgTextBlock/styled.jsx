@@ -13,9 +13,11 @@ export const StyledSection = styled.section`
   text-align: center;
   width: calc(100% / 3);
   ${respondTo.M`
+    padding: 64px 24px 0;
     width: 50%;
   `}
   ${respondTo.S`
+    padding: 64px 0 0;
     width: 100%;
   `}
 `

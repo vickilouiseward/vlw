@@ -8,11 +8,11 @@ import {
 } from './styled'
 
 export const Button = ({ onClick, type, $outline, $light, $disabled, children }) => (
-  <StyledButton {...{ onClick, type, $outline, $light, $disabled }}>{children}</StyledButton>
+  <StyledButton data-aos='fade-in' {...{ onClick, type, $outline, $light, $disabled }}>{children}</StyledButton>
 )
 
 export const LinkButton = ({ cta, link, $outline, $light }) => (
-  <StyledLinkButton to={link} {...{ $outline, $light }}>{cta}</StyledLinkButton>
+  <StyledLinkButton to={link} data-aos='fade-in' {...{ $outline, $light }}>{cta}</StyledLinkButton>
 )
 
 export const BodyLink = ({ color, children }) => (

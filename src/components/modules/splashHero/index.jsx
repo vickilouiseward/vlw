@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { StyledContainer, StyledSliderSection, StyledImg, StyledSection, StyledLinkSpacer, StyledSpacer } from './styled'
-import { AutoSlider, Logo, Tagline, LinkButton, ParallaxFade } from '../..'
+import { AutoSlider, Logo, Tagline, LinkButton } from '../..'
 
 export const SplashHero = ({ images, cta, link, introAnimation }) => {
   const [bgImage, setBgImage] = useState(0)
@@ -14,7 +14,6 @@ export const SplashHero = ({ images, cta, link, introAnimation }) => {
   return (
     <>
       <StyledContainer>
-        {/* <ParallaxFade> */}
         <StyledSliderSection {...{ introAnimation }}>
           <AutoSlider speed={6000} $light>
             {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='Portfolio example' />)}
@@ -27,8 +26,6 @@ export const SplashHero = ({ images, cta, link, introAnimation }) => {
           <LinkButton {...{ cta, link }} />
         </StyledLinkSpacer> */}
         </StyledSection>
-        {/* </ParallaxFade> */}
-
       </StyledContainer>
       <StyledSpacer />
     </>
