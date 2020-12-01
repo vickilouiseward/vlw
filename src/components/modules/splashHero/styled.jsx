@@ -26,8 +26,8 @@ export const StyledContainer = styled.section`
   z-index: -1;
   ${respondTo.S`
     justify-content: flex-end;
-    padding: 0 24px 100px;
-    height: 100vh;
+    padding: 0 24px 64px;
+    height: calc(100vh - 140px);
   `}
 `
 
@@ -83,6 +83,6 @@ export const StyledLinkSpacer = styled.div`
 export const StyledSpacer = styled.div`
   margin-bottom: calc(100vh - 80px);
   ${respondTo.S`
-    margin-bottom: calc(100vh - 60px);
+    margin-bottom: calc(100vh - 140px);
   `}
 `

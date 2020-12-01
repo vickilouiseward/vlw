@@ -85,7 +85,7 @@ const Page = ({ data }) => {
       />
       {console.log(data.lwt1.childImageSharp.fluid)}
       <BodyWrapper {...{ introAnimation }}>
-        <SiteHeader {...{ introAnimation }} />
+        <SiteHeader />
         <TwoCtasCarousel
           title="Let's work together"
           ctas={[

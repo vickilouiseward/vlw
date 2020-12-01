@@ -10,7 +10,7 @@ import { AutoSlider, CallToAction, Title } from '../..'
 export const TwoCtasCarousel = ({ title, ctas, images }) => (
   <StyledContainer>
     <StyledCtaSection>
-      <Title level={2}>
+      <Title data-aos='fade-in' level={2}>
         {title}
       </Title>
       {ctas.map((cta, index) => (

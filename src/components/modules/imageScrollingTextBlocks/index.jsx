@@ -26,7 +26,7 @@ export const ImageScrollingTextBlocks = ({ image, title, blocks }) => {
         </Parallax>
       </StyledImgSection>
       <StyledScrollingWrapper>
-        <StyledScrollingSection>
+        <StyledScrollingSection data-aos='fade-in'>
           <Title level={2}>
             {title}
           </Title>

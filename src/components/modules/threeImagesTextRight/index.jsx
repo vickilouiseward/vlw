@@ -43,10 +43,10 @@ export const ThreeImagesTextRight = ({ images, title, text }) => {
         ))}
       </StyledSection>
       <StyledArticle>
-        <Title level={2} color={cream}>
+        <Title data-aos='fade-in' level={2} color={cream}>
           {title}
         </Title>
-        <Paragraph color={cream}>
+        <Paragraph data-aos='fade-in' color={cream}>
           {text}
         </Paragraph>
       </StyledArticle>

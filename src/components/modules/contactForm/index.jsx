@@ -46,12 +46,12 @@ export const ContactForm = ({ title, text, image }) => {
   return (
     <StyledContainer id='contact'>
       <StyledFormSection>
-        <Title level={2}>
+        <Title data-aos='fade-in' level={2}>
           {title}
         </Title>
-        <Paragraph>{text}</Paragraph>
+        <Paragraph data-aos='fade-in'>{text}</Paragraph>
         {success ? (
-          <Paragraph>Thank you for signing up!</Paragraph>
+          <Paragraph data-aos='fade-in'>Thank you for signing up!</Paragraph>
         ) : (
           <>
             <FormiumForm
@@ -78,7 +78,7 @@ export const ContactForm = ({ title, text, image }) => {
                 }
               }}
             />
-            {error && <Paragraph>Something went wrong, please try again.</Paragraph>}
+            {error && <Paragraph data-aos='fade-in'>Something went wrong, please try again.</Paragraph>}
           </>
         )}
       </StyledFormSection>

@@ -21,10 +21,10 @@ export const BodyLink = ({ color, children }) => (
 
 export const CallToAction = ({ level, title, blurb, cta, link, $light, $outline }) => (
   <StyledCtaSection>
-    <Title {...{ level }}>
+    <Title data-aos='fade-in' {...{ level }}>
       {title}
     </Title>
-    <Paragraph>{blurb}</Paragraph>
+    <Paragraph data-aos='fade-in'>{blurb}</Paragraph>
     {link ? (
       <LinkButton {...{ cta, link, $outline, $light }} />
     ) : (

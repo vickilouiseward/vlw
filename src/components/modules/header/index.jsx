@@ -59,14 +59,14 @@ export const MobileNav = () => (
   </StyledMobileNav>
 )
 
-export const SiteHeader = ({ introAnimation }) => {
+export const SiteHeader = () => {
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const tabletUp = useMediaQuery({ minWidth: breakpoints.S + 1 })
   const [showMobileNav, toggleMobileNav] = useState(false)
 
   return (
     <>
-      <StyledSiteHeader {...{ introAnimation, showMobileNav }}>
+      <StyledSiteHeader {...{ showMobileNav }}>
         {mobile && (
           <StyledMenuButton
             onClick={() => toggleMobileNav(!showMobileNav)}
@@ -104,8 +104,8 @@ export const PageHeader = ({ title, text, image, color, bgcolor }) => (
     )}
     <StyledContainer {...{ bgcolor }}>
       <StyledSection>
-        <Title level={2} {...{ color }}>{title}</Title>
-        {text && <Paragraph>{text}</Paragraph>}
+        <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
+        {text && <Paragraph data-aos='fade-in'>{text}</Paragraph>}
       </StyledSection>
     </StyledContainer>
   </>

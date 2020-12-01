@@ -7,7 +7,7 @@ const { midnight } = colours
 
 export const ThreeCards = ({ title, cards }) => (
   <StyledContainer>
-    <Title level={2} color={midnight}>{title}</Title>
+    <Title data-aos='fade-in' level={2} color={midnight}>{title}</Title>
     <StyledSection>
       {cards.map((card, index) => (
         <ShopCard key={index} {...card} />

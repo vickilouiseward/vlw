@@ -1,4 +1,5 @@
 export * from './cta'
+export * from './fader'
 export * from './forms'
 export * from './icons'
 export * from './imgTextBlock'

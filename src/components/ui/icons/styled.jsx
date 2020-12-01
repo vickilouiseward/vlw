@@ -5,8 +5,8 @@ import { respondTo } from '../../../utilities'
 const { midnight } = colours
 
 export const StyledMenuIcon = styled.svg`
-  height: 26px;
-  width: 32px;
+  height: 20px;
+  width: 24px;
 `
 
 export const StyledCloseIcon = styled.svg`

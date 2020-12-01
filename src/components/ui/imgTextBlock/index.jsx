@@ -5,9 +5,9 @@ import { StyledSection, StyledImg } from './styled'
 export const ImgTextBlock = ({ image, title, text, color }) => (
   <StyledSection data-aos='fade-in'>
     <StyledImg fixed={image} alt={title} />
-    <Title level={3} {...{ color }}>
+    <Title data-aos='fade-in' level={3} {...{ color }}>
       {title}
     </Title>
-    <Paragraph {...{ color }}>{text}</Paragraph>
+    <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>
   </StyledSection>
 )

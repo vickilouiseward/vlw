@@ -26,12 +26,6 @@ export const StyledSiteHeader = styled.header`
   top: 0;
   width: 100vw;
   z-index: 9;
-  ${({ introAnimation }) =>
-    introAnimation &&
-    css`
-      // animation: ${fadeInHeader} 2s ease-in-out 4s forwards;
-      // opacity: 0;
-    `}
   ${respondTo.S`
     height: 60px;
     justify-content: center;
@@ -49,10 +43,12 @@ export const StyledSiteHeader = styled.header`
 `
 
 export const StyledMenuButton = styled.button`
+  align-items: center;
   background: none;
   border: none;
-  display: initial;
+  display: flex;
   height: 40px;
+  justify-content: center;
   margin-right: -40px;
   outline: none;
   padding: 7px calc(7px / 2);

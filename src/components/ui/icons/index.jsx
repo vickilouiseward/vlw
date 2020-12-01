@@ -50,15 +50,16 @@ export const Tagline = ({ children }) => (
 export const MenuIcon = () => (
   <StyledMenuIcon>
     <title>Menu</title>
-    <g fill={white} fillRule='nonzero' stroke='none' strokeWidth={1}>
-      <path
-        d='M7.08 16.489l16.262-.505 2.113.152c.597 0 .827-.958.046-1.11l-16.583.353-2.067-.302c-.965.353-.506 1.361.23 1.412zM27.61 25.55c.272.6 1.088.6 1.542 0 0-4.456-26.303-2.056-26.393-2.056-.635.342-.454 1.114.181 1.456.09 0 24.67-2.313 24.67.6z'
-        transform='translate(-16 -16) translate(16 16)'
-      />
-      <path
-        d='M11.037 23.144c-.09.373.768.792 1.084.187l8.086-26.046 1.039-1.864c.18-.839-.587-1.491-1.22-.233l-3.568 12.3-4.518 13.84-.903 1.816z'
-        transform='translate(-16 -16) translate(16 16) rotate(75 16.152 9.06)'
-      />
+    <g
+      transform='translate(-16 -22) translate(16 22)'
+      fill={white}
+      stroke='none'
+      strokeWidth={1}
+      fillRule='evenodd'
+    >
+      <rect x={0} y={0} width={24} height={1} rx={0.5} />
+      <rect x={0} y={18} width={24} height={1} rx={0.5} />
+      <rect x={0} y={9} width={24} height={1} rx={0.5} />
     </g>
   </StyledMenuIcon>
 )

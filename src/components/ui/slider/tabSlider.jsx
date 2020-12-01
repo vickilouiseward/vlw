@@ -25,7 +25,7 @@ export const TabSlider = ({ children, height, $light, tabs, title }) => {
         ))}
       </StyledSlider>
       <StyledSliderTitle>
-        <Title level={2} color={cream}>
+        <Title data-aos='fade-in' level={2} color={cream}>
           {title}
         </Title>
       </StyledSliderTitle>

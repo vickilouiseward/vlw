@@ -12,7 +12,7 @@ export const ThreeQuotes = ({ title, quotes }) => {
 
   return (
     <StyledContainer>
-      <Title level={2} color={midnight}>{title}</Title>
+      <Title data-aos='fade-in' level={2} color={midnight}>{title}</Title>
       <StyledSection>
         {tablet ? (
           <StyledSliderSection>

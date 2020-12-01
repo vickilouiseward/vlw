@@ -7,7 +7,7 @@ import { Title, ImgTextBlock } from '../..'
 
 export const ImageTextBlockGroup = ({ title, blocks }) => (
   <StyledContainer>
-    <Title level={2}>
+    <Title data-aos='fade-in' level={2}>
       {title}
     </Title>
     <StyledSection>
