@@ -9,10 +9,11 @@ import {
   Newsletter,
   ThreeImagesTextRight,
   ThreeQuotes,
-  TwoCtasCarousel
+  TwoCtasCarousel,
   // FiveLogos,
   // FourItemCarousel,
   // ThreeCards,
+  Footer
 } from '../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -244,6 +245,7 @@ const Page = ({ data }) => {
           title='Newsletter'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
         />
+        <Footer />
       </BodyWrapper>
     </>
   )

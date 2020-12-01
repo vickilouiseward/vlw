@@ -32,7 +32,7 @@ export const StyledHeaderLogo = styled.svg`
 
 export const StyledInstaIcon = styled.svg`
   height: 20px;
-  padding: 0 8px 2px;
+  padding: 0 8px 2px 0;
   width: 20px;
 `
 
@@ -57,4 +57,9 @@ export const StyledTagline = styled.p`
     letter-spacing: 1.4px;
     text-transform: uppercase;
   `}
+`
+
+export const StyledCCIcon = styled.svg`
+  height: auto;
+  width: 300px;
 `

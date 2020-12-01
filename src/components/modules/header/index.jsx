@@ -28,10 +28,10 @@ import {
 import { breakpoints } from '../../../utilities'
 
 const routes = [
-  { title: "Let's work together", path: '/lets-work-together' },
-  { title: 'Shop off the rack', path: '/shop-off-the-rack' },
-  { title: 'Portfilio', path: '/portfolio' },
-  { title: 'My story', path: '/my-story' },
+  // { title: "Let's work together", path: '/lets-work-together' },
+  // { title: 'Shop off the rack', path: '/shop-off-the-rack' },
+  // { title: 'Portfilio', path: '/portfolio' },
+  // { title: 'My story', path: '/my-story' },
   { title: 'Contact', path: '/contact' }
 ]
 

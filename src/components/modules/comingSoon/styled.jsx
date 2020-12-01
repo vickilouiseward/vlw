@@ -45,6 +45,6 @@ export const StyledSocialSection = styled.section`
 export const StyledLink = styled.a`
   color: ${midnight};
   display: inline-block;
-  padding: 0 8px;
+  padding: 0 0 0 8px;
   text-decoration: none;
 `

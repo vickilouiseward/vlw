@@ -9,6 +9,9 @@ import {
 } from './styled'
 import { Newsletter } from '..'
 import { Logo, Tagline, InstaIcon } from '../..'
+import { colours } from '../../../styles'
+
+const { midnight } = colours
 
 export const ComingSoon = () => {
   const data = useStaticQuery(graphql`
@@ -29,7 +32,7 @@ export const ComingSoon = () => {
         <Logo />
         <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
         <StyledSocialSection>
-          <InstaIcon />
+          <InstaIcon fill={midnight} />
           Follow me on Instagram
           <StyledLink
             href='https://www.instagram.com/vickilouiseward'
