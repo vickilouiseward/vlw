@@ -83,7 +83,6 @@ const Page = ({ data }) => {
         link='/portfolio'
         {...{ introAnimation }}
       />
-      {console.log(data.lwt1.childImageSharp.fluid)}
       <BodyWrapper {...{ introAnimation }}>
         <SiteHeader />
         <TwoCtasCarousel

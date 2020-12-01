@@ -24,8 +24,6 @@ export const Newsletter = ({ title, text }) => {
     }
   `)
 
-  console.log()
-
   if (typeof window !== 'undefined') {
     window.sessionStorage.clear(`formium-${formiumForm.id}-form-state`)
   }

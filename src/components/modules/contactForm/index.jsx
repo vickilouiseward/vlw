@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { graphql, useStaticQuery } from 'gatsby'
 import { FormiumForm, defaultComponents } from '@formium/react'
 import {
   StyledContainer,
@@ -21,23 +20,11 @@ import {
 } from '../..'
 import { breakpoints, formium } from '../../../utilities'
 
-export const ContactForm = ({ title, text, image }) => {
+export const ContactForm = ({ formiumForm, title, text, image }) => {
+  console.log(formiumForm)
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
-  const { formiumForm } = useStaticQuery(graphql`
-    query {
-      formiumForm(slug: { eq: "contact" }) {
-        id
-        name
-        slug
-        projectId
-        schema
-        createAt
-        updateAt
-      }
-    }
-  `)
 
   if (typeof window !== 'undefined') {
     window.sessionStorage.clear(`formium-${formiumForm.id}-form-state`)

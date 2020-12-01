@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { GlobalStyles, SiteHeader, BodyWrapper } from '../components'
+import { graphql } from 'gatsby'
+import { GlobalStyles, SiteHeader, BodyWrapper, ContactForm } from '../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const Page = () => {
+const Page = ({ data }) => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -26,9 +27,34 @@ const Page = () => {
       <GlobalStyles />
       <SiteHeader />
       <BodyWrapper>
-        <div />
+        <ContactForm
+          formiumForm={data.formiumForm}
+          title='Get in touch'
+          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+          image={data.dress.childImageSharp.fluid}
+        />
       </BodyWrapper>
     </>
   )
 }
+export const query = graphql`
+  query {
+    formiumForm: formiumForm(slug: { eq: "contact" }) {
+      id
+      name
+      slug
+      projectId
+      schema
+      createAt
+      updateAt
+    }
+    dress: file(relativePath: { eq: "lets-work-together/purple_dress_wip.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`
 export default Page

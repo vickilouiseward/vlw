@@ -26,7 +26,7 @@ const Page = ({ data }) => {
     })
     window.sessionStorage.setItem('introComplete', 1)
   }, [])
-
+  console.log(data)
   return (
     <>
       <Helmet>
@@ -111,6 +111,7 @@ const Page = ({ data }) => {
           ]}
         />
         <ContactForm
+          formiumForm={data.formiumForm}
           title='Get in touch'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
           image={data.dress.childImageSharp.fluid}
@@ -121,6 +122,15 @@ const Page = ({ data }) => {
 }
 export const query = graphql`
   query {
+    formiumForm: formiumForm(slug: { eq: "bespoke" }) {
+      id
+      name
+      slug
+      projectId
+      schema
+      createAt
+      updateAt
+    }
     header: file(relativePath: { eq: "lets-work-together/ysl_wip.png" }) {
       childImageSharp {
         fluid(quality: 100) {
