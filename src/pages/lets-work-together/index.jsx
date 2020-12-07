@@ -8,7 +8,8 @@ import {
   PageHeader,
   ImageCtaLeft,
   ImageCtaRight,
-  Keyline
+  Keyline,
+  Footer
 } from '../../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -66,6 +67,7 @@ const Page = ({ data }) => {
             data.cc2.childImageSharp.fluid
           ]}
         />
+        <Footer />
       </BodyWrapper>
     </>
   )

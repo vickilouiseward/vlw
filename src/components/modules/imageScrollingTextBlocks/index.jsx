@@ -1,40 +1,27 @@
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
 import {
   StyledContainer,
   StyledImgSection,
   StyledScrollingSection,
-  StyledScrollingWrapper,
   StyledImg,
-  StyledFadeTop,
-  StyledFadeBottom
+  StyledFadeTop
 } from './styled'
-import { Title, Step, Parallax } from '../..'
+import { Title, Step } from '../..'
 import { colours } from '../../../styles'
-import { breakpoints } from '../../../utilities'
 
 const { white } = colours
 
-export const ImageScrollingTextBlocks = ({ image, title, blocks }) => {
-  const mobile = useMediaQuery({ maxWidth: breakpoints.S })
-
-  return (
-    <StyledContainer>
-      <StyledImgSection>
-        <Parallax height={mobile ? '100vw' : 'calc(100vh - 80px)'}>
-          <StyledImg fadeIn={false} fluid={image} alt={title} />
-        </Parallax>
-      </StyledImgSection>
-      <StyledScrollingWrapper>
-        <StyledScrollingSection data-aos='fade-in'>
-          <Title level={2}>
-            {title}
-          </Title>
-          {blocks.map((block, index) => <Step key={index} color={white} {...block} />)}
-        </StyledScrollingSection>
-        <StyledFadeTop />
-        <StyledFadeBottom />
-      </StyledScrollingWrapper>
-    </StyledContainer>
-  )
-}
+export const ImageScrollingTextBlocks = ({ image, title, blocks }) => (
+  <StyledContainer>
+    <StyledImgSection>
+      <StyledFadeTop />
+      <StyledImg fadeIn={false} fluid={image} alt={title} />
+    </StyledImgSection>
+    <StyledScrollingSection>
+      <Title level={2}>
+        {title}
+      </Title>
+      {blocks.map((block, index) => <Step key={index} color={white} {...block} />)}
+    </StyledScrollingSection>
+  </StyledContainer>
+)

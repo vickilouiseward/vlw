@@ -8,7 +8,8 @@ import {
   PageHeader,
   ImageScrollingTextBlocks,
   ImageTextBlockGroup,
-  ContactForm
+  ContactForm,
+  Footer
 } from '../../components'
 import { colours } from '../../styles'
 import AOS from 'aos'
@@ -35,7 +36,7 @@ const Page = ({ data }) => {
         <title>Bespoke originals | Vicki Louise Ward Fashion Illustrator</title>
         <meta name='description' content='Ideal for those looking for a unique and personal artwork to bring that touch of luxury to a home or office space. One of a kind originals also make for an elegant and refined gift, they are the perfect way to treat that special someone.' />
       </Helmet>
-      <GlobalStyles $lightmode />
+      <GlobalStyles />
       <SiteHeader />
       <BodyWrapper>
         <PageHeader
@@ -85,28 +86,28 @@ const Page = ({ data }) => {
           blocks={[
             {
               image: data.subject.childImageSharp.fixed,
-              title: 'Subject matter',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              title: 'Subject',
+              text: 'This is what your chosen illustration/art is of. It could be an object you love, a fashion figure of your favourite brand or maybe the interior of somewhere you have visited. This can be personal to you, however if you are undecided or need help choosing a subject Vicki can help you find the right thing for you just let her know when asking for a quote.'
             }, {
               image: data.size.childImageSharp.fixed,
-              title: 'Artwork size',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              title: 'Size & ratio',
+              text: "The size of your artwork is how big or small you'd like it. This normally depends on the space you are wishing to fill. It's great to measure the area making sure you leave enough space for the artwork and the frame you wish to put it in. Vicki can always advise a good size based on the space you want the artwork to go in."
             }, {
               image: data.canvas.childImageSharp.fixed,
-              title: 'Canvas choice',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              title: 'Canvas',
+              text: "Choosing a canvas is really preference however Vicki uses high quality 100% rag watercolour paper, starting in 300 gsm by default. There are many alternatives you can have as your canvas such as ply, stretch canvas, wood etc. If you'd like to use another material as your canvas this can easily be arranged and would be subject to sourcing and at an extra cost."
             }, {
               image: data.materials.childImageSharp.fixed,
-              title: 'Type of materials',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              title: 'Materials',
+              text: 'By default Vicki uses premium watercolour and inks from the top brands to create any Bespoke Original. However if you would like custom materials such as a special type of ink or watercolour for example neon/metallic or gold leaf, she can discuss the option and quote you based on the additional materials.'
             }, {
               image: data.timeline.childImageSharp.fixed,
-              title: 'Your timeline',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              title: 'Timeline',
+              text: 'Generally allow a commission to take 4 - 6  weeks. This will all be based on each individual quote. If you need your piece sooner then please Vicki know this in advance as she will see how she can accommodate you.- Should you need a fast turn around this can be arrange depending on availability and this is subject to additional cost.'
             }, {
               image: data.gifting.childImageSharp.fixed,
               title: 'Gifting',
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+              text: 'If your item is a gift, for any size A5 - A2 the artwork can be wrapped in a luxury gift box and sent directly to your nominated recipient. However if you are not quite sure what type of artwork to gift there is an option to purchase a gift voucher for a Bespoke Original for your special someone that way they can choose for themselves a piece of art dear to them.'
             }
           ]}
         />
@@ -116,6 +117,7 @@ const Page = ({ data }) => {
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
           image={data.dress.childImageSharp.fluid}
         />
+        <Footer />
       </BodyWrapper>
     </>
   )

@@ -4,8 +4,8 @@ import { StyledStep, StyledStepNumber } from './styled'
 
 export const Step = ({ color, number, title, text }) => (
   <StyledStep {...{ color }}>
-    <StyledStepNumber>{number}</StyledStepNumber>
-    <Title level={3}>{title}</Title>
-    <Paragraph>{text}</Paragraph>
+    <StyledStepNumber data-aos='fade-in'>{number}</StyledStepNumber>
+    <Title level={3} data-aos='fade-in'>{title}</Title>
+    <Paragraph data-aos='fade-in'>{text}</Paragraph>
   </StyledStep>
 )

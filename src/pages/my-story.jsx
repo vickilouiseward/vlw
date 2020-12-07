@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { GlobalStyles, SiteHeader, ComingSoon } from '../components'
+import { GlobalStyles, SiteHeader, ComingSoon, Footer } from '../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -26,6 +26,7 @@ const Page = () => {
       <GlobalStyles />
       <SiteHeader />
       <ComingSoon />
+      <Footer />
     </>
   )
 }

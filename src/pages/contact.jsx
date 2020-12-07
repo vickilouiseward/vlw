@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { GlobalStyles, SiteHeader, BodyWrapper, ContactForm } from '../components'
+import { GlobalStyles, SiteHeader, BodyWrapper, ContactForm, Footer } from '../components'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -33,6 +33,7 @@ const Page = ({ data }) => {
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
           image={data.dress.childImageSharp.fluid}
         />
+        <Footer />
       </BodyWrapper>
     </>
   )

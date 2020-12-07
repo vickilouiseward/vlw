@@ -8,7 +8,7 @@ import {
 } from '../fonts'
 import { colours } from '../styles'
 
-const { midnight, white } = colours
+const { midnight, white, black } = colours
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ $lightmode }) => $lightmode ? white : midnight};
+    background-color: ${({ $lightmode }) => $lightmode ? white : black};
     color: ${({ $lightmode }) => $lightmode ? midnight : white};
     font-family: Amiri, serif;
     font-size: 16px;

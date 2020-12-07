@@ -52,6 +52,7 @@ export const StyledLink = styled.a`
 `
 
 export const StyledText = styled.p`
+  color: ${white};
   font-size: 12px;
   letter-spacing: 2.3px;
   line-height: 21px;

@@ -16,6 +16,7 @@ export const Footer = () => (
       <StyledLink
         href='https://www.instagram.com/vickilouiseward'
         title='Instagram @vickilouiseward '
+        target='_blank'
       >
         <InstaIcon fill={white} />Follow on Instagram
       </StyledLink>

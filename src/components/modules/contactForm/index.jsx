@@ -21,7 +21,6 @@ import {
 import { breakpoints, formium } from '../../../utilities'
 
 export const ContactForm = ({ formiumForm, title, text, image }) => {
-  console.log(formiumForm)
   const mobile = useMediaQuery({ maxWidth: breakpoints.S })
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)

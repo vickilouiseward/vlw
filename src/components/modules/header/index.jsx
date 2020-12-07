@@ -32,7 +32,7 @@ const routes = [
   // { title: 'Shop off the rack', path: '/shop-off-the-rack' },
   // { title: 'Portfilio', path: '/portfolio' },
   // { title: 'My story', path: '/my-story' },
-  { title: 'Contact', path: '/contact' }
+  { title: 'Get in touch', path: '/contact' }
 ]
 
 export const Nav = () => (
@@ -105,7 +105,7 @@ export const PageHeader = ({ title, text, image, color, bgcolor }) => (
     <StyledContainer {...{ bgcolor }}>
       <StyledSection>
         <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
-        {text && <Paragraph data-aos='fade-in'>{text}</Paragraph>}
+        {text && <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>}
       </StyledSection>
     </StyledContainer>
   </>

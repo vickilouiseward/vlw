@@ -10,36 +10,49 @@ export const StyledContainer = styled.section`
   color: ${white};
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: -1;
   ${respondTo.S`
     flex-direction: column;
   `}
 `
 
 export const StyledImgSection = styled.section`
+  align-self: flex-start;
+  position: sticky;
   width: 50vw;
+  top: 0;
+  z-index: 1;
   ${respondTo.S`
     width: 100vw;
-    height: 100vw;
     order: 0;
+  `}
+`
+
+export const StyledFadeTop = styled.div`
+  background: linear-gradient(${midnight} 80px, transparent 100%);
+  height: 200px;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  width: 50vw;
+  ${respondTo.S`
+    background: linear-gradient(${midnight} 0%, transparent 100%);
+    bottom: -80px;
+    height: 80px;
+    right: 0;
+    top: auto;
+    width: 100vw;
   `}
 `
 
 export const StyledImg = styled(Img)`
   display: block;
   width: 50vw;
-  height: 120vh;
+  height: 100vh;
   ${respondTo.S`
     width: 100vw;
-    height: 120vw;
-  `}
-`
-
-export const StyledScrollingWrapper = styled.section`
-  position: relative;
-  width: 50vw;
-  ${respondTo.S`
-    width: 100vw;
-    order: 1;
+    height: 60vw;
   `}
 `
 
@@ -49,33 +62,12 @@ export const StyledScrollingSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: scroll;
   padding: 120px 24px;
-  height: calc(100vh - 80px);
+  position: relative;
+  width: 50vw;
   ${respondTo.S`
-    padding: 64px 24px;
-    height: calc(100vh - 60px);
-  `}
-`
-
-export const StyledFadeTop = styled.div`
-  background: linear-gradient(${midnight} 0%, transparent 100%);
-  height: 120px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  ${respondTo.S`
-    height: 64px;
-  `}
-`
-
-export const StyledFadeBottom = styled.div`
-  background: linear-gradient(transparent 0%, ${midnight} 100%);
-  bottom: 0;
-  height: 120px;
-  position: absolute;
-  width: 100%;
-  ${respondTo.S`
-    height: 64px;
+    padding: 80px 24px;
+    width: 100vw;
+    order: 1;
   `}
 `
