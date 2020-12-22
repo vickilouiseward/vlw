@@ -46,9 +46,11 @@ export const ThreeImagesTextRight = ({ images, title, text }) => {
         <Title data-aos='fade-in' level={2} color={cream}>
           {title}
         </Title>
-        <Paragraph data-aos='fade-in' color={cream}>
-          {text}
-        </Paragraph>
+        {text.map((paragraph, index) => (
+          <Paragraph key={index} data-aos='fade-in' color={cream}>
+            {paragraph}
+          </Paragraph>
+        ))}
       </StyledArticle>
     </StyledContainer>
   )

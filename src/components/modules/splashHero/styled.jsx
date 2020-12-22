@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { white } = colours
+const { black } = colours
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -13,13 +13,9 @@ const fadeIn = keyframes`
   }
 `
 export const StyledContainer = styled.section`
-  align-items: center;
-  background-color: ${white};
+  background-color: ${black};
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  justify-content: center;
   position: fixed;
   top: 0;
   width: 100vw;

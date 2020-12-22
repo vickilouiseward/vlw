@@ -43,7 +43,7 @@ export const StyledImg = styled(Img)`
   height: 800px;
   width: 100%;
   ${respondTo.M`
-    height: 50vw;
+    height: 65vw;
     width: 50vw;
   `}
   ${respondTo.S`

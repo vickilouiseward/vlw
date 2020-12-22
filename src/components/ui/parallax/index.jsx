@@ -28,7 +28,7 @@ export const Parallax = ({ children, height }) => {
   )
 }
 
-export const ParallaxFade = ({ className, children }) => {
+export const ParallaxFade = ({ style, children }) => {
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
   const calc = offset => (1 - (offset / 1000)).toFixed(3)
   const handleScroll = () => {
@@ -46,8 +46,7 @@ export const ParallaxFade = ({ className, children }) => {
 
   return (
     <animated.div
-      className={className}
-      style={{ opacity: offset.interpolate(calc) }}
+      style={{ ...{ opacity: offset.interpolate(calc) }, ...style }}
     >
       {children}
     </animated.div>

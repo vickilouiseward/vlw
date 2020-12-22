@@ -3,16 +3,14 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import {
   BodyWrapper,
+  CarouselCtaLeft,
+  CarouselCtaRight,
   GlobalStyles,
   SiteHeader,
   SplashHero,
   Newsletter,
   ThreeImagesTextRight,
   ThreeQuotes,
-  TwoCtasCarousel,
-  // FiveLogos,
-  // FourItemCarousel,
-  // ThreeCards,
   Footer
 } from '../components'
 import AOS from 'aos'
@@ -86,31 +84,33 @@ const Page = ({ data }) => {
       />
       <BodyWrapper {...{ introAnimation }}>
         <SiteHeader />
-        <TwoCtasCarousel
+        <CarouselCtaLeft
           title="Let's work together"
-          ctas={[
-            {
-              title: 'Bespoke originals',
-              blurb:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
-              cta: 'Find out more',
-              link: '/lets-work-together/bespoke-originals'
-            },
-            {
-              title: 'Commercial commissions',
-              blurb:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. ',
-              cta: 'Coming soon'
-              // cta: 'Find out more',
-              // link: '/'
-            }
-          ]}
+          cta={{
+            title: 'Bespoke originals',
+            blurb: 'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
+            cta: 'Find out more',
+            link: '/lets-work-together/bespoke-originals'
+          }}
           images={[
-            data.lwt1.childImageSharp.fluid,
-            data.lwt2.childImageSharp.fluid,
-            data.lwt3.childImageSharp.fluid,
-            data.lwt4.childImageSharp.fluid,
-            data.lwt5.childImageSharp.fluid
+            data.bo1.childImageSharp.fluid,
+            data.bo2.childImageSharp.fluid,
+            data.bo3.childImageSharp.fluid
+          ]}
+        />
+        <CarouselCtaRight
+          title="Let's work together"
+          cta={{
+            title: 'Commercial commissions',
+            blurb: "Enhance your story telling with custom illustrations designed to help commutate your brand’s identity, products/services and core values. Drop me a message and we can talk about all the options and ways illustration can help you give the personal touch you're looking for.",
+            cta: 'Coming soon'
+            // cta: 'Find out more',
+            // link: '/'
+          }}
+          images={[
+            data.cc1.childImageSharp.fluid,
+            data.cc2.childImageSharp.fluid,
+            data.cc3.childImageSharp.fluid
           ]}
         />
         <ThreeQuotes
@@ -143,86 +143,6 @@ const Page = ({ data }) => {
             }
           ]}
         />
-        {/* <FourItemCarousel
-      title='Press'
-      items={[{
-        image: data.press1.childImageSharp.fluid,
-        tab: {
-          image: data.pressLogo1.childImageSharp.fixed,
-          title: 'Currently exhibiting at',
-          text:
-            'Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus.'
-        }
-      }, {
-        image: data.press1.childImageSharp.fluid,
-        tab: {
-          image: data.pressLogo2.childImageSharp.fixed,
-          title: 'Finalist S/S Awards 2020',
-          text:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
-        }
-      }, {
-        image: data.press3.childImageSharp.fluid,
-        tab: {
-          image: data.pressLogo3.childImageSharp.fixed,
-          title: 'Previous exhibitions',
-          text:
-            'Consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non ligula porta malesuada. Donec tincidunt purus ac lobortis varius. Integer massa neque, posuere sed mollis ut, placerat eu orci.'
-        }
-      }, {
-        image: data.press4.childImageSharp.fluid,
-        tab: {
-          image: data.pressLogo4.childImageSharp.fixed,
-          title: '100 anniversary winner',
-          text:
-            'Ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Cras vel dolor non.'
-        }
-      }]}
-    /> */}
-        {/* <ThreeCards
-      title='Shop off the rack'
-      cards={[
-        {
-          image: data.otr1.childImageSharp.fluid,
-          cta: 'Shop Prints',
-          link: '/shop-off-the-rack/prints'
-        },
-        {
-          image: data.otr2.childImageSharp.fluid,
-          cta: 'Shop Editions',
-          link: '/shop-off-the-rack/editions'
-        },
-        {
-          image: data.otr3.childImageSharp.fluid,
-          cta: 'Shop Originals',
-          link: '/shop-off-the-rack/originals'
-        }
-      ]}
-    /> */}
-        {/* <FiveLogos
-      logos={[
-        {
-          image: data.portfolio1.childImageSharp.fixed,
-          alt: 'SkinCeuticals'
-        },
-        {
-          image: data.portfolio2.childImageSharp.fixed,
-          alt: 'NET-A-PORTER'
-        },
-        {
-          image: data.portfolio3.childImageSharp.fixed,
-          alt: 'By Sarah London'
-        },
-        {
-          image: data.portfolio4.childImageSharp.fixed,
-          alt: 'PerriconeMD'
-        },
-        {
-          image: data.portfolio5.childImageSharp.fixed,
-          alt: "L'Oréal"
-        }
-      ]}
-    /> */}
         <ThreeImagesTextRight
           images={[
             {
@@ -239,11 +159,15 @@ const Page = ({ data }) => {
             }
           ]}
           title='My Story'
-          text='Vicki Louise Ward is a London based fashion and lifestyle illustrator. She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.'
+          text={[
+            'Vicki Louise Ward is a London based fashion, beauty and lifestyle illustrator.',
+            'She uses a mixture of minimalist and detailed lines alongside abstract watercolour to describe the beauty and elegance of the world around her.',
+            'She studied at the University for the Creative Arts before embarking on her design and illustration career. She has worked with brands including L’Oréal, SkinCeuticals, Stylist and NET-A-PORTER.'
+          ]}
         />
         <Newsletter
           title='Newsletter'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
+          text='Don’t miss a thing. Sign up to the newsletter to be the first to hear about artwork launches, up and coming exhibitions, and new blog posts.'
         />
         <Footer />
       </BodyWrapper>
@@ -337,153 +261,48 @@ export const query = graphql`
         }
       }
     }
-    lwt1: file(relativePath: { eq: "homepage/lets_work_together_1.jpg" }) {
+    bo1: file(relativePath: { eq: "homepage/bespoke_originals_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt2: file(relativePath: { eq: "homepage/lets_work_together_2.jpg" }) {
+    bo2: file(relativePath: { eq: "homepage/bespoke_originals_2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt3: file(relativePath: { eq: "homepage/lets_work_together_3.jpg" }) {
+    bo3: file(relativePath: { eq: "homepage/bespoke_originals_3.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt4: file(relativePath: { eq: "homepage/lets_work_together_4.jpg" }) {
+    cc1: file(relativePath: { eq: "homepage/commercial_commission_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    lwt5: file(relativePath: { eq: "homepage/lets_work_together_5.jpg" }) {
+    cc2: file(relativePath: { eq: "homepage/commercial_commission_2.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    press1: file(relativePath: { eq: "homepage/press_1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    press2: file(relativePath: { eq: "homepage/press_1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    press3: file(relativePath: { eq: "homepage/press_3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    press4: file(relativePath: { eq: "homepage/press_4.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    pressLogo1: file(relativePath: { eq: "homepage/acid_gallery_logo.png" }) {
-      childImageSharp {
-        fixed(height: 72) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    pressLogo2: file(relativePath: { eq: "homepage/fida_logo.png" }) {
-      childImageSharp {
-        fixed(height: 72) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    pressLogo3: file(relativePath: { eq: "homepage/cluster_logo.png" }) {
-      childImageSharp {
-        fixed(height: 72) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    pressLogo4: file(relativePath: { eq: "homepage/stylist_logo.png" }) {
-      childImageSharp {
-        fixed(height: 72) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    otr1: file(relativePath: { eq: "homepage/prints.png" }) {
+    cc3: file(relativePath: { eq: "homepage/commercial_commission_3.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    otr2: file(relativePath: { eq: "homepage/limited_edition.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    otr3: file(relativePath: { eq: "homepage/original_artwork.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    # portfolio1: file(relativePath: { eq: "homepage/skin_ceuticals.png" }) {
-    #   childImageSharp {
-    #     fixed(height: 72) {
-    #       ...GatsbyImageSharpFixed_withWebp_noBase64
-    #     }
-    #   }
-    # }
-    # portfolio2: file(relativePath: { eq: "homepage/nap.png" }) {
-    #   childImageSharp {
-    #     fixed(height: 72) {
-    #       ...GatsbyImageSharpFixed_withWebp_noBase64
-    #     }
-    #   }
-    # }
-    # portfolio3: file(relativePath: { eq: "homepage/by_sarah.png" }) {
-    #   childImageSharp {
-    #     fixed(height: 72) {
-    #       ...GatsbyImageSharpFixed_withWebp_noBase64
-    #     }
-    #   }
-    # }
-    # portfolio4: file(relativePath: { eq: "homepage/perricone_md.png" }) {
-    #   childImageSharp {
-    #     fixed(height: 72) {
-    #       ...GatsbyImageSharpFixed_withWebp_noBase64
-    #     }
-    #   }
-    # }
-    # portfolio5: file(relativePath: { eq: "homepage/loreal.png" }) {
-    #   childImageSharp {
-    #     fixed(height: 72) {
-    #       ...GatsbyImageSharpFixed_withWebp_noBase64
-    #     }
-    #   }
-    # }
     ms1: file(relativePath: { eq: "homepage/my_story_1.jpg" }) {
       childImageSharp {
         fluid(quality: 100) {
