@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { colours, dropShadow } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { white, midnight } = colours
+const { white, midnight, pastelPink } = colours
 
 export const StyledContainer = styled.section`
   background-color: ${({ $light }) => $light ? white : midnight};
@@ -118,5 +118,42 @@ export const StyledImageSectionLeft = styled.section`
   `}
   & > ${StyledImgSm} {
     margin-right: -5%;
+  }
+`
+
+export const StyledTitleContainer = styled.section`
+  background-color: ${pastelPink};
+  color: ${midnight};
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 72px 0 90px;
+  ${respondTo.S`
+    flex-direction: column;
+    padding: 64px 0 0;
+  `}
+  & > ${StyledImageSectionLeft} {
+    align-items: flex-end;
+    & > ${StyledImgLg} {
+      margin-right: -5%;
+    }
+    & > ${StyledImgSm} {
+      margin: 0 0 -2%;
+    }
+  }
+  & > ${StyledCtaSectionRight} {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0 24px;
+    width: 50vw;
+    ${respondTo.S`
+      padding: 64px 24px;
+      width: 100vw;
+      order: 1;
+    `}
   }
 `

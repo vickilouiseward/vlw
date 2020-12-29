@@ -4,16 +4,27 @@ import {
   StyledButton,
   StyledCtaSection,
   StyledLink,
-  StyledLinkButton
+  StyledLinkButton,
+  StyledExternalLinkButton
 } from './styled'
 
 export const Button = ({ onClick, type, $outline, $light, $disabled, children }) => (
   <StyledButton data-aos='fade-in' {...{ onClick, type, $outline, $light, $disabled }}>{children}</StyledButton>
 )
 
-export const LinkButton = ({ cta, link, $outline, $light }) => (
-  <StyledLinkButton to={link} data-aos='fade-in' {...{ $outline, $light }}>{cta}</StyledLinkButton>
-)
+export const LinkButton = ({ cta, link, $outline, $light }) => {
+  var isExternal = new RegExp('^(?:[a-z]+:)?//', 'i')
+
+  if (isExternal.test(link)) {
+    return (
+      <StyledExternalLinkButton href={link} data-aos='fade-in' {...{ $outline, $light }}>{cta}</StyledExternalLinkButton>
+    )
+  }
+
+  return (
+    <StyledLinkButton to={link} data-aos='fade-in' {...{ $outline, $light }}>{cta}</StyledLinkButton>
+  )
+}
 
 export const BodyLink = ({ color, children }) => (
   <StyledLink {...{ color }}>{children}</StyledLink>

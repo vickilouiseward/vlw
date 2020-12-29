@@ -5,6 +5,7 @@ import {
   BodyWrapper,
   CarouselCtaLeft,
   CarouselCtaRight,
+  ImageTitleCtaRight,
   GlobalStyles,
   SiteHeader,
   SplashHero,
@@ -96,6 +97,19 @@ const Page = ({ data }) => {
             data.bo1.childImageSharp.fluid,
             data.bo2.childImageSharp.fluid,
             data.bo3.childImageSharp.fluid
+          ]}
+        />
+        <ImageTitleCtaRight
+          title='Give the gift of art'
+          cta={{
+            title: 'Bespoke originals gift experience',
+            blurb: 'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
+            cta: 'Shop gifting',
+            link: 'https://www.google.com'
+          }}
+          images={[
+            data.bo1.childImageSharp.fluid,
+            data.bo2.childImageSharp.fluid
           ]}
         />
         <CarouselCtaRight

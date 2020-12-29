@@ -23,7 +23,7 @@ export const StyledContainer = styled.section`
   ${respondTo.S`
     justify-content: flex-end;
     padding: 0 24px 64px;
-    height: calc(100vh - 140px);
+    // height: calc(100vh - 140px);
   `}
 `
 
@@ -44,11 +44,10 @@ export const StyledSliderSection = styled.section`
 export const StyledImg = styled(Img)`
   display: block;
   width: 100vw;
-  height: calc(100vh - 80px);
-  ${respondTo.S`
-    width: 100vw;
-    height: auto;
-  `}
+  height: 100vh;
+  // ${respondTo.S`
+  //   height: auto;
+  // `}
 `
 
 export const StyledSection = styled.section`
@@ -77,8 +76,8 @@ export const StyledLinkSpacer = styled.div`
 `
 
 export const StyledSpacer = styled.div`
-  margin-bottom: calc(100vh - 80px);
-  ${respondTo.S`
-    margin-bottom: calc(100vh - 140px);
-  `}
+  margin-bottom: 100vh;
+  // ${respondTo.S`
+  //   margin-bottom: calc(100vh - 140px);
+  // `}
 `
