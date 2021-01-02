@@ -27,7 +27,7 @@ const Page = ({ data }) => {
       offset: 100,
       once: true
     })
-    window.sessionStorage.setItem('introComplete', 1)
+    typeof window !== 'undefined' && setTimeout(() => window.sessionStorage.setItem('introComplete', 1), 4000)
   }, [])
 
   return (

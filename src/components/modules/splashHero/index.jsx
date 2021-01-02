@@ -5,7 +5,7 @@ import { colours } from '../../../styles'
 
 const { white } = colours
 
-export const SplashHero = ({ images, cta, link, introAnimation }) => {
+export const SplashHero = ({ images, introAnimation }) => {
   const [bgImage, setBgImage] = useState(0)
 
   useEffect(() => {
@@ -36,9 +36,6 @@ export const SplashHero = ({ images, cta, link, introAnimation }) => {
           <StyledSection {...{ introAnimation }}>
             <Logo />
             <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
-            {/* <StyledLinkSpacer {...{ fadeIn }}>
-          <LinkButton {...{ cta, link }} />
-        </StyledLinkSpacer> */}
           </StyledSection>
         </ParallaxFade>
       </StyledContainer>
