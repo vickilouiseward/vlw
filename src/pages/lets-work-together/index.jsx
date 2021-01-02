@@ -58,9 +58,8 @@ const Page = ({ data }) => {
           cta={{
             title: 'Commercial',
             blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-            cta: 'Coming soon'
-          // cta: 'Find out more',
-          // link: '/'
+            cta: 'Find out more',
+            link: '/lets-work-together/commercial-commissions'
           }}
           images={[
             data.cc1.childImageSharp.fluid,

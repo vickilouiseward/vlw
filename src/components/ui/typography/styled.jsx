@@ -7,7 +7,7 @@ export const StyledH2 = styled.h2`
   font-size: 48px;
   font-weight: normal;
   line-height: 78px;
-  margin: 0 auto;
+  margin: 0;
   ${respondTo.M`
     font-size: 32px;
     line-height: 52px;
@@ -20,7 +20,7 @@ export const StyledH3 = styled.h3`
   font-size: 24px;
   font-weight: normal;
   line-height: 42px;
-  margin: 0 auto;
+  margin: 0;
 `
 
 export const StyledParagraph = styled.p`
@@ -28,5 +28,5 @@ export const StyledParagraph = styled.p`
   font-family: Amiri;
   font-size: 16px;
   line-height: 28px;
-  margin: 16px auto 24px;
+  margin: 16px 0 24px;
 `

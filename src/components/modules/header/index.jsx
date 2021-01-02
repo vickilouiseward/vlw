@@ -14,21 +14,27 @@ import {
   StyledMobileNavUl,
   StyledMobileNavLi,
   StyledContainer,
+  StyledInlineContainer,
   StyledSection,
+  StyledImageSectionLeft,
+  StyledSectionLeft,
+  StyledSectionRight,
+  StyledImgLg,
+  StyledImgSm,
   StyledImg
 } from './styled'
 import {
   CloseIcon,
+  LinkButton,
   MenuIcon,
   HeaderLogo,
   Title,
-  Paragraph,
-  Parallax
+  Paragraph
 } from '../..'
 import { breakpoints } from '../../../utilities'
 
 const routes = [
-  // { title: "Let's work together", path: '/lets-work-together' },
+  { title: "Let's work together", path: '/lets-work-together' },
   // { title: 'Shop off the rack', path: '/shop-off-the-rack' },
   // { title: 'Portfilio', path: '/portfolio' },
   // { title: 'My story', path: '/my-story' },
@@ -95,18 +101,46 @@ export const SiteHeader = () => {
   )
 }
 
-export const PageHeader = ({ title, text, image, color, bgcolor }) => (
+export const PageHeader = ({ title, text, color, bgcolor }) => (
+  <StyledContainer {...{ bgcolor }}>
+    <StyledSection>
+      <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
+      {text && <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>}
+    </StyledSection>
+  </StyledContainer>
+)
+
+export const PageHeaderLeft = ({ title, text, cta, image, color, bgcolor }) => (
   <>
-    {image && (
-      <Parallax height='380px'>
+    <StyledInlineContainer {...{ bgcolor, color }}>
+      <StyledSectionLeft>
+        <Title data-aos='fade-in' level={2}>{title}</Title>
+        {text && text.map((line, index) => (
+          <Paragraph data-aos='fade-in' key={index}>{line}</Paragraph>
+        ))}
+        {cta && <LinkButton cta={cta.text} link={cta.link} $light />}
+      </StyledSectionLeft>
+      <StyledSectionRight>
         <StyledImg fadeIn={false} fluid={image} alt={title} />
-      </Parallax>
-    )}
-    <StyledContainer {...{ bgcolor }}>
-      <StyledSection>
-        <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
-        {text && <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>}
-      </StyledSection>
-    </StyledContainer>
+      </StyledSectionRight>
+    </StyledInlineContainer>
+  </>
+)
+
+export const PageHeaderRight = ({ title, text, cta, images, color, bgcolor }) => (
+  <>
+    <StyledInlineContainer {...{ bgcolor, color }}>
+      <StyledImageSectionLeft>
+        <StyledImgLg fadeIn={false} fluid={images[0]} alt={title} />
+        <StyledImgSm fadeIn={false} fluid={images[1]} alt={title} />
+      </StyledImageSectionLeft>
+      <StyledSectionRight>
+        <Title data-aos='fade-in' level={2}>{title}</Title>
+        {text && text.map((line, index) => (
+          <Paragraph data-aos='fade-in' key={index}>{line}</Paragraph>
+        ))}
+        {cta && <LinkButton cta={cta.text} link={cta.link} $light />}
+      </StyledSectionRight>
+    </StyledInlineContainer>
   </>
 )

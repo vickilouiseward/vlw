@@ -47,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ $lightmode }) => $lightmode ? white : black};
+    background-color: ${({ $lightmode }) => $lightmode ? white : midnight};
     color: ${({ $lightmode }) => $lightmode ? midnight : white};
     font-family: Amiri, serif;
     font-size: 16px;

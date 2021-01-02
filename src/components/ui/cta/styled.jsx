@@ -72,6 +72,7 @@ export const StyledLinkButton = styled(Link)`
   min-width: 160px;
   padding: 0 23px;
   outline: none;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 `
@@ -89,6 +90,7 @@ export const StyledExternalLinkButton = styled.a`
   min-width: 160px;
   padding: 0 23px;
   outline: none;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 `

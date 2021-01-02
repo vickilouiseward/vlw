@@ -9,19 +9,19 @@ import {
 import { Title, Step } from '../..'
 import { colours } from '../../../styles'
 
-const { white } = colours
+const { white, black } = colours
 
-export const ImageScrollingTextBlocks = ({ image, title, blocks }) => (
-  <StyledContainer>
+export const ImageScrollingTextBlocks = ({ image, title, blocks, $light }) => (
+  <StyledContainer {...{ $light }}>
     <StyledImgSection>
-      <StyledFadeTop />
+      <StyledFadeTop {...{ $light }} />
       <StyledImg fadeIn={false} fluid={image} alt={title} />
     </StyledImgSection>
     <StyledScrollingSection>
       <Title level={2}>
         {title}
       </Title>
-      {blocks.map((block, index) => <Step key={index} color={white} {...block} />)}
+      {blocks.map((block, index) => <Step key={index} color={$light ? black : white} {...block} />)}
     </StyledScrollingSection>
   </StyledContainer>
 )

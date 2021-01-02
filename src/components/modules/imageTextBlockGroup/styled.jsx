@@ -10,6 +10,7 @@ export const StyledContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 120px 80px;
+  text-align: center;
   ${respondTo.S`
     padding: 64px 24px;
   `}

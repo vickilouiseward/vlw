@@ -104,8 +104,8 @@ const Page = ({ data }) => {
           cta={{
             title: 'Bespoke originals gift experience',
             blurb: 'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
-            cta: 'Shop gifting',
-            link: 'https://www.google.com'
+            cta: 'Find out more',
+            link: '/lets-work-together/gifting-experience'
           }}
           images={[
             data.bo1.childImageSharp.fluid,
@@ -117,9 +117,8 @@ const Page = ({ data }) => {
           cta={{
             title: 'Commercial commissions',
             blurb: "Enhance your story telling with custom illustrations designed to help commutate your brand’s identity, products/services and core values. Drop me a message and we can talk about all the options and ways illustration can help you give the personal touch you're looking for.",
-            cta: 'Coming soon'
-            // cta: 'Find out more',
-            // link: '/'
+            cta: 'Find out more',
+            link: '/lets-work-together/commercial-commissions'
           }}
           images={[
             data.cc1.childImageSharp.fluid,

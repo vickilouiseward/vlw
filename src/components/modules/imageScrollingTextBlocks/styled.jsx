@@ -3,11 +3,11 @@ import Img from 'gatsby-image'
 import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
-const { white, midnight } = colours
+const { white, midnight, cream, black } = colours
 
 export const StyledContainer = styled.section`
-  background-color: ${midnight};
-  color: ${white};
+  background-color: ${({ $light }) => $light ? cream : midnight};
+  color: ${({ $light }) => $light ? black : white};
   display: flex;
   flex-direction: row;
   position: relative;
@@ -30,14 +30,14 @@ export const StyledImgSection = styled.section`
 `
 
 export const StyledFadeTop = styled.div`
-  background: linear-gradient(${midnight} 80px, transparent 100%);
+  background: linear-gradient(${({ $light }) => $light ? cream : midnight} 80px, transparent 100%);
   height: 200px;
   position: absolute;
   right: -100%;
   top: 0;
   width: 50vw;
   ${respondTo.S`
-    background: linear-gradient(${midnight} 0%, transparent 100%);
+    background: linear-gradient(${({ $light }) => $light ? cream : midnight} 0%, transparent 100%);
     bottom: -80px;
     height: 80px;
     right: 0;

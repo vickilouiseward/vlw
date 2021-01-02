@@ -74,7 +74,7 @@ export const StyledImgSection = styled.section`
 
 export const StyledImg = styled(Img)`
   display: block;
-  height: 1200px;
+  height: 1400px;
   width: 50vw;
   ${respondTo.S`
     width: 100vw;
