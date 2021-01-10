@@ -27,29 +27,24 @@ export const StyledSection = styled.section`
 `
 
 export const StyledImgWrapper = styled.div`
+  height: 800px;
   overflow: hidden;
   transition: width 0.8s ease-in-out;
-  width: ${({ inFocus }) => (inFocus ? '45vw' : '15vw')};
+  width: ${({ inFocus }) => (inFocus ? '39vw' : '18vw')};
   ${respondTo.M`
+    height: 65vw;
     width: ${({ inFocus }) => (inFocus ? '30vw' : '10vw')};
   `}
   ${respondTo.S`
+    height: 100vw;
     width: ${({ inFocus }) => (inFocus ? '60vw' : '20vw')};
   `}
 `
 
 export const StyledImg = styled(Img)`
   display: block;
-  height: 800px;
+  height: 100%;
   width: 100%;
-  ${respondTo.M`
-    height: 65vw;
-    width: 50vw;
-  `}
-  ${respondTo.S`
-    height: 100vw;
-    width: 100vw;
-  `}
 `
 
 export const StyledArticle = styled.article`

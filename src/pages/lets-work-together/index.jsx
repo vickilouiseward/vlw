@@ -6,9 +6,8 @@ import {
   GlobalStyles,
   SiteHeader,
   PageHeader,
-  ImageCtaLeft,
-  ImageCtaRight,
-  Keyline,
+  ImageCtaWrapper,
+  ImageCta,
   Footer
 } from '../../components'
 import AOS from 'aos'
@@ -17,7 +16,7 @@ import 'aos/dist/aos.css'
 const Page = ({ data }) => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true
@@ -40,32 +39,26 @@ const Page = ({ data }) => {
           title="Let's work together"
           text='I offer two custom services, Bespoke Originals for those looking for something niche or personal and the other is Commercial Commissions for those looking to enhance their brand story and luxury presence.'
         />
-        <Keyline />
-        <ImageCtaLeft
-          cta={{
-            title: 'Bespoke originals',
-            blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-            cta: 'Find out more',
-            link: '/lets-work-together/bespoke-originals'
-          }}
-          images={[
-            data.bo1.childImageSharp.fluid,
-            data.bo2.childImageSharp.fluid
-          ]}
-        />
-        <Keyline />
-        <ImageCtaRight
-          cta={{
-            title: 'Commercial',
-            blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-            cta: 'Find out more',
-            link: '/lets-work-together/commercial-commissions'
-          }}
-          images={[
-            data.cc1.childImageSharp.fluid,
-            data.cc2.childImageSharp.fluid
-          ]}
-        />
+        <ImageCtaWrapper>
+          <ImageCta
+            image={data.placeholder.childImageSharp.fluid}
+            cta={{
+              title: 'Bespoke originals',
+              blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
+              cta: 'Find out more',
+              link: '/lets-work-together/bespoke-originals'
+            }}
+          />
+          <ImageCta
+            image={data.placeholder.childImageSharp.fluid}
+            cta={{
+              title: 'Commercial',
+              blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
+              cta: 'Find out more',
+              link: '/lets-work-together/commercial-commissions'
+            }}
+          />
+        </ImageCtaWrapper>
         <Footer />
       </BodyWrapper>
     </>
@@ -74,28 +67,7 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
-    bo1: file(relativePath: { eq: "lets-work-together/floral_skull.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    bo2: file(relativePath: { eq: "lets-work-together/dior.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    cc1: file(relativePath: { eq: "lets-work-together/beauty_selection.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    cc2: file(relativePath: { eq: "lets-work-together/fashionistas.png" }) {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

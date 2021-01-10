@@ -8,7 +8,7 @@ import 'aos/dist/aos.css'
 const Page = ({ data }) => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true
@@ -31,7 +31,7 @@ const Page = ({ data }) => {
           formiumForm={data.formiumForm}
           title='Get in touch'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
-          image={data.dress.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
         />
         <Footer />
       </BodyWrapper>
@@ -49,7 +49,7 @@ export const query = graphql`
       createAt
       updateAt
     }
-    dress: file(relativePath: { eq: "lets-work-together/purple_dress_wip.png" }) {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

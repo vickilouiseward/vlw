@@ -5,7 +5,7 @@ import {
   BodyWrapper,
   CarouselCtaLeft,
   CarouselCtaRight,
-  ImageTitleCtaRight,
+  ImageCta,
   GlobalStyles,
   SiteHeader,
   SplashHero,
@@ -14,15 +14,18 @@ import {
   ThreeQuotes,
   Footer
 } from '../components'
+import { colours } from '../styles'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+const { pastelPink } = colours
 
 const Page = ({ data }) => {
   const introAnimation = typeof window !== 'undefined' && !window.sessionStorage.getItem('introComplete')
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true
@@ -42,39 +45,39 @@ const Page = ({ data }) => {
       <SplashHero
         images={[
           [
-            data.portfolioLg1.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm1.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.portfolioLg2.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm2.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.portfolioLg3.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm3.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.portfolioLg4.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm4.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.portfolioLg5.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm5.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.portfolioLg6.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
             {
-              ...data.portfolioSm6.childImageSharp.fluid,
+              ...data.placeholder.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ]
@@ -94,12 +97,13 @@ const Page = ({ data }) => {
             link: '/lets-work-together/bespoke-originals'
           }}
           images={[
-            data.bo1.childImageSharp.fluid,
-            data.bo2.childImageSharp.fluid,
-            data.bo3.childImageSharp.fluid
+            data.placeholder.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid
           ]}
         />
-        <ImageTitleCtaRight
+        <ImageCta
+          image={data.placeholder.childImageSharp.fluid}
           title='Give the gift of art'
           cta={{
             title: 'Bespoke originals gift experience',
@@ -107,10 +111,7 @@ const Page = ({ data }) => {
             cta: 'Find out more',
             link: '/lets-work-together/gifting-experience'
           }}
-          images={[
-            data.bo1.childImageSharp.fluid,
-            data.bo2.childImageSharp.fluid
-          ]}
+          bgcolor={pastelPink}
         />
         <CarouselCtaRight
           title="Let's work together"
@@ -121,9 +122,9 @@ const Page = ({ data }) => {
             link: '/lets-work-together/commercial-commissions'
           }}
           images={[
-            data.cc1.childImageSharp.fluid,
-            data.cc2.childImageSharp.fluid,
-            data.cc3.childImageSharp.fluid
+            data.placeholder.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid,
+            data.placeholder.childImageSharp.fluid
           ]}
         />
         <ThreeQuotes
@@ -159,15 +160,15 @@ const Page = ({ data }) => {
         <ThreeImagesTextRight
           images={[
             {
-              image: data.ms1.childImageSharp.fluid,
+              image: data.placeholder.childImageSharp.fluid,
               alt: ''
             },
             {
-              image: data.ms2.childImageSharp.fluid,
+              image: data.placeholder.childImageSharp.fluid,
               alt: ''
             },
             {
-              image: data.ms3.childImageSharp.fluid,
+              image: data.placeholder.childImageSharp.fluid,
               alt: ''
             }
           ]}
@@ -190,147 +191,7 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
-    portfolioLg1: file(relativePath: { eq: "homepage/01_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm1: file(relativePath: { eq: "homepage/01_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioLg2: file(relativePath: { eq: "homepage/02_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm2: file(relativePath: { eq: "homepage/02_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioLg3: file(relativePath: { eq: "homepage/03_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm3: file(relativePath: { eq: "homepage/03_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioLg4: file(relativePath: { eq: "homepage/04_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm4: file(relativePath: { eq: "homepage/04_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioLg5: file(relativePath: { eq: "homepage/05_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm5: file(relativePath: { eq: "homepage/05_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioLg6: file(relativePath: { eq: "homepage/06_bp4_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    portfolioSm6: file(relativePath: { eq: "homepage/06_bp1_portfolio.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    bo1: file(relativePath: { eq: "homepage/bespoke_originals_1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    bo2: file(relativePath: { eq: "homepage/bespoke_originals_2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    bo3: file(relativePath: { eq: "homepage/bespoke_originals_3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    cc1: file(relativePath: { eq: "homepage/commercial_commission_1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    cc2: file(relativePath: { eq: "homepage/commercial_commission_2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    cc3: file(relativePath: { eq: "homepage/commercial_commission_3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    ms1: file(relativePath: { eq: "homepage/my_story_1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    ms2: file(relativePath: { eq: "homepage/my_story_2.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    ms3: file(relativePath: { eq: "homepage/my_story_3.jpg" }) {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

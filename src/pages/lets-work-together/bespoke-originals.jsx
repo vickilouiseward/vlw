@@ -20,7 +20,7 @@ const { midnight, white } = colours
 const Page = ({ data }) => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true
@@ -47,7 +47,7 @@ const Page = ({ data }) => {
         />
         <ImageScrollingTextBlocks
           title='Vicki’s process'
-          image={data.runway.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
           blocks={[
             {
               number: 'Step One',
@@ -85,27 +85,27 @@ const Page = ({ data }) => {
           title='Things to consider'
           blocks={[
             {
-              image: data.subject.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Subject',
               text: 'This is what your chosen illustration/art is of. It could be an object you love, a fashion figure of your favourite brand or maybe the interior of somewhere you have visited. This can be personal to you, however if you are undecided or need help choosing a subject Vicki can help you find the right thing for you just let her know when asking for a quote.'
             }, {
-              image: data.size.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Size & ratio',
               text: "The size of your artwork is how big or small you'd like it. This normally depends on the space you are wishing to fill. It's great to measure the area making sure you leave enough space for the artwork and the frame you wish to put it in. Vicki can always advise a good size based on the space you want the artwork to go in."
             }, {
-              image: data.canvas.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Canvas',
               text: "Choosing a canvas is really preference however Vicki uses high quality 100% rag watercolour paper, starting in 300 gsm by default. There are many alternatives you can have as your canvas such as ply, stretch canvas, wood etc. If you'd like to use another material as your canvas this can easily be arranged and would be subject to sourcing and at an extra cost."
             }, {
-              image: data.materials.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Materials',
               text: 'By default Vicki uses premium watercolour and inks from the top brands to create any Bespoke Original. However if you would like custom materials such as a special type of ink or watercolour for example neon/metallic or gold leaf, she can discuss the option and quote you based on the additional materials.'
             }, {
-              image: data.timeline.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Timeline',
               text: 'Generally allow a commission to take 4 - 6  weeks. This will all be based on each individual quote. If you need your piece sooner then please Vicki know this in advance as she will see how she can accommodate you.- Should you need a fast turn around this can be arrange depending on availability and this is subject to additional cost.'
             }, {
-              image: data.gifting.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Gifting',
               text: 'If your item is a gift, for any size A5 - A2 the artwork can be wrapped in a luxury gift box and sent directly to your nominated recipient. However if you are not quite sure what type of artwork to gift there is an option to purchase a gift voucher for a Bespoke Original for your special someone that way they can choose for themselves a piece of art dear to them.'
             }
@@ -115,7 +115,7 @@ const Page = ({ data }) => {
           formiumForm={data.formiumForm}
           title='Get in touch'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
-          image={data.dress.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
         />
         <Footer />
       </BodyWrapper>
@@ -133,80 +133,17 @@ export const query = graphql`
       createAt
       updateAt
     }
-    header: file(relativePath: { eq: "lets-work-together/ysl_wip.png" }) {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    yoga: file(relativePath: { eq: "lets-work-together/yoga.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    jom: file(relativePath: { eq: "lets-work-together/jo_malone.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    runway: file(relativePath: { eq: "lets-work-together/runway_wip.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    subject: file(relativePath: { eq: "lets-work-together/subject_matter.jpg" }) {
+    placeholderFixed: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fixed(height: 276, width: 276) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    size: file(relativePath: { eq: "lets-work-together/artwork_size.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    canvas: file(relativePath: { eq: "lets-work-together/canvas_choice.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    materials: file(relativePath: { eq: "lets-work-together/types_of_materials.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    timeline: file(relativePath: { eq: "lets-work-together/your_timeline.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    gifting: file(relativePath: { eq: "lets-work-together/gifting.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    dress: file(relativePath: { eq: "lets-work-together/purple_dress_wip.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }

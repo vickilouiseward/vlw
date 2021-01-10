@@ -7,7 +7,7 @@ import 'aos/dist/aos.css'
 const Page = () => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true

@@ -20,7 +20,7 @@ const { midnight, white } = colours
 const Page = ({ data }) => {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
       easing: 'ease-in-out',
       offset: 100,
       once: true
@@ -43,7 +43,7 @@ const Page = ({ data }) => {
           color={midnight}
           bgcolor={white}
           title='Commercial commissions'
-          image={data.header.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
           text={[
             'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
             'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
@@ -51,7 +51,7 @@ const Page = ({ data }) => {
         />
         <ImageScrollingTextBlocks
           title='Vicki’s process'
-          image={data.runway.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
           blocks={[
             {
               number: 'Step One',
@@ -89,27 +89,27 @@ const Page = ({ data }) => {
           title='Illustration Services'
           blocks={[
             {
-              image: data.subject.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Branding & Packaging',
               text: 'This applies to accompanying illustrations that compliment your brands identity and adds an extra layer of personality. Including marketing material, press packs as well as adding to your digital presences, via email marketing, social and your business or brands website creating a consistent identity across all platforms.'
             }, {
-              image: data.size.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Advertising campaigns',
               text: 'Are you looking to promote a new product or collection and want to add an illustrative detail?'
             }, {
-              image: data.canvas.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Editorial & Media',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.materials.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Press & events',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.timeline.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Large scale',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.gifting.childImageSharp.fixed,
+              image: data.placeholderFixed.childImageSharp.fixed,
               title: 'Bespoke',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }
@@ -119,7 +119,7 @@ const Page = ({ data }) => {
           formiumForm={data.formiumForm}
           title='Get in touch'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
-          image={data.dress.childImageSharp.fluid}
+          image={data.placeholder.childImageSharp.fluid}
         />
         <Footer />
       </BodyWrapper>
@@ -137,80 +137,17 @@ export const query = graphql`
       createAt
       updateAt
     }
-    header: file(relativePath: { eq: "lets-work-together/ysl_wip.png" }) {
+    placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
-    yoga: file(relativePath: { eq: "lets-work-together/yoga.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    jom: file(relativePath: { eq: "lets-work-together/jo_malone.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    runway: file(relativePath: { eq: "lets-work-together/runway_wip.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    subject: file(relativePath: { eq: "lets-work-together/subject_matter.jpg" }) {
+    placeholderFixed: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fixed(height: 276, width: 276) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    size: file(relativePath: { eq: "lets-work-together/artwork_size.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    canvas: file(relativePath: { eq: "lets-work-together/canvas_choice.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    materials: file(relativePath: { eq: "lets-work-together/types_of_materials.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    timeline: file(relativePath: { eq: "lets-work-together/your_timeline.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    gifting: file(relativePath: { eq: "lets-work-together/gifting.jpg" }) {
-      childImageSharp {
-        fixed(height: 276, width: 276) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-    dress: file(relativePath: { eq: "lets-work-together/purple_dress_wip.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
         }
       }
     }
