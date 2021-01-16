@@ -19,8 +19,6 @@ import {
   StyledImageSectionLeft,
   StyledSectionLeft,
   StyledSectionRight,
-  StyledImgLg,
-  StyledImgSm,
   StyledImg
 } from './styled'
 import {
@@ -127,12 +125,11 @@ export const PageHeaderLeft = ({ title, text, cta, image, color, bgcolor }) => (
   </>
 )
 
-export const PageHeaderRight = ({ title, text, cta, images, color, bgcolor }) => (
+export const PageHeaderRight = ({ title, text, cta, image, color, bgcolor }) => (
   <>
     <StyledInlineContainer {...{ bgcolor, color }}>
       <StyledImageSectionLeft>
-        <StyledImgLg fadeIn={false} fluid={images[0]} alt={title} />
-        <StyledImgSm fadeIn={false} fluid={images[1]} alt={title} />
+        <StyledImg fadeIn={false} fluid={image} alt={title} />
       </StyledImageSectionLeft>
       <StyledSectionRight>
         <Title data-aos='fade-in' level={2}>{title}</Title>

@@ -9,16 +9,35 @@ export const StyledContainer = styled.section`
   color: ${midnight};
   display: flex;
   flex-direction: column;
-  padding: 120px 80px;
+  padding: 120px 0;
   text-align: center;
   ${respondTo.S`
-    padding: 64px 24px;
+    padding: 64px 0;
   `}
 `
 
+export const StyledWrapper = styled.section`
+  height: 610px;
+  overflow: hidden;
+  width: 100%;
+`
 export const StyledSection = styled.section`
+  align-items: end;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  height: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 610px;
+  scroll-snap-type: y mandatory;
+  transform: rotate(-90deg) translateY(-610px);
+  transform-origin: right top;
+  & ::-webkit-scrollbar {
+    display: none;
+  }
+  & > * {
+    scroll-snap-align: start;
+    transform: rotate(90deg) translateY(-610px);
+    transform-origin: left top;
+  }
 `

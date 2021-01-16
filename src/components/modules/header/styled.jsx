@@ -1,7 +1,7 @@
 import styled, { css, keyframes } from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { colours, dropShadow } from '../../../styles'
+import { colours } from '../../../styles'
 import { respondTo } from '../../../utilities'
 
 const { white, black, cream, midnight } = colours
@@ -198,7 +198,7 @@ export const StyledInlineContainer = styled.section`
   flex-direction: row;
   justify-content: center;
   padding: 120px 0;
-  ${respondTo.S`
+  ${respondTo.M`
     flex-direction: column;
     padding: 64px 0;
   `}
@@ -213,9 +213,6 @@ export const StyledSectionLeft = styled.section`
   padding: 0  120px;
   width: 50vw;
   ${respondTo.M`
-    padding: 0 64px;
-  `}
-  ${respondTo.S`
     align-items: center;
     padding: 64px 24px 0;
     width: 100vw;
@@ -233,31 +230,12 @@ export const StyledSectionRight = styled.section`
   padding: 0 120px 0 0;
   width: 50vw;
   ${respondTo.M`
-    padding-right: 64px;
-  `}
-  ${respondTo.S`
     align-items: center;
     padding: 64px 24px 0;
     width: 100vw;
     order: 1;
     text-align: center
   `}
-`
-
-export const StyledImgLg = styled(Img)`
-  box-shadow: ${dropShadow};
-  display: block;
-  height: 80%;
-  width: 50%;
-  z-index: 0;
-`
-
-export const StyledImgSm = styled(Img)`
-  box-shadow: ${dropShadow};
-  display: block;
-  height: 70%;
-  width: 45%;
-  z-index: 1;
 `
 
 export const StyledImg = styled(Img)`
@@ -275,15 +253,9 @@ export const StyledImageSectionLeft = styled.section`
   padding: 0 64px 40px 120px;
   width: 60vw;
   ${respondTo.M`
-    padding-left: 64px;
-  `}
-  ${respondTo.S`
     justify-content: center;
     padding: 0 24px;
     width: 100vw;
     order: 0;
   `}
-  & > ${StyledImgSm} {
-    margin: 0 0 -3% -11%;
-  }
 `

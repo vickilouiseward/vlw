@@ -42,10 +42,7 @@ const Page = ({ data }) => {
           color={midnight}
           bgcolor={white}
           title='Gifting Experience'
-          images={[
-            data.placeholder.childImageSharp.fluid,
-            data.placeholder.childImageSharp.fluid
-          ]}
+          image={data.placeholder.childImageSharp.fluid}
           text={[
             'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
             'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
@@ -96,15 +93,15 @@ const Page = ({ data }) => {
           title='Things to consider'
           blocks={[
             {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Subject',
               text: 'This is what your chosen illustration/art is of. It could be an object you love, a fashion figure of your favourite brand or maybe the interior of somewhere you have visited. This can be personal to you, however if you are undecided or need help choosing a subject Vicki can help you find the right thing for you just let her know when asking for a quote.'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Size & ratio',
               text: "The size of your artwork is how big or small you'd like it. This normally depends on the space you are wishing to fill. It's great to measure the area making sure you leave enough space for the artwork and the frame you wish to put it in. Vicki can always advise a good size based on the space you want the artwork to go in."
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Canvas',
               text: "Choosing a canvas is really preference however Vicki uses high quality 100% rag watercolour paper, starting in 300 gsm by default. There are many alternatives you can have as your canvas such as ply, stretch canvas, wood etc. If you'd like to use another material as your canvas this can easily be arranged and would be subject to sourcing and at an extra cost."
             }
@@ -135,7 +132,7 @@ export const query = graphql`
     }
     placeholderFixed: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
-        fixed(height: 276, width: 276) {
+        fixed(height: 280, width: 388) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }

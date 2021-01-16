@@ -89,27 +89,27 @@ const Page = ({ data }) => {
           title='Illustration Services'
           blocks={[
             {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Branding & Packaging',
               text: 'This applies to accompanying illustrations that compliment your brands identity and adds an extra layer of personality. Including marketing material, press packs as well as adding to your digital presences, via email marketing, social and your business or brands website creating a consistent identity across all platforms.'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Advertising campaigns',
               text: 'Are you looking to promote a new product or collection and want to add an illustrative detail?'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Editorial & Media',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Press & events',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Large scale',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholderFixed.childImageSharp.fixed,
+              image: data.placeholder.childImageSharp.fluid,
               title: 'Bespoke',
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }
@@ -146,7 +146,7 @@ export const query = graphql`
     }
     placeholderFixed: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
-        fixed(height: 276, width: 276) {
+        fixed(height: 280, width: 388) {
           ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }

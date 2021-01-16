@@ -64,6 +64,7 @@ export const StyledScrollingSection = styled.section`
   justify-content: flex-start;
   padding: 120px 24px;
   position: relative;
+  scroll-snap-type: y mandatory;
   width: 50vw;
   ${respondTo.S`
     padding: 80px 24px;
