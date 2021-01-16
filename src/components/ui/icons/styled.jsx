@@ -63,3 +63,8 @@ export const StyledCCIcon = styled.svg`
   height: auto;
   width: 300px;
 `
+
+export const StyledStepIcon = styled.svg`
+  height: 80px;
+  width: auto;
+`

@@ -36,8 +36,15 @@ export const StyledSection = styled.section`
     display: none;
   }
   & > * {
+    margin-bottom: calc(-610px + (100vw / 3));
     scroll-snap-align: start;
     transform: rotate(90deg) translateY(-610px);
     transform-origin: left top;
+    ${respondTo.M`
+      margin-bottom: calc(-610px + 50vw);
+    `}
+    ${respondTo.S`
+      margin-bottom: calc(-610px + 100vw);
+    `}
   }
 `

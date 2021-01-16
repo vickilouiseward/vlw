@@ -6,11 +6,10 @@ import { respondTo } from '../../../utilities'
 const { black } = colours
 
 export const StyledSection = styled.section`
-  align-items: center;
+  align-items: flex-start;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  grid-column: 1;
   height: 610px;
   justify-content: center;
   padding: 64px 40px 0;
@@ -27,6 +26,7 @@ export const StyledSection = styled.section`
 export const StyledImg = styled(Img)`
   border-left: 4px solid ${black};
   height: auto;
+  margin-bottom: 32px;
   order: ${({ $textFirst }) => ($textFirst ? 1 : 0)};
   width: 100%;
 `

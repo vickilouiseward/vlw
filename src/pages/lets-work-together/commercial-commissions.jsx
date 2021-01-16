@@ -9,7 +9,8 @@ import {
   ImageScrollingTextBlocks,
   ImageTextBlockGroup,
   ContactForm,
-  Footer
+  Footer,
+  StepIcons
 } from '../../components'
 import { colours } from '../../styles'
 import AOS from 'aos'
@@ -90,27 +91,27 @@ const Page = ({ data }) => {
           blocks={[
             {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Branding & Packaging',
+              Icon: StepIcons.Branding,
               text: 'This applies to accompanying illustrations that compliment your brands identity and adds an extra layer of personality. Including marketing material, press packs as well as adding to your digital presences, via email marketing, social and your business or brands website creating a consistent identity across all platforms.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Advertising campaigns',
+              Icon: StepIcons.Advertising,
               text: 'Are you looking to promote a new product or collection and want to add an illustrative detail?'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Editorial & Media',
+              Icon: StepIcons.Editorial,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Press & events',
+              Icon: StepIcons.Press,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Large scale',
+              Icon: StepIcons.LargeScale,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              title: 'Bespoke',
+              Icon: StepIcons.Bespoke,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }
           ]}
