@@ -11,7 +11,8 @@ export const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   height: 610px;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 610px;
   padding: 64px 40px 0;
   text-align: left;
   width: calc(100vw / 3);

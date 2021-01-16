@@ -107,7 +107,7 @@ const Page = ({ data }) => {
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
-              Icon: StepIcons.LargeScale,
+              Icon: StepIcons.Windows,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
               image: data.placeholder.childImageSharp.fluid,
