@@ -376,13 +376,6 @@ export const query = graphql`
         }
       }
     }
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
   }
 `
 

@@ -44,7 +44,7 @@ const Page = ({ data }) => {
           color={midnight}
           bgcolor={white}
           title='Commercial commissions'
-          image={data.placeholder.childImageSharp.fluid}
+          image={data.commercial_commission_eips.childImageSharp.fluid}
           text={[
             'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
             'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
@@ -52,7 +52,7 @@ const Page = ({ data }) => {
         />
         <ImageScrollingTextBlocks
           title='Vicki’s process'
-          image={data.placeholder.childImageSharp.fluid}
+          image={data.process.childImageSharp.fluid}
           blocks={[
             {
               number: 'Step One',
@@ -90,27 +90,27 @@ const Page = ({ data }) => {
           title='Illustration Services'
           blocks={[
             {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_0.childImageSharp.fluid,
               Icon: StepIcons.Branding,
               text: 'This applies to accompanying illustrations that compliment your brands identity and adds an extra layer of personality. Including marketing material, press packs as well as adding to your digital presences, via email marketing, social and your business or brands website creating a consistent identity across all platforms.'
             }, {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_1.childImageSharp.fluid,
               Icon: StepIcons.Advertising,
               text: 'Are you looking to promote a new product or collection and want to add an illustrative detail?'
             }, {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_2.childImageSharp.fluid,
               Icon: StepIcons.Editorial,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_3.childImageSharp.fluid,
               Icon: StepIcons.Press,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_4.childImageSharp.fluid,
               Icon: StepIcons.Windows,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }, {
-              image: data.placeholder.childImageSharp.fluid,
+              image: data.consider_5.childImageSharp.fluid,
               Icon: StepIcons.Bespoke,
               text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }
@@ -138,24 +138,66 @@ export const query = graphql`
       createAt
       updateAt
     }
+    commercial_commission_eips: file(relativePath: { eq: "lets-work-together/commercial-commissions/commercial_commission_eips.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    process: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports3x4_image_working_farmhouse.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_0: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports01_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_1: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports02_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_2: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports03_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_3: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports04_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_4: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports05_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    consider_5: file(relativePath: { eq: "lets-work-together/commercial-commissions/Image-exports06_commercial_commissions_consider.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     contact: file(relativePath: { eq: "contact/Image-exports3x4_image_studio_figurepurpledress.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-    placeholderFixed: file(relativePath: { eq: "placeholder.png" }) {
-      childImageSharp {
-        fixed(height: 280, width: 388) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
         }
       }
     }

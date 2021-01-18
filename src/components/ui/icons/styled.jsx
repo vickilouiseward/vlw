@@ -66,5 +66,7 @@ export const StyledCCIcon = styled.svg`
 
 export const StyledStepIcon = styled.svg`
   height: 80px;
+  max-height: 80px;
+  min-height: 80px;
   width: auto;
 `

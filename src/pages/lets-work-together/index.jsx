@@ -41,7 +41,7 @@ const Page = ({ data }) => {
         />
         <ImageCtaWrapper>
           <ImageCta
-            image={data.placeholder.childImageSharp.fluid}
+            image={data.bespoke_orginals.childImageSharp.fluid}
             cta={{
               title: 'Bespoke originals',
               blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
@@ -50,9 +50,9 @@ const Page = ({ data }) => {
             }}
           />
           <ImageCta
-            image={data.placeholder.childImageSharp.fluid}
+            image={data.commercial_commissions.childImageSharp.fluid}
             cta={{
-              title: 'Commercial',
+              title: 'Commercial Commissions',
               blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
               cta: 'Find out more',
               link: '/lets-work-together/commercial-commissions'
@@ -67,7 +67,14 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
+    bespoke_orginals: file(relativePath: { eq: "lets-work-together/bespoke_orginals.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions: file(relativePath: { eq: "lets-work-together/commercial_commissions.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

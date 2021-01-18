@@ -65,13 +65,17 @@ export const StyledWrapper = styled.section`
   & > ${StyledContainer} {
     box-sizing: border-box;
     flex-direction: column;
-    padding: 0 64px 80px;
+    padding: 0 40px 80px;
     ${respondTo.M`
-      padding: 0 24px 80px;
-    `}
+      padding: 0 0 80px;
+  `}
   }
   & ${StyledSection} {
+    padding: 0 64px;
     width: 100%;
+    ${respondTo.M`
+      padding: 0 24px;
+    `}
   }
   & ${StyledImg} {
     width: 100%;
