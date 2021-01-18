@@ -28,7 +28,7 @@ export const ThreeImagesTextRight = ({ images, title, text }) => {
   return (
     <StyledContainer>
       <StyledSection>
-        {images.map(({ image, alt }, index) => (
+        {images.map((image, index) => (
           <StyledImgWrapper
             key={index}
             inFocus={inFocus === index}
@@ -38,7 +38,7 @@ export const ThreeImagesTextRight = ({ images, title, text }) => {
               }
             }}
           >
-            <StyledImg fadeIn={false} fluid={image} {...{ alt }} />
+            <StyledImg fadeIn={false} fluid={image} alt={title} />
           </StyledImgWrapper>
         ))}
       </StyledSection>

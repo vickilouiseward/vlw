@@ -31,7 +31,7 @@ const Page = ({ data }) => {
           formiumForm={data.formiumForm}
           title='Get in touch'
           text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
-          image={data.placeholder.childImageSharp.fluid}
+          image={data.contact.childImageSharp.fluid}
         />
         <Footer />
       </BodyWrapper>
@@ -49,7 +49,7 @@ export const query = graphql`
       createAt
       updateAt
     }
-    placeholder: file(relativePath: { eq: "placeholder.png" }) {
+    contact: file(relativePath: { eq: "contact/Image-exports3x4_image_studio_oscardelarenta.png" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_noBase64

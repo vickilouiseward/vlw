@@ -45,39 +45,39 @@ const Page = ({ data }) => {
       <SplashHero
         images={[
           [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_0.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_0.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_1.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_1.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_2.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_2.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_3.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_3.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_4.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_4.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ], [
-            data.placeholder.childImageSharp.fluid,
+            data.splash_bp4_5.childImageSharp.fluid,
             {
-              ...data.placeholder.childImageSharp.fluid,
+              ...data.splash_bp1_5.childImageSharp.fluid,
               media: '(max-width: 600px)'
             }
           ]
@@ -97,13 +97,15 @@ const Page = ({ data }) => {
             link: '/lets-work-together/bespoke-originals'
           }}
           images={[
-            data.placeholder.childImageSharp.fluid,
-            data.placeholder.childImageSharp.fluid,
-            data.placeholder.childImageSharp.fluid
+            data.bespoke_originals_0.childImageSharp.fluid,
+            data.bespoke_originals_1.childImageSharp.fluid,
+            data.bespoke_originals_2.childImageSharp.fluid,
+            data.bespoke_originals_3.childImageSharp.fluid,
+            data.bespoke_originals_4.childImageSharp.fluid
           ]}
         />
         <ImageCta
-          image={data.placeholder.childImageSharp.fluid}
+          image={data.gifting.childImageSharp.fluid}
           title='Give the gift of art'
           cta={{
             title: 'Bespoke originals gift experience',
@@ -122,9 +124,12 @@ const Page = ({ data }) => {
             link: '/lets-work-together/commercial-commissions'
           }}
           images={[
-            data.placeholder.childImageSharp.fluid,
-            data.placeholder.childImageSharp.fluid,
-            data.placeholder.childImageSharp.fluid
+            data.commercial_commissions_0.childImageSharp.fluid,
+            data.commercial_commissions_1.childImageSharp.fluid,
+            data.commercial_commissions_2.childImageSharp.fluid,
+            data.commercial_commissions_3.childImageSharp.fluid,
+            data.commercial_commissions_4.childImageSharp.fluid,
+            data.commercial_commissions_5.childImageSharp.fluid
           ]}
         />
         <ThreeQuotes
@@ -159,18 +164,9 @@ const Page = ({ data }) => {
         />
         <ThreeImagesTextRight
           images={[
-            {
-              image: data.placeholder.childImageSharp.fluid,
-              alt: ''
-            },
-            {
-              image: data.placeholder.childImageSharp.fluid,
-              alt: ''
-            },
-            {
-              image: data.placeholder.childImageSharp.fluid,
-              alt: ''
-            }
+            data.my_story_0.childImageSharp.fluid,
+            data.my_story_1.childImageSharp.fluid,
+            data.my_story_2.childImageSharp.fluid
           ]}
           title='My Story'
           text={[
@@ -191,6 +187,195 @@ const Page = ({ data }) => {
 
 export const query = graphql`
   query {
+    splash_bp1_0: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_0.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_0: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_0.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp1_1: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_1.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_1: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_1.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp1_2: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_2.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_2: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_2.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp1_3: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_3.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_3: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_3.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp1_4: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_4.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_4: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_4.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp1_5: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp1_home_splash_5.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    splash_bp4_5: file(relativePath: { eq: "homepage/splashscreen/Image-exportsbp4_home_splash_5.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bespoke_originals_0: file(relativePath: { eq: "homepage/bo_Image-exports3x4_artwork_floralskull_1.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bespoke_originals_1: file(relativePath: { eq: "homepage/bo_Image-exports3x4_artwork_medior.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bespoke_originals_2: file(relativePath: { eq: "homepage/bo_Image-exports3x4_image_diptyquebaies.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bespoke_originals_3: file(relativePath: { eq: "homepage/bo_Image-exports3x4_image_missdior.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    bespoke_originals_4: file(relativePath: { eq: "homepage/bo_Image-exports3x4_image_missdior.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    gifting: file(relativePath: { eq: "homepage/gifting.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_0: file(relativePath: { eq: "homepage/cc_Image-exports3x4_artwork_luxurybags_2.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_1: file(relativePath: { eq: "homepage/cc_Image-exports3x4_artwork_napeip_digital_2.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_2: file(relativePath: { eq: "homepage/cc_Image-exports3x4_image_beautyfavorites.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_3: file(relativePath: { eq: "homepage/cc_Image-exports3x4_image_outout.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_4: file(relativePath: { eq: "homepage/cc_Image-exports3x4_image_skinceuticals.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    commercial_commissions_5: file(relativePath: { eq: "homepage/cc_Image-exports3x4_image_smoothskinbikini.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    my_story_0: file(relativePath: { eq: "homepage/mystory_Image-exports3x4_image_studio_brushes.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    my_story_1: file(relativePath: { eq: "homepage/mystory_Image-exports3x4_image_working_farmhouse.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+    my_story_2: file(relativePath: { eq: "homepage/mystory_Image-exports3x4_image_zimmerman_runway.png" }) {
+      childImageSharp {
+        fluid(quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
     placeholder: file(relativePath: { eq: "placeholder.png" }) {
       childImageSharp {
         fluid(quality: 100) {
