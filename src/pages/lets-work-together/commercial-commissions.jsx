@@ -6,8 +6,8 @@ import {
   GlobalStyles,
   SiteHeader,
   PageHeaderLeft,
-  ImageScrollingTextBlocks,
-  ImageTextBlockGroup,
+  FixedImageVerticalScroll,
+  HorizontalScroll,
   ContactForm,
   Footer,
   StepIcons
@@ -50,7 +50,7 @@ const Page = ({ data }) => {
             'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
           ]}
         />
-        <ImageScrollingTextBlocks
+        <FixedImageVerticalScroll
           title='Vicki’s process'
           image={data.process.childImageSharp.fluid}
           blocks={[
@@ -86,7 +86,7 @@ const Page = ({ data }) => {
             }
           ]}
         />
-        <ImageTextBlockGroup
+        <HorizontalScroll
           title='Illustration Services'
           blocks={[
             {

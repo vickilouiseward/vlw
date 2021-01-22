@@ -6,8 +6,8 @@ import {
   GlobalStyles,
   SiteHeader,
   PageHeader,
-  ImageScrollingTextBlocks,
-  ImageTextBlockGroup,
+  FixedImageVerticalScroll,
+  HorizontalScroll,
   ContactForm,
   Footer,
   StepIcons
@@ -46,7 +46,7 @@ const Page = ({ data }) => {
           title='Bespoke originals'
           text='Ideal for those looking for a unique and personal artwork to bring that touch of luxury to a home or office space. One of a kind originals also make for an elegant and refined gift, they are the perfect way to treat that special someone.'
         />
-        <ImageScrollingTextBlocks
+        <FixedImageVerticalScroll
           title='Vicki’s process'
           image={data.process.childImageSharp.fluid}
           blocks={[
@@ -82,7 +82,7 @@ const Page = ({ data }) => {
             }
           ]}
         />
-        <ImageTextBlockGroup
+        <HorizontalScroll
           title='Things to consider'
           blocks={[
             {

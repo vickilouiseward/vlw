@@ -6,8 +6,8 @@ import {
   GlobalStyles,
   SiteHeader,
   PageHeaderRight,
-  ImageScrollingTextBlocks,
-  ImageTextBlockGroup,
+  FixedImageVerticalScroll,
+  HorizontalScroll,
   Footer,
   StepIcons
 } from '../../components'
@@ -53,7 +53,7 @@ const Page = ({ data }) => {
             link: 'https://www.google.com'
           }}
         />
-        <ImageScrollingTextBlocks
+        <FixedImageVerticalScroll
           title='Vicki’s process'
           image={data.process.childImageSharp.fluid}
           blocks={[
@@ -90,7 +90,7 @@ const Page = ({ data }) => {
           ]}
           $light
         />
-        <ImageTextBlockGroup
+        <HorizontalScroll
           title='Things to consider'
           blocks={[
             {

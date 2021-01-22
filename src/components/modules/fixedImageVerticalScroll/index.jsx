@@ -11,7 +11,7 @@ import { colours } from '../../../styles'
 
 const { white, black } = colours
 
-export const ImageScrollingTextBlocks = ({ image, title, blocks, $light }) => (
+export const FixedImageVerticalScroll = ({ image, title, blocks, $light }) => (
   <StyledContainer {...{ $light }}>
     <StyledImgSection>
       <StyledFadeTop {...{ $light }} />
