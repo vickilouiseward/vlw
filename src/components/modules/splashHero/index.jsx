@@ -25,7 +25,7 @@ export const SplashHero = ({ images, introAnimation }) => {
             flex-direction: column;
             height: 100%;
             width: 100%;
-            justify-dontent: center;
+            justify-content: center;
           `}
         >
           <StyledSliderSection {...{ introAnimation }}>
