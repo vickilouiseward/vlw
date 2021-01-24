@@ -93,7 +93,7 @@ const Page = ({ data }) => {
           cta={{
             title: 'Bespoke originals',
             blurb: 'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
-            cta: 'Find out more',
+            cta: 'Commission me',
             link: '/lets-work-together/bespoke-originals'
           }}
           images={[
@@ -120,7 +120,7 @@ const Page = ({ data }) => {
           cta={{
             title: 'Commercial commissions',
             blurb: "Enhance your story telling with custom illustrations designed to help commutate your brand’s identity, products/services and core values. Drop me a message and we can talk about all the options and ways illustration can help you give the personal touch you're looking for.",
-            cta: 'Find out more',
+            cta: 'Start a project',
             link: '/lets-work-together/commercial-commissions'
           }}
           images={[

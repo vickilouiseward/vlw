@@ -35,7 +35,9 @@ export const ContactForm = ({ formiumForm, title, text, image }) => {
         <Title data-aos='fade-in' level={2}>
           {title}
         </Title>
-        <Paragraph data-aos='fade-in'>{text}</Paragraph>
+        {text && (
+          <Paragraph data-aos='fade-in'>{text}</Paragraph>
+        )}
         {success ? (
           <Paragraph data-aos='fade-in'>Thank you for signing up!</Paragraph>
         ) : (

@@ -35,7 +35,7 @@ const Page = ({ data }) => {
         <html lang='en' />
         <meta charSet='utf-8' />
         <title>Commercial commissions | Vicki Louise Ward Fashion Illustrator</title>
-        <meta name='description' content='Ideal for those looking for a unique and personal artwork to bring that touch of luxury to a home or office space. One of a kind originals also make for an elegant and refined gift, they are the perfect way to treat that special someone.' />
+        <meta name='description' content="It all begins with an idea. Maybe you want to launch a new brand or elevate your next campaign. Whatever it is, the way you tell your brands story can make all the difference. With Vicki's delicate and stylish illustrations she can help you do just that by bringing a sense of sophistication and adding a personal touch." />
       </Helmet>
       <GlobalStyles />
       <BodyWrapper>
@@ -46,8 +46,7 @@ const Page = ({ data }) => {
           title='Commercial commissions'
           image={data.commercial_commission_eips.childImageSharp.fluid}
           text={[
-            'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
-            'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
+            "It all begins with an idea. Maybe you want to launch a new brand or elevate your next campaign. Whatever it is, the way you tell your brands story can make all the difference. With Vicki's delicate and stylish illustrations she can help you do just that by bringing a sense of sophistication and adding a personal touch."
           ]}
         />
         <FixedImageVerticalScroll
@@ -56,33 +55,33 @@ const Page = ({ data }) => {
           blocks={[
             {
               number: 'Step One',
-              title: 'Personal Consultation',
-              text: 'We will discuss your vision and how best to realise it. You might want to share ideas on subject matter, composition or colour palette. Some people have very specific ideas in mind whereas others prefer a more guided approach - no matter your requirements we can tailor the service to suit your needs. You can find some considerations below [Link to this] to help with this conversation.'
+              title: 'Consultation',
+              text: 'We will start every project with an initial consultation, with the aim for Vicki to fully understand your businesses needs and what illustrative service/s you business requires, we can then discuss approach, agree times lines and fees.'
             },
             {
               number: 'Step Two',
-              title: 'Tailored quote',
-              text: 'Once we have discussed your requirements you will receive an outline of options and prices for the service. We can then agree on the scope of the project, after which a statement of work and initial quote will be issued. 50% of this total will be required before any work can be started.'
+              title: 'Quote & contract',
+              text: 'Based on the consultation Vicki will put together a tailored quote & contract for you, outlining all requirements discussed, any key dates and deadline along with the final cost. This is the opportunity to raise any amendments or new requests. Before any work begins 50% of the final cost is required up front and the remaining 50% on completion. '
             },
             {
               number: 'Step Three',
               title: 'Exploration',
-              text: 'An exploration of the final piece will be carried out, including roughs for composition, line work and colour palate as well as any additional requests such copy admirations or use of special materials or canvas.'
+              text: 'Vicki will begin an exploration phase including roughs for composition, line work and colour palate as well as any additional requests such copy considerations or use of special materials or canvas.'
             },
             {
               number: 'Step Four',
-              title: 'Review',
-              text: 'This is a chance to review and provide feedback on the initial exploration. Take this opportunity to ask any questions you have or to request small amendments. Bear in mind that after this point once everything has been signed off any changes or additions will be an extra cost.'
+              title: 'Exploration Review',
+              text: 'This is a chance to review and provide feedback on the initial exploration and approach.  Take this opportunity to ask any questions you have or to request small amendments.'
             },
             {
               number: 'Step Five',
-              title: 'Final piece',
-              text: 'Once you are happy and everything has been approved, your original piece will be completed. After the work has been finished you will receive high res images of your art and the final invoice.'
+              title: 'Illustration / Artwork',
+              text: 'Once we have discussed the approach based on the exploration and everything has been approved Vicki will begin working on the agreed artwork. After the work has been finished you will receive high res images of your illustrations for you to approve (they will be water marked). Depending on contract as to how many amendments have been included any extra will be charged extra charge per hour.'
             },
             {
               number: 'Step Six',
-              title: 'Receiving your artwork',
-              text: 'Once final payment has been received your artwork will be scheduled for delivery and sent to your chosen address.'
+              title: 'Receiving Your Illustrations / Artwork',
+              text: 'Once you are happy with your illustrations/artwork Vicki will send you the files or hard copy depending on what your required once final payment is received.'
             }
           ]}
         />
@@ -92,34 +91,33 @@ const Page = ({ data }) => {
             {
               image: data.consider_0.childImageSharp.fluid,
               Icon: StepIcons.Branding,
-              text: 'This applies to accompanying illustrations that compliment your brands identity and adds an extra layer of personality. Including marketing material, press packs as well as adding to your digital presences, via email marketing, social and your business or brands website creating a consistent identity across all platforms.'
+              text: 'Want to compliment your brands identity and add an extra layer of personality. This includes marketing material, press packs as well as adding to your digital presences through email marketing, social and website creating a consistent identity across all platforms'
             }, {
               image: data.consider_1.childImageSharp.fluid,
               Icon: StepIcons.Advertising,
-              text: 'Are you looking to promote a new product or collection and want to add an illustrative detail?'
+              text: 'Are you looking to promote a new product or collection and want to add illustrative detail to elevate your brand story for a new product or collection. Do you want to add a unique illustrative look that brings your brand to life.'
             }, {
               image: data.consider_2.childImageSharp.fluid,
               Icon: StepIcons.Editorial,
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              text: 'Fashion illustration is great way to enhance editorial and media content, by adding the elegance of illustration you can create depth to your content and story telling in a way that sets you apart either instead of photography or to compliment the imagery.'
             }, {
               image: data.consider_3.childImageSharp.fluid,
               Icon: StepIcons.Press,
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              text: 'Are you looking to create a launch for your brand or client and want to add a special illustrative element. This could be through the invites, the press pack and launch material to live drawing or bespoke illustrations for guests.'
             }, {
               image: data.consider_4.childImageSharp.fluid,
               Icon: StepIcons.Windows,
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              text: 'Do you want to create impact in an event space or brand store? A great way to do this is bespoke window and mural illustration is one way to create impact for your customers or atmosphere at an events.'
             }, {
               image: data.consider_5.childImageSharp.fluid,
               Icon: StepIcons.Bespoke,
-              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+              text: 'When it comes to fashion illustration there is are so many ways it can add to a brand, sometimes it’s something more bespoke or unique to the brand or event. If you have an idea you want to find if it’d doable just drop Vicki a message.'
             }
           ]}
         />
         <ContactForm
           formiumForm={data.formiumForm}
           title='Get in touch'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
           image={data.contact.childImageSharp.fluid}
         />
         <Footer />

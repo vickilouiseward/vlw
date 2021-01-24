@@ -45,11 +45,10 @@ const Page = ({ data }) => {
           title='Gifting Experience'
           image={data.bs_gifting.childImageSharp.fluid}
           text={[
-            'This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour.',
-            'Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.'
+            'This luxury offering is for those who have been looking for the perfect gift. You want something special, one of a kind and thoughtful. The Bespoke Originals experince gives your giftee the chance to experience what it’s like to commission their very own piece of art, they get taken through the process of choosing what is right for them and will recieve the final peiece beautiful packaged for them to enjoy in their chosen place.'
           ]}
           cta={{
-            text: 'Buy now',
+            text: 'Shop gifting',
             link: 'https://www.google.com'
           }}
         />
@@ -60,17 +59,17 @@ const Page = ({ data }) => {
             {
               number: 'Step One',
               title: 'Personal Consultation',
-              text: 'We will discuss your vision and how best to realise it. You might want to share ideas on subject matter, composition or colour palette. Some people have very specific ideas in mind whereas others prefer a more guided approach - no matter your requirements we can tailor the service to suit your needs. You can find some considerations below [Link to this] to help with this conversation.'
+              text: 'We will discuss your vision and how best to realise it. You can share ideas on a subject matter, composition and colour palette. Some people have very specific ideas in mind whereas others prefer a more guided approach - no matter your requirements we can tailor the service to suit your needs. You can find some examples on my instagram @vickilouiseward'
             },
             {
               number: 'Step Two',
               title: 'Tailored quote',
-              text: 'Once we have discussed your requirements you will receive an outline of options and prices for the service. We can then agree on the scope of the project, after which a statement of work and initial quote will be issued. 50% of this total will be required before any work can be started.'
+              text: 'As this is a pre paid experience we will discuss your requirements. If you’d like to go larger or use special materials and paints then we can add that onto your experience. You will receive an outline of options and prices for additions. We can then agree on the scope of the project, after which a statement of work and initial quote will be issued. 50% of this total will be required before any work can be started if applicable.'
             },
             {
               number: 'Step Three',
               title: 'Exploration',
-              text: 'An exploration of the final piece will be carried out, including roughs for composition, line work and colour palate as well as any additional requests such copy admirations or use of special materials or canvas.'
+              text: 'An exploration of your Bespoke Original piece will be carried out, including roughs for composition, line work and colour palate as well as any additional requests such copy admirations or use of special materials or canvas.'
             },
             {
               number: 'Step Four',
@@ -80,12 +79,12 @@ const Page = ({ data }) => {
             {
               number: 'Step Five',
               title: 'Final piece',
-              text: 'Once you are happy and everything has been approved, your original piece will be completed. After the work has been finished you will receive high res images of your art and the final invoice.'
+              text: 'Once you are happy and everything has been approved, your Bespoke Original piece will be completed. After the work has been finished you will receive high res images of your art and the final invoice.'
             },
             {
               number: 'Step Six',
               title: 'Receiving your artwork',
-              text: 'Once final payment has been received your artwork will be scheduled for delivery and sent to your chosen address.'
+              text: 'Your Bespoke Original artwork will be scheduled for delivery and sent to your chosen address. If a final payment is applicable it will be sent after receipt of this. Once final payment has been received your artwork will be scheduled for delivery and sent to your chosen address.'
             }
           ]}
           $light

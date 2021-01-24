@@ -115,7 +115,6 @@ const Page = ({ data }) => {
         <ContactForm
           formiumForm={data.formiumForm}
           title='Get in touch'
-          text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.'
           image={data.contact.childImageSharp.fluid}
         />
         <Footer />

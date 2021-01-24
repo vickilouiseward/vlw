@@ -37,15 +37,15 @@ const Page = ({ data }) => {
         <SiteHeader />
         <PageHeader
           title="Let's work together"
-          text='I offer two custom services, Bespoke Originals for those looking for something niche or personal and the other is Commercial Commissions for those looking to enhance their brand story and luxury presence.'
+          text='I offer two custom services, Bespoke Originals for those looking for something niche or personal and Commercial Commissions for those looking to enhance their brand story and luxury presence.'
         />
         <ImageCtaWrapper>
           <ImageCta
             image={data.bespoke_orginals.childImageSharp.fluid}
             cta={{
               title: 'Bespoke originals',
-              blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-              cta: 'Find out more',
+              blurb: 'One of a kind artwork or yourself or a loved one.',
+              cta: 'Commission me',
               link: '/lets-work-together/bespoke-originals'
             }}
           />
@@ -53,8 +53,8 @@ const Page = ({ data }) => {
             image={data.commercial_commissions.childImageSharp.fluid}
             cta={{
               title: 'Commercial Commissions',
-              blurb: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam metus, varius vitae magna efficitur, dapibus luctus metus. Nulla bibendum ut odio sit amet varius.',
-              cta: 'Find out more',
+              blurb: 'Take your brand identity and storytelling to the next level with custom illustrations.',
+              cta: 'Start a project',
               link: '/lets-work-together/commercial-commissions'
             }}
           />
