@@ -33,8 +33,8 @@ const Page = ({ data }) => {
         <meta name='description' content="Let's work together - fashion, beauty &amp; lifestyle illustrator" />
       </Helmet>
       <GlobalStyles />
-      <SiteHeader />
       <BodyWrapper>
+        <SiteHeader />
         <PageHeader
           title="Let's work together"
           text='I offer two custom services, Bespoke Originals for those looking for something niche or personal and the other is Commercial Commissions for those looking to enhance their brand story and luxury presence.'

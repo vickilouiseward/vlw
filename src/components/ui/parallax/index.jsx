@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, forwardRef } from 'react'
-import { animated, useSpring } from 'react-spring'
+import { useSpring } from 'react-spring'
+import { StyledContainer, StyledParallax } from './styled'
 
 export const Parallax = ({ children, height }) => {
   const ref = useRef()
@@ -20,26 +21,31 @@ export const Parallax = ({ children, height }) => {
   })
 
   return (
-    <div style={{ height, overflow: 'hidden' }} {...{ ref }}>
-      <animated.div style={{ transform: offset.interpolate(calc) }}>
+    <StyledContainer {...{ height, ref }}>
+      <StyledParallax style={{ transform: offset.interpolate(calc) }}>
         {children}
-      </animated.div>
-    </div>
+      </StyledParallax>
+    </StyledContainer>
   )
 }
 
-export const ParallaxX = forwardRef(({ children }, ref) => {
+// eslint-disable-next-line react/display-name
+export const ParallaxScroller = forwardRef(({ children, maxOffset }, ref) => {
+  const pRef = useRef()
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
   const calc = (offset) => {
     return `translateX(${offset}%)`
   }
 
   const handleScroll = () => {
-    const { height, top, width } = ref.current.getBoundingClientRect()
-    const offsetPercent = top / (height - width) * 100
-    const offset = offsetPercent > 0 ? 0 : offsetPercent < -100 ? -100 : offsetPercent
-    console.log(offset)
-    set({ offset })
+    const { height, width, top } = ref.current.getBoundingClientRect()
+    const { right } = pRef.current.getBoundingClientRect()
+    const offsetPercent = top / height * 100
+    console.log(offset, offsetPercent, right < width)
+
+    if (offsetPercent <= 0 && offsetPercent >= maxOffset) {
+      set({ offset: offsetPercent })
+    }
   }
 
   useEffect(() => {
@@ -51,15 +57,19 @@ export const ParallaxX = forwardRef(({ children }, ref) => {
   })
 
   return (
-    <div style={{ overflow: 'hidden' }}>
-      <animated.div style={{ transform: offset.interpolate(calc) }}>
-        {children}
-      </animated.div>
-    </div>
+    <StyledParallax
+      ref={pRef}
+      style={{ transform: offset.interpolate(calc) }}
+      styles={`
+        width: fit-content;
+      `}
+    >
+      {children}
+    </StyledParallax>
   )
 })
 
-export const ParallaxFade = ({ style, children }) => {
+export const ParallaxFade = ({ styles, children }) => {
   const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
   const calc = offset => (1 - (offset / 1000)).toFixed(3)
   const handleScroll = () => {
@@ -76,10 +86,11 @@ export const ParallaxFade = ({ style, children }) => {
   })
 
   return (
-    <animated.div
-      style={{ ...{ opacity: offset.interpolate(calc) }, ...style }}
+    <StyledParallax
+      style={{ opacity: offset.interpolate(calc) }}
+      {...{ styles }}
     >
       {children}
-    </animated.div>
+    </StyledParallax>
   )
 }

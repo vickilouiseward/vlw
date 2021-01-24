@@ -38,8 +38,8 @@ const Page = ({ data }) => {
         <meta name='description' content='Ideal for those looking for a unique and personal artwork to bring that touch of luxury to a home or office space. One of a kind originals also make for an elegant and refined gift, they are the perfect way to treat that special someone.' />
       </Helmet>
       <GlobalStyles />
-      <SiteHeader />
       <BodyWrapper>
+        <SiteHeader />
         <PageHeader
           color={midnight}
           bgcolor={white}

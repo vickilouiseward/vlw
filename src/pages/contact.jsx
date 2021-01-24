@@ -25,8 +25,8 @@ const Page = ({ data }) => {
         <meta name='description' content='Contact, Vicki Louise Ward - fashion, beauty &amp; lifestyle illustrator' />
       </Helmet>
       <GlobalStyles />
-      <SiteHeader />
       <BodyWrapper>
+        <SiteHeader />
         <ContactForm
           formiumForm={data.formiumForm}
           title='Get in touch'

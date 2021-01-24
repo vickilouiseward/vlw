@@ -37,8 +37,8 @@ const Page = ({ data }) => {
         <meta name='description' content='This luxury offering is ideal for those who have been looking to find the perfect original artwork to bring their home or office space together. One of a kind art also makes for a sumptuous gift, it is a wonderful way to treat someone special to a carefully refined favour. Vicki takes her time to get to know and really understand your vision - whether you are commissioning her to create artwork for yourself or as a gift.' />
       </Helmet>
       <GlobalStyles />
-      <SiteHeader />
       <BodyWrapper>
+        <SiteHeader />
         <PageHeaderRight
           color={midnight}
           bgcolor={white}

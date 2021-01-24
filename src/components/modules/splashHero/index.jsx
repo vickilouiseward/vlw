@@ -18,15 +18,15 @@ export const SplashHero = ({ images, introAnimation }) => {
     <>
       <StyledContainer>
         <ParallaxFade
-          style={{
-            alignItems: 'center',
-            backgroundColor: white,
-            display: 'flex',
-            flexDirection: 'column',
-            height: '100%',
-            width: '100%',
-            justifyContent: 'center'
-          }}
+          styles={`
+            align-items: center;
+            background-color: ${white};
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            justify-dontent: center;
+          `}
         >
           <StyledSliderSection {...{ introAnimation }}>
             <AutoSlider speed={6000} $light>
