@@ -32,12 +32,8 @@ export const StyledSliderSection = styled.section`
   top: 0;
   width: 100%;
   z-index: 0;
-  ${({ introAnimation }) =>
-    introAnimation &&
-    css`
-      animation: ${fadeIn} 2s ease-in-out 2s forwards;
-      opacity: 0;
-    `}
+  animation: ${fadeIn} 2s ease-in-out 2s forwards;
+  opacity: 0;
 `
 
 export const StyledImg = styled(Img)`
@@ -53,22 +49,8 @@ export const StyledSection = styled.section`
   justify-content: center;
   text-align: center;
   z-index: 1;
-  ${({ introAnimation }) =>
-    introAnimation &&
-    css`
-      animation: ${fadeIn} 2s ease-in-out forwards;
-      opacity: 0;
-    `}
-`
-
-export const StyledLinkSpacer = styled.div`
-  padding-top: 24px;
-  ${({ introAnimation }) =>
-    introAnimation &&
-    css`
-      animation: ${fadeIn} 2s ease-in-out 4s forwards;
-      opacity: 0;
-    `}
+  animation: ${fadeIn} 2s ease-in-out forwards;
+  opacity: 0;
 `
 
 export const StyledSpacer = styled.div`

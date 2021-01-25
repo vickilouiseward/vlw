@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import {
@@ -21,8 +21,6 @@ import 'aos/dist/aos.css'
 const { pastelPink } = colours
 
 const Page = ({ data }) => {
-  const introAnimation = typeof window !== 'undefined' && !window.sessionStorage.getItem('introComplete')
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -30,7 +28,6 @@ const Page = ({ data }) => {
       offset: 100,
       once: true
     })
-    typeof window !== 'undefined' && setTimeout(() => window.sessionStorage.setItem('introComplete', 1), 4000)
   }, [])
 
   return (
@@ -84,9 +81,8 @@ const Page = ({ data }) => {
         ]}
         cta='Explore protfolio'
         link='/portfolio'
-        {...{ introAnimation }}
       />
-      <BodyWrapper {...{ introAnimation }}>
+      <BodyWrapper>
         <SiteHeader />
         <CarouselCtaLeft
           title="Let's work together"

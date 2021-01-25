@@ -32,8 +32,7 @@ export const StyledSiteHeader = styled.header`
     padding: 0 16px;
     text-align: center;
     ${({ showMobileNav }) =>
-      showMobileNav &&
-      css`
+      showMobileNav && css`
         animation: ${fadeInHeader} 0.6s ease-in-out;
         flex-direction: column;
         height: 216px;
@@ -55,8 +54,7 @@ export const StyledMenuButton = styled.button`
   width: 40px;
   z-index: 1;
   ${({ showMobileNav }) =>
-    showMobileNav &&
-    `
+    showMobileNav && css`
       margin: 32px 0;
       padding: 3px 8px;
     `}
@@ -72,8 +70,7 @@ export const StyledTitle = styled.h1`
   ${respondTo.S`
     padding: 0;
     ${({ showMobileNav }) =>
-      !showMobileNav &&
-      `
+      !showMobileNav && css`
         flex-grow: 2;
       `}
   `}

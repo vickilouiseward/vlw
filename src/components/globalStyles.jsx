@@ -8,7 +8,7 @@ import {
 } from '../fonts'
 import { colours } from '../styles'
 
-const { midnight, white, black } = colours
+const { midnight, white } = colours
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -53,6 +53,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     line-height: 1.2;
     margin: 0;
+    overflow-x: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

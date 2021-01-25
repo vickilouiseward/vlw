@@ -5,7 +5,7 @@ import { colours } from '../../../styles'
 
 const { white } = colours
 
-export const SplashHero = ({ images, introAnimation }) => {
+export const SplashHero = ({ images }) => {
   const [bgImage, setBgImage] = useState(0)
 
   useEffect(() => {
@@ -28,12 +28,12 @@ export const SplashHero = ({ images, introAnimation }) => {
             justify-content: center;
           `}
         >
-          <StyledSliderSection {...{ introAnimation }}>
+          <StyledSliderSection>
             <AutoSlider speed={6000} $light>
               {images.map((image, index) => <StyledImg key={index} fadeIn={false} fluid={image} alt='Portfolio example' />)}
             </AutoSlider>
           </StyledSliderSection>
-          <StyledSection {...{ introAnimation }}>
+          <StyledSection>
             <Logo />
             <Tagline>Fashion, beauty &amp; lifestyle illustrator</Tagline>
           </StyledSection>
