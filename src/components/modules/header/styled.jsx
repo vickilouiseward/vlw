@@ -239,6 +239,10 @@ export const StyledImg = styled(Img)`
   display: block;
   width: 100%;
   height: auto;
+  ${({ $headerImage }) => $headerImage && css`
+    width: auto;
+    height: 500px;
+  `}
 `
 
 export const StyledImageSectionLeft = styled.section`

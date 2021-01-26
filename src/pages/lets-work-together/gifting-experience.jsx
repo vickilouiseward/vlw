@@ -25,9 +25,7 @@ const Page = ({ data }) => {
       offset: 100,
       once: true
     })
-    window.sessionStorage.setItem('introComplete', 1)
   }, [])
-  console.log(data)
   return (
     <>
       <Helmet>
@@ -89,7 +87,7 @@ const Page = ({ data }) => {
           ]}
           $light
         />
-        <HorizontalScroll
+        {/* <HorizontalScroll
           title='Things to consider'
           blocks={[
             {
@@ -106,7 +104,7 @@ const Page = ({ data }) => {
               text: "Choosing a canvas is really preference however Vicki uses high quality 100% rag watercolour paper, starting in 300 gsm by default. There are many alternatives you can have as your canvas such as ply, stretch canvas, wood etc. If you'd like to use another material as your canvas this can easily be arranged and would be subject to sourcing and at an extra cost."
             }
           ]}
-        />
+        /> */}
         <Footer />
       </BodyWrapper>
     </>

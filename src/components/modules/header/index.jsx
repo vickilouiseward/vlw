@@ -99,13 +99,16 @@ export const SiteHeader = () => {
   )
 }
 
-export const PageHeader = ({ title, text, color, bgcolor }) => (
-  <StyledContainer {...{ bgcolor }}>
-    <StyledSection>
-      <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
-      {text && <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>}
-    </StyledSection>
-  </StyledContainer>
+export const PageHeader = ({ image, title, text, color, bgcolor }) => (
+  <>
+    {image && <StyledImg fadeIn={false} fluid={image} alt={title} $headerImage />}
+    <StyledContainer {...{ bgcolor }}>
+      <StyledSection>
+        <Title data-aos='fade-in' level={2} {...{ color }}>{title}</Title>
+        {text && <Paragraph data-aos='fade-in' {...{ color }}>{text}</Paragraph>}
+      </StyledSection>
+    </StyledContainer>
+  </>
 )
 
 export const PageHeaderLeft = ({ title, text, cta, image, color, bgcolor }) => (

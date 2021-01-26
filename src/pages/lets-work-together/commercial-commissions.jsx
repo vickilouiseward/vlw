@@ -26,9 +26,7 @@ const Page = ({ data }) => {
       offset: 100,
       once: true
     })
-    window.sessionStorage.setItem('introComplete', 1)
   }, [])
-  console.log(data)
   return (
     <>
       <Helmet>
